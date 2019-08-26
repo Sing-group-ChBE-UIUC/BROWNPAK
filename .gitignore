@@ -30,3 +30,13 @@
 *.exe
 *.out
 *.app
+
+#Python files
+*.py[cod]
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+#Docs
+docs/html/
