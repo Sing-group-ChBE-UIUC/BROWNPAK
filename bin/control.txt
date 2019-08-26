@@ -1,0 +1,32 @@
+sim_style           2            
+use_verlet_tab      F
+rcutoff             5.25D0
+tskin               2.1D0
+use_cell_list       T
+excluded_atoms      1
+lvdw                T
+lhdia               F
+mob_fctr            KRYL
+lelectrostatics     F
+
+tim_stp             1.0D-2
+nts_md              100
+nts_eql             0.0D0
+nts_eql_samp        10
+nts_sim             2.0D3
+nts_samp            10
+nts_dump            10
+nts_log             10
+
+fn_cfg              sample-rlx.cfg
+fn_revive           revive.bin
+fn_stats            stats.txt
+fn_traj             traj.bin
+
+lrevive             F
+read_seed           F
+write_seed          T
+write_eql_stats     T
+write_traj          T
+traj_frmcmp         1 0 0 1
+traj_wmpcd          F
