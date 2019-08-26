@@ -6,13 +6,13 @@ author: Sarit Dutta
 email: saridut@gmail.com
 github: https://github.com/saridut
 src_dir: ../src
-output_dir: html
+output_dir: html_bak
 page_dir: pages
 display: public
 display: protected
 display: private
 source: true
-graph: true
+graph: false
 coloured_edges: true
 license: bsd
 exclude_dir: ../src/extra
