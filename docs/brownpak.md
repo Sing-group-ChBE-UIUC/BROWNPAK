@@ -12,11 +12,11 @@ display: public
 display: protected
 display: private
 source: true
-graph: false
+graph: true
 coloured_edges: true
 license: bsd
 exclude_dir: ../src/extra
-search: false
+search: true
 docmark_alt:
 
 ---
