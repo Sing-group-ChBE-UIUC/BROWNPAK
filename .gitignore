@@ -1,6 +1,5 @@
 # Prerequisites
 *.d
-.DS_Store
 
 # Compiled Object files
 *.slo
@@ -15,7 +14,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -28,9 +26,8 @@
 *.lib
 
 # Executables
-*.exe
+bin/brownpak
 *.out
-*.app
 
 #Python files
 *.py[cod]

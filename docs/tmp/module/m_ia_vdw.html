@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>m_ia_vdw &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.2</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>m_ia_vdw 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 4.9% of total for modules and submodules.">300 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/m_ia_vdw.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/m_ia_vdw.f90.html'>m_ia_vdw.f90</a></li>
+    
+  
+     <li class="active">m_ia_vdw</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-ia_vdw_setup">ia_vdw_setup</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-ia_get_vdw_force">ia_get_vdw_force</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_set">vdw_lj_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj">vdw_lj</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_gaussian_set">vdw_gaussian_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_gaussian">vdw_gaussian</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_cosine_set">vdw_cosine_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_cosine">vdw_cosine</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul_debye_set">vdw_lj_coul_debye_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul_debye">vdw_lj_coul_debye</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul_set">vdw_lj_coul_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul">vdw_lj_coul</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <p>Routines to evaulate pairwise potentials and their derivative.</p>
+<p>The following styles are available:</p>
+<ul>
+<li>Style 1. 12-6 LJ (cut &amp; shifted). See <a href="../proc/vdw_lj_set.html">vdw_lj_set</a>.</li>
+<li>Style 2. Gaussian (cut &amp; shifted). See <a href="../proc/vdw_gaussian_set.html">vdw_gaussian_set</a>.</li>
+<li>Style 3. Cosine. See <a href="../proc/vdw_cosine_set.html">vdw_cosine_set</a>.</li>
+<li>Style 4. Screened Coulomb + LJ (cut &amp; shifted). See <a href="../proc/vdw_lj_coul_debye_set.html">vdw_lj_coul_debye_set</a>.</li>
+<li>Style 5. Coulomb + LJ (cut &amp; shifted) See <a href="../proc/vdw_lj_coul_set.html">vdw_lj_coul_set</a>.</li>
+</ul>
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/m_precision.html'>m_precision</a></li>
+    
+    <li><a href='../module/m_constants_math.html'>m_constants_math</a></li>
+    
+    <li><a href='../module/m_globals.html'>m_globals</a></li>
+    
+    <li><a href='../module/m_logger.html'>m_logger</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      </ul>
+    </div>
+    
+
+    
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-ia_vdw_setup">ia_vdw_setup</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-ia_get_vdw_force">ia_get_vdw_force</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_set">vdw_lj_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj">vdw_lj</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_gaussian_set">vdw_gaussian_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_gaussian">vdw_gaussian</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_cosine_set">vdw_cosine_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_cosine">vdw_cosine</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul_debye_set">vdw_lj_coul_debye_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul_debye">vdw_lj_coul_debye</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul_set">vdw_lj_coul_set</a>
+      
+      <a class="list-group-item" href="../module/m_ia_vdw.html#proc-vdw_lj_coul">vdw_lj_coul</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ia_vdw_setup"></span><h3>
+public subroutine <a href='../proc/ia_vdw_setup.html'>ia_vdw_setup</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Sets up parameters for vdw potentials </p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-ia_get_vdw_force"></span><h3>
+public subroutine <a href='../proc/ia_get_vdw_force.html'>ia_get_vdw_force</a>(rij_mag, qi, qj, typ, enrg, frc, ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Calculates the energy &amp; its derivative due to a single interacting pair of atoms.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>rij_mag</strong></td><td><p>Distance between two atoms</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>qi</strong></td><td><p>Charge on atom i</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>qj</strong></td><td><p>Charge on atom j</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>typ</strong></td><td><p>Type of vdw interaction</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>enrg</strong></td><td><p>Energy</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>frc</strong></td><td><p>Derivative of the potential. This is the magnitude of force due to
+ this potential.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td><p>Error flag</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_lj_set"></span><h3>
+private subroutine <a href='../proc/vdw_lj_set.html'>vdw_lj_set</a>(params, eps, sigma, rcut)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Setter for 12-6 LJ (cut &amp; shifted) interaction.</p><a href="../proc/vdw_lj_set.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>eps</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>sigma</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rcut</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_lj"></span><h3>
+private pure subroutine <a href='../proc/vdw_lj.html'>vdw_lj</a>(r, params, enrg, frc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Evaluates the potential and its derivative for LJ interaction. See
+ <a href="../proc/vdw_lj_set.html">vdw_lj_set</a>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>enrg</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>frc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_gaussian_set"></span><h3>
+private subroutine <a href='../proc/vdw_gaussian_set.html'>vdw_gaussian_set</a>(params, A, B, rcut)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Setter for gaussian interaction.</p><a href="../proc/vdw_gaussian_set.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>B</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rcut</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_gaussian"></span><h3>
+private pure subroutine <a href='../proc/vdw_gaussian.html'>vdw_gaussian</a>(r, params, enrg, frc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Calculates energy &amp; its derivative for gaussian interaction. See
+ <a href="../proc/vdw_gaussian_set.html">vdw_gaussian_set</a>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>enrg</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>frc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_cosine_set"></span><h3>
+private subroutine <a href='../proc/vdw_cosine_set.html'>vdw_cosine_set</a>(params, A, rcut)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Setter for cosine interaction.</p><a href="../proc/vdw_cosine_set.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>A</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rcut</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_cosine"></span><h3>
+private pure subroutine <a href='../proc/vdw_cosine.html'>vdw_cosine</a>(r, params, enrg, frc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Evaluates the potential and its derivative for  cosine interaction.
+ See <a href="../proc/vdw_cosine_set.html">vdw_cosine_set</a>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>enrg</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>frc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_lj_coul_debye_set"></span><h3>
+private subroutine <a href='../proc/vdw_lj_coul_debye_set.html'>vdw_lj_coul_debye_set</a>(params, eps, sigma, rcut, rcut_coul, C, kappa)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Setter for 12-6 LJ with screened Coulombic interaction.</p><a href="../proc/vdw_lj_coul_debye_set.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>eps</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>sigma</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rcut</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rcut_coul</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>C</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>kappa</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_lj_coul_debye"></span><h3>
+private pure subroutine <a href='../proc/vdw_lj_coul_debye.html'>vdw_lj_coul_debye</a>(r, qiqj, params, enrg, frc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Evaluates the potential and its derivative for screened Coulombic interaction
+combined with 12-6 LJ (cut &amp; shifted). See <a href="../proc/vdw_lj_coul_debye_set.html">vdw_lj_coul_debye_set</a>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>qiqj</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>enrg</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>frc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_lj_coul_set"></span><h3>
+private subroutine <a href='../proc/vdw_lj_coul_set.html'>vdw_lj_coul_set</a>(params, eps, sigma, rcut, rcut_coul, C)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Setter for 12-6 LJ with Coulombic interaction.</p><a href="../proc/vdw_lj_coul_set.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>eps</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>sigma</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rcut</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>rcut_coul</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
+  
+  <td></td><td>::</td>
+  <td><strong>C</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-vdw_lj_coul"></span><h3>
+private pure subroutine <a href='../proc/vdw_lj_coul.html'>vdw_lj_coul</a>(r, qiqj, params, enrg, frc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Evaluates the potential and its derivative for Coulombic interaction
+ combined with 12-6 LJ (cut &amp; shifted). See <a href="../proc/vdw_lj_coul_set.html">vdw_lj_coul_set</a>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>qiqj</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>enrg</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>frc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2019 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    
+  </body>
+</html>
