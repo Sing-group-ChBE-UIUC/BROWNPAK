@@ -1,0 +1,63 @@
+https://sangsoonam.github.io/2019/02/08/using-git-worktree-to-deploy-github-pages.html
+
+Get the code by cloning the repository.
+```bash
+git clone https://github.com/saridut/BROWNPAK.git .
+```
+
+Update .gitignore file, LICENSE, etc.
+
+Add, commit, and push.
+
+Create orphan branch gh-pages
+git checkout --orphan gh-pages
+Clean it
+git rm -rf .
+
+Commit
+git commit --allow-empty -m "Init gh-pages"
+Push
+git push origin gh-pages
+
+Github will show two branches.
+
+Add sources
+
+Hide tests by adding to .gitignore.
+
+Push
+git push origin master
+
+git pull origin master
+
+From https://github.com/saridut/BROWNPAK
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+Creating documentation
+
+1. Create linked working tree (html must not exist, it will be created)
+    git worktree add html gh-pages
+
+    cd html
+
+    Clean
+    git rm -rf .
+    touch .nojekyll
+
+2. Create documentation using ford.
+    cd ../
+    mkdir tmp
+    ford -o tmp brownpak.md 
+    mv tmp/* html/
+    rm -r tmp
+    
+    git add --all
+    git commit -a --allow-empty-message -m ''
+    git push origin gh-pages
+    
+3. Get out
+    git worktree remove html
+
+
+
