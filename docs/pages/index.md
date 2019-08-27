@@ -389,7 +389,8 @@ not straightforward. These pages are pushed to the *gh-pages* branch, not to
 *master*.
 
 - Assume that you have cloned the repo as usual, worked on it, and now you wish to update 
-the documentation. This will be done via git worktree.
+the documentation. This will be done via git worktree, as discussed by 
+[Sangsoo Nam](https://sangsoonam.github.io/2019/02/08/using-git-worktree-to-deploy-github-pages.html).
 
 - Commit your current work and push. From the root of the repo, first create a
 linked worktree as follows:
