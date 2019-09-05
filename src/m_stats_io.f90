@@ -96,14 +96,16 @@ subroutine stats_init()
             if (write_eql_stats) then
                 open(newunit=fu_stats, file=fn_stats//'.eq'//trim(adjustl(job_tag)), &
                     action='write', status='replace')
+                !Write header
+                call stats_write_hdr()
             end if
         else
             !Open file for writing production (or relaxation) statistics
             open(newunit=fu_stats, file=fn_stats//trim(adjustl(job_tag)), &
                 action='write', status='replace')
+            !Write header
+            call stats_write_hdr()
         end if
-        !Write header
-        call stats_write_hdr()
     end if
 
     !Allocate space for unwrapping molecule under PBC

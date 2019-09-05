@@ -210,6 +210,7 @@ private subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
 
     
     <p>Setter for 12-6 LJ with Coulombic interaction.</p>
+<p>The potential <code>U</code> is given by:</p>
 <div class="codehilite"><pre><span></span> <span class="nv">V</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="nv">eps</span><span class="o">*</span>[<span class="ss">(</span><span class="nv">r</span><span class="o">/</span><span class="nv">sigma</span><span class="ss">)</span><span class="o">^</span><span class="mi">12</span> <span class="o">-</span> <span class="ss">(</span><span class="nv">r</span><span class="o">/</span><span class="nv">sigma</span><span class="ss">)</span><span class="o">^</span><span class="mi">6</span>]
  <span class="nv">W</span> <span class="o">=</span> <span class="nv">C</span><span class="o">*</span><span class="nv">qi</span><span class="o">*</span><span class="nv">qj</span><span class="o">/</span><span class="nv">r</span>
  <span class="k">if</span> <span class="nv">rcut_coul</span> <span class="o">&gt;</span> <span class="mi">0</span>:
@@ -239,8 +240,7 @@ private subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
 <p>Internally stored parameters:</p>
 <ul>
 <li>params(6) = <code>V(rcut)</code></li>
-<li>params(7) = <code>V(rcut)</code></li>
-<li>params(8) = <code>C/rcut_coul</code></li>
+<li>params(7) = <code>C/rcut_coul</code></li>
 </ul>
     
 

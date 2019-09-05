@@ -10,7 +10,7 @@
     <meta name="author" content="Sarit Dutta" >
     <link rel="icon" href="../favicon.png">
 
-    <title>vdw_gaussian &ndash; BROWNPAK</title>
+    <title>vdw_dpd_set &ndash; BROWNPAK</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/pygments.css" rel="stylesheet">
@@ -114,7 +114,7 @@
     
   
   <div class="row">
-    <h1>vdw_gaussian
+    <h1>vdw_dpd_set
       <small>Subroutine</small>
     
     </h1>
@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.4% of total for procedures.">20 statements</a>
+    title=" 0.1% of total for procedures.">7 statements</a>
      </li> 
      
      
@@ -149,7 +149,7 @@
      <li><a href='../module/m_ia_vdw.html'>m_ia_vdw</a></li>
     
   
-     <li class="active">vdw_gaussian</li>
+     <li class="active">vdw_dpd_set</li>
   </ol>
 </div>
 </div>
@@ -199,7 +199,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private pure subroutine vdw_gaussian(r, params, enrg, frc)
+private subroutine vdw_dpd_set(params, A, rcut)
     
     
    
@@ -209,8 +209,21 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
 
 
     
-    <p>Calculates energy &amp; its derivative for gaussian interaction. See
- <a href="../proc/vdw_gaussian_set.html">vdw_gaussian_set</a>.</p>
+    <p>Setter for standard DPD interaction.</p>
+<p>The potential <code>U</code> is given by:</p>
+<div class="codehilite"><pre><span></span>   <span class="n">U</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">rcut</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="n">rcut</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">rcut</span>
+</pre></div>
+
+
+<p>User-set parameters:</p>
+<ul>
+<li>params(1) = <code>A</code></li>
+<li>params(2) = <code>rcut</code></li>
+</ul>
+<p>Internally stored parameters:</p>
+<ul>
+<li>None</li>
+</ul>
     
 
     <h3>Arguments</h3>
@@ -231,23 +244,8 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
   
 <tr>
   
-  <td><span class="anchor" id="variable-r%7E3"></span>real(kind=rp),</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
-  <td><strong>r</strong></td><td></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-params%7E5"></span>real(kind=rp),</td>
-  <td>intent(in),</td>
+  <td><span class="anchor" id="variable-params%7E12"></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
   <td></td>
   
   <td>dimension(:)</td><td>::</td>
@@ -261,12 +259,12 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
   
 <tr>
   
-  <td><span class="anchor" id="variable-enrg%7E5"></span>real(kind=rp),</td>
-  <td>intent(out)</td>
-  <td></td>
+  <td><span class="anchor" id="variable-a%7E8"></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>enrg</strong></td><td></td>
+  <td><strong>A</strong></td><td></td>
   
 </tr>
 
@@ -276,12 +274,12 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
   
 <tr>
   
-  <td><span class="anchor" id="variable-frc%7E3"></span>real(kind=rp),</td>
-  <td>intent(out)</td>
-  <td></td>
+  <td><span class="anchor" id="variable-rcut%7E6"></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td>optional</td>
   
   <td></td><td>::</td>
-  <td><strong>frc</strong></td><td></td>
+  <td><strong>rcut</strong></td><td></td>
   
 </tr>
 

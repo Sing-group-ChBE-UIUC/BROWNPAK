@@ -102,8 +102,8 @@ subroutine rlx_run()
     call write_dump(fn_revive//trim(adjustl(job_tag)))
 
     !Export final configuration to config & ldf files
-    call write_config(fn_rlx, ' ')
-    call write_ldf(fn_ldf, ' ')
+    call write_config(fn_rlx//trim(adjustl(job_tag)), ' ')
+    call write_ldf(fn_ldf//trim(adjustl(job_tag)), ' ')
 
     end subroutine
 

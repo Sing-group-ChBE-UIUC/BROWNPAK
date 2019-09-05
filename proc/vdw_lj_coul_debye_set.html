@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.7% of total for procedures.">36 statements</a>
+    title=" 0.6% of total for procedures.">36 statements</a>
      </li> 
      
      
@@ -210,6 +210,7 @@ private subroutine vdw_lj_coul_debye_set(params, eps, sigma, rcut, rcut_coul, C,
 
     
     <p>Setter for 12-6 LJ with screened Coulombic interaction.</p>
+<p>The potential <code>U</code> is given by:</p>
 <div class="codehilite"><pre><span></span> <span class="nv">V</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="nv">eps</span><span class="o">*</span>[<span class="ss">(</span><span class="nv">r</span><span class="o">/</span><span class="nv">sigma</span><span class="ss">)</span><span class="o">^</span><span class="mi">12</span> <span class="o">-</span> <span class="ss">(</span><span class="nv">r</span><span class="o">/</span><span class="nv">sigma</span><span class="ss">)</span><span class="o">^</span><span class="mi">6</span>]
  <span class="nv">W</span> <span class="o">=</span> <span class="nv">C</span><span class="o">*</span><span class="nv">qi</span><span class="o">*</span><span class="nv">qj</span><span class="o">*</span><span class="nv">exp</span><span class="ss">(</span><span class="o">-</span><span class="nv">kappa</span><span class="o">*</span><span class="nv">r</span><span class="ss">)</span><span class="o">/</span><span class="nv">r</span>
  <span class="k">if</span> <span class="nv">rcut_coul</span> <span class="o">&gt;</span> <span class="mi">0</span>:

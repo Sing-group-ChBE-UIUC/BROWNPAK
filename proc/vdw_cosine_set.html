@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.2% of total for procedures.">9 statements</a>
+    title=" 0.1% of total for procedures.">7 statements</a>
      </li> 
      
      
@@ -210,10 +210,13 @@ private subroutine vdw_cosine_set(params, A, rcut)
 
     
     <p>Setter for cosine interaction.</p>
-<div class="codehilite"><pre><span></span>   <span class="n">U</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">/</span><span class="n">rcut</span><span class="p">)</span>
+<p>The potential <code>U</code> is given by:</p>
+<div class="codehilite"><pre><span></span>   <span class="n">U</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="p">[</span><span class="mi">1</span> <span class="o">+</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">r</span><span class="o">/</span><span class="n">rcut</span><span class="p">)],</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">rcut</span>
+       <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="n">rcut</span>
 </pre></div>
 
 
+<p>The potential as well as its derivative is zero at <code>r = rcut</code>.</p>
 <p>User-set parameters:</p>
 <ul>
 <li>params(1) = <code>A</code></li>
@@ -221,8 +224,7 @@ private subroutine vdw_cosine_set(params, A, rcut)
 </ul>
 <p>Internally stored parameters:</p>
 <ul>
-<li>params(3) = <code>pi/rcut</code></li>
-<li>params(4) = <code>pi*A/rcut</code></li>
+<li>None</li>
 </ul>
     
 

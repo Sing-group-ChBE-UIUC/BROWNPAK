@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.2% of total for procedures.">12 statements</a>
+    title=" 0.3% of total for procedures.">14 statements</a>
      </li> 
      
      
@@ -209,13 +209,16 @@ private subroutine vdw_gaussian_set(params, A, B, rcut)
 
 
     
-    <p>Setter for gaussian interaction.</p>
+    <p>Setter for gaussian interaction. The potential is truncated and
+ force-shifted.</p>
+<p>The potential <code>U</code> is given by:</p>
 <div class="codehilite"><pre><span></span>   <span class="n">V</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">B</span><span class="o">*</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>  
-   <span class="n">U</span> <span class="o">=</span> <span class="n">V</span> <span class="o">-</span> <span class="n">V</span><span class="p">(</span><span class="n">rcut</span><span class="p">),</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">rcut</span>  
-   <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="n">rcut</span>  
+   <span class="n">U</span> <span class="o">=</span> <span class="n">V</span> <span class="o">-</span> <span class="n">V</span><span class="p">(</span><span class="n">rcut</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">rcut</span><span class="p">)</span><span class="o">*</span><span class="n">dV</span><span class="o">/</span><span class="n">dr</span><span class="p">,</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">rcut</span>  
+       <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="n">rcut</span><span class="p">,</span>
 </pre></div>
 
 
+<p>where <code>dV/dr</code> is evaluated at <code>r = rcut</code>.</p>
 <p>User-set parameters:</p>
 <ul>
 <li>params(1) = <code>A</code></li>
@@ -225,6 +228,7 @@ private subroutine vdw_gaussian_set(params, A, B, rcut)
 <p>Internally stored parameters:</p>
 <ul>
 <li>params(4) = <code>V(rcut)</code></li>
+<li>params(5) = <code>dV/dr(rcut)</code></li>
 </ul>
     
 

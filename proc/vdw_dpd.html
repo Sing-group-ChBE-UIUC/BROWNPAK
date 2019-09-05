@@ -10,7 +10,7 @@
     <meta name="author" content="Sarit Dutta" >
     <link rel="icon" href="../favicon.png">
 
-    <title>vdw_gaussian &ndash; BROWNPAK</title>
+    <title>vdw_dpd &ndash; BROWNPAK</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/pygments.css" rel="stylesheet">
@@ -114,7 +114,7 @@
     
   
   <div class="row">
-    <h1>vdw_gaussian
+    <h1>vdw_dpd
       <small>Subroutine</small>
     
     </h1>
@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.4% of total for procedures.">20 statements</a>
+    title=" 0.3% of total for procedures.">16 statements</a>
      </li> 
      
      
@@ -149,7 +149,7 @@
      <li><a href='../module/m_ia_vdw.html'>m_ia_vdw</a></li>
     
   
-     <li class="active">vdw_gaussian</li>
+     <li class="active">vdw_dpd</li>
   </ol>
 </div>
 </div>
@@ -199,7 +199,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-private pure subroutine vdw_gaussian(r, params, enrg, frc)
+private pure subroutine vdw_dpd(r, params, enrg, frc)
     
     
    
@@ -209,8 +209,8 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
 
 
     
-    <p>Calculates energy &amp; its derivative for gaussian interaction. See
- <a href="../proc/vdw_gaussian_set.html">vdw_gaussian_set</a>.</p>
+    <p>Evaluates the potential and its derivative for standard DPD interaction.
+ See <a href="../proc/vdw_dpd_set.html">vdw_dpd_set</a>.</p>
     
 
     <h3>Arguments</h3>
@@ -231,7 +231,7 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
   
 <tr>
   
-  <td><span class="anchor" id="variable-r%7E3"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-r%7E7"></span>real(kind=rp),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -246,7 +246,7 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
   
 <tr>
   
-  <td><span class="anchor" id="variable-params%7E5"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-params%7E13"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td></td>
   
@@ -261,7 +261,7 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
   
 <tr>
   
-  <td><span class="anchor" id="variable-enrg%7E5"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-enrg%7E9"></span>real(kind=rp),</td>
   <td>intent(out)</td>
   <td></td>
   
@@ -276,7 +276,7 @@ private pure subroutine vdw_gaussian(r, params, enrg, frc)
   
 <tr>
   
-  <td><span class="anchor" id="variable-frc%7E3"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-frc%7E7"></span>real(kind=rp),</td>
   <td>intent(out)</td>
   <td></td>
   
