@@ -3,11 +3,12 @@ module m_ia_vdw
 !!
 !! The following styles are available:
 !!
-!! * Style 1. 12-6 LJ (cut & shifted). See [[vdw_lj_set]].
-!! * Style 2. Gaussian (cut & shifted). See [[vdw_gaussian_set]].
+!! * Style 1. 12-6 LJ. See [[vdw_lj_set]].
+!! * Style 2. Gaussian. See [[vdw_gaussian_set]].
 !! * Style 3. Cosine. See [[vdw_cosine_set]].
-!! * Style 4. Screened Coulomb + LJ (cut & shifted). See [[vdw_lj_coul_debye_set]].
-!! * Style 5. Coulomb + LJ (cut & shifted) See [[vdw_lj_coul_set]].
+!! * Style 4. Screened Coulomb + LJ. See [[vdw_lj_coul_debye_set]].
+!! * Style 5. Coulomb + LJ. See [[vdw_lj_coul_set]].
+!! * Style 6. Standard DPD. See [[vdw_dpd_set]].
 
 use m_precision
 use m_constants_math
@@ -45,6 +46,8 @@ subroutine ia_vdw_setup()
             call vdw_lj_coul_debye_set(vdw_params(:,i))
         case(5)
             call vdw_lj_coul_set(vdw_params(:,i))
+        case(6)
+            call vdw_dpd_set(vdw_params(:,i))
         case default
             continue
         end select
@@ -88,6 +91,8 @@ subroutine ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
         call vdw_lj_coul_debye(rij_mag, qi*qj, vdw_params(:,typ), enrg, frc)
     case(5)
         call vdw_lj_coul(rij_mag, qi*qj, vdw_params(:,typ), enrg, frc)
+    case(6)
+        call vdw_dpd(rij_mag, vdw_params(:,typ), enrg, frc)
     case default
         continue
     end select
@@ -97,13 +102,16 @@ subroutine ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
 !******************************************************************************
 
 subroutine vdw_lj_set(params, eps, sigma, rcut)
-    !! Setter for 12-6 LJ (cut & shifted) interaction.
+    !! Setter for 12-6 LJ (truncated & force-shifted) interaction.
     !!
+    !! The potential `U` is given by:
     !!```
     !!   V = 4*eps*[(r/sigma)^12 - (r/sigma)^6]  
-    !!   U = V - V(rcut), r < rcut  
+    !!   U = V - V(rcut) - (r - rcut)*dV/dr, r < rcut,
     !!       0, r >= rcut  
     !!```
+    !! where `dV/dr` is evaluated at `r = rcut`.
+    !!
     !! User-set parameters:
     !!
     !! * params(1) = `eps`
@@ -113,13 +121,14 @@ subroutine vdw_lj_set(params, eps, sigma, rcut)
     !! Internally stored parameters:
     !!
     !! * params(4) = `V(rcut)`
+    !! * params(5) = `dV/dr(rcut)`
 
     real(rp), dimension(:), intent(in out) :: params
     real(rp), intent(in), optional :: eps
     real(rp), intent(in), optional :: sigma
     real(rp), intent(in), optional :: rcut
     real(rp) :: eps_, sigma_, rcut_
-    real(rp) :: pot_rcut
+    real(rp) :: pot_rcut, pot_deriv_rcut
     real(rp) :: sir, sir2, sir6, sir12
 
     if (present(eps)) params(1) = eps
@@ -131,8 +140,10 @@ subroutine vdw_lj_set(params, eps, sigma, rcut)
     sir = sigma_/rcut_
     sir2 = sir*sir; sir6 = sir2*sir2*sir2; sir12 = sir6*sir6
     pot_rcut = 4*eps_*(sir12 - sir6)
+    pot_deriv_rcut = -24*eps_*(2*sir12 - sir6)/rcut_
 
     params(4) = pot_rcut
+    params(5) = pot_deriv_rcut
 
     end subroutine
 
@@ -147,19 +158,20 @@ pure subroutine vdw_lj(r, params, enrg, frc)
     real(rp), intent(out) :: enrg
     real(rp), intent(out) :: frc
     real(rp) :: eps, sigma, rcut
-    real(rp) :: pot_rcut
+    real(rp) :: pot_rcut, pot_deriv_rcut
     real(rp) :: sir, sir2, sir6, sir12
 
     enrg = 0.0_rp; frc = 0.0_rp
 
     eps = params(1); sigma = params(2); rcut = params(3)
     pot_rcut = params(4)
+    pot_deriv_rcut = params(5)
 
     if ( r < rcut ) then
         sir = sigma/r
         sir2 = sir*sir; sir6 = sir2*sir2*sir2; sir12 = sir6*sir6
-        enrg = 4*eps*(sir12 - sir6) - pot_rcut
-        frc = -24*eps*(2*sir12 - sir6)/r
+        enrg = 4*eps*(sir12 - sir6) - pot_rcut - (r - rcut)*pot_deriv_rcut
+        frc = -24*eps*(2*sir12 - sir6)/r - pot_deriv_rcut
     end if
 
     end subroutine
@@ -167,13 +179,17 @@ pure subroutine vdw_lj(r, params, enrg, frc)
 !******************************************************************************
 
 subroutine vdw_gaussian_set(params, A, B, rcut)
-    !! Setter for gaussian interaction.
+    !! Setter for gaussian interaction. The potential is truncated and
+    !! force-shifted.
     !!
+    !! The potential `U` is given by:
     !!```
     !!   V = A*exp(-B*r^2)  
-    !!   U = V - V(rcut), r < rcut  
-    !!   0, r >= rcut  
+    !!   U = V - V(rcut) - (r - rcut)*dV/dr, r < rcut  
+    !!       0, r >= rcut,
     !!```
+    !! where `dV/dr` is evaluated at `r = rcut`.
+    !!
     !! User-set parameters:
     !!
     !! * params(1) = `A`
@@ -183,19 +199,24 @@ subroutine vdw_gaussian_set(params, A, B, rcut)
     !! Internally stored parameters:
     !!
     !! * params(4) = `V(rcut)`
+    !! * params(5) = `dV/dr(rcut)`
 
     real(rp), dimension(:), intent(in out) :: params
     real(rp), intent(in), optional :: A
     real(rp), intent(in), optional :: B
     real(rp), intent(in), optional :: rcut
-    real(rp) :: pot_rcut
+    real(rp) :: pot_rcut, pot_deriv_rcut
 
     if (present(A)) params(1) = A
     if (present(B)) params(2) = B
     if (present(rcut)) params(3) = rcut
 
     pot_rcut = params(1)*exp(-params(2)*params(3)**2)
+    pot_deriv_rcut = -2.0_rp*params(1)*params(2)*params(3) &
+                     * exp(-params(2)*params(3)**2)
+
     params(4) = pot_rcut
+    params(5) = pot_deriv_rcut
 
     end subroutine
 
@@ -209,14 +230,18 @@ pure subroutine vdw_gaussian(r, params, enrg, frc)
     real(rp), dimension(:), intent(in) :: params
     real(rp), intent(out) :: enrg
     real(rp), intent(out) :: frc
-    real(rp) :: A, B, rcut, pot_rcut
+    real(rp) :: A, B, rcut, pot_rcut, pot_deriv_rcut
+    real(rp) :: exrs
 
     enrg = 0.0_rp; frc = 0.0_rp
-    A = params(1); B = params(2); rcut = params(3); pot_rcut = params(4)
+    A = params(1); B = params(2); rcut = params(3)
+    pot_rcut = params(4); pot_deriv_rcut = params(5)
+
+    exrs = exp(-B*r*r)
 
     if ( r < rcut ) then
-        enrg = A*exp(-B*r*r) - pot_rcut
-        frc = -2*A*B*r*exp(-B*r*r)
+        enrg = A*exrs - pot_rcut - (r - rcut)*pot_deriv_rcut
+        frc = -2*A*B*r*exrs - pot_deriv_rcut
     end if
 
     end subroutine
@@ -226,9 +251,12 @@ pure subroutine vdw_gaussian(r, params, enrg, frc)
 subroutine vdw_cosine_set(params, A, rcut)
     !! Setter for cosine interaction.
     !!
+    !! The potential `U` is given by:
     !!```
-    !!   U = A*cos(pi*r/rcut)
+    !!   U = A*[1 + cos(pi*r/rcut)], r < rcut
+    !!       0, r >= rcut
     !!```
+    !! The potential as well as its derivative is zero at `r = rcut`.
     !!
     !! User-set parameters:
     !!
@@ -237,8 +265,7 @@ subroutine vdw_cosine_set(params, A, rcut)
     !!
     !! Internally stored parameters:
     !!
-    !! * params(3) = `pi/rcut`
-    !! * params(4) = `pi*A/rcut`
+    !! * None
 
     real(rp), dimension(:), intent(in out) :: params
     real(rp), intent(in), optional :: A
@@ -246,9 +273,6 @@ subroutine vdw_cosine_set(params, A, rcut)
 
     if (present(A)) params(1) = A
     if (present(rcut)) params(2) = rcut
-
-    params(3) = math_pi/params(2)
-    params(4) = params(3)*params(1)
 
     end subroutine
 
@@ -262,14 +286,16 @@ pure subroutine vdw_cosine(r, params, enrg, frc)
     real(rp), dimension(:), intent(in) :: params
     real(rp), intent(out) :: enrg
     real(rp), intent(out) :: frc
-    real(rp) :: A, rcut
+    real(rp) :: A, rcut, pf, pr
 
     enrg = 0.0_rp; frc = 0.0_rp
     A = params(1); rcut = params(2)
 
+    pf = math_pi/rcut; pr = pf*r
+
     if ( r < rcut ) then
-        enrg = params(1)*( 1.0_rp + cos(params(3)*r) )
-        frc = -params(4)*sin(params(3)*r)
+        enrg = A*( 1.0_rp + cos(pr) )
+        frc = -A*pf*sin(pr)
     end if
 
     end subroutine
@@ -279,6 +305,7 @@ pure subroutine vdw_cosine(r, params, enrg, frc)
 subroutine vdw_lj_coul_debye_set(params, eps, sigma, rcut, rcut_coul, C, kappa)
     !! Setter for 12-6 LJ with screened Coulombic interaction.
     !!
+    !! The potential `U` is given by:
     !!```
     !! V = 4*eps*[(r/sigma)^12 - (r/sigma)^6]
     !! W = C*qi*qj*exp(-kappa*r)/r
@@ -395,6 +422,7 @@ pure subroutine vdw_lj_coul_debye(r, qiqj, params, enrg, frc)
 subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
     !! Setter for 12-6 LJ with Coulombic interaction.
     !!
+    !! The potential `U` is given by:
     !!```
     !! V = 4*eps*[(r/sigma)^12 - (r/sigma)^6]
     !! W = C*qi*qj/r
@@ -422,8 +450,7 @@ subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
     !! Internally stored parameters:
     !!
     !! * params(6) = `V(rcut)`
-    !! * params(7) = `V(rcut)`
-    !! * params(8) = `C/rcut_coul`
+    !! * params(7) = `C/rcut_coul`
 
     real(rp), dimension(:), intent(in out) :: params
     real(rp), intent(in), optional :: eps
@@ -454,8 +481,8 @@ subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
         pot_rcut_coul = 0.0_rp
     end if
 
-    params(7) = pot_rcut
-    params(8) = pot_rcut_coul
+    params(6) = pot_rcut
+    params(7) = pot_rcut_coul
 
     end subroutine
 
@@ -498,6 +525,59 @@ pure subroutine vdw_lj_coul(r, qiqj, params, enrg, frc)
         sir2 = sir*sir; sir6 = sir2*sir2*sir2; sir12 = sir6*sir6
         enrg = enrg + 4*eps*(sir12 - sir6) - pot_rcut
         frc = frc - 24*eps*(2*sir12 - sir6)/r
+    end if
+
+    end subroutine
+
+!******************************************************************************
+
+subroutine vdw_dpd_set(params, A, rcut)
+    !! Setter for standard DPD interaction.
+    !!
+    !! The potential `U` is given by:
+    !!```
+    !!   U = (A/2)*rcut*(1 - (r/rcut))^2, r < rcut
+    !        0, r >= rcut
+    !!```
+    !!
+    !! User-set parameters:
+    !!
+    !! * params(1) = `A`
+    !! * params(2) = `rcut`
+    !!
+    !! Internally stored parameters:
+    !!
+    !! * None
+
+    real(rp), dimension(:), intent(in out) :: params
+    real(rp), intent(in), optional :: A
+    real(rp), intent(in), optional :: rcut
+
+    if (present(A)) params(1) = A
+    if (present(rcut)) params(2) = rcut
+
+    end subroutine
+
+!******************************************************************************
+
+pure subroutine vdw_dpd(r, params, enrg, frc)
+    !! Evaluates the potential and its derivative for standard DPD interaction.
+    !! See [[vdw_dpd_set]].
+
+    real(rp), intent(in) :: r
+    real(rp), dimension(:), intent(in) :: params
+    real(rp), intent(out) :: enrg
+    real(rp), intent(out) :: frc
+    real(rp) :: A, rcut, ir
+
+    enrg = 0.0_rp; frc = 0.0_rp
+    A = params(1); rcut = params(2)
+
+    ir = 1.0_rp - (r/rcut)
+
+    if ( r < rcut ) then
+        enrg = 0.5_rp*A*rcut*ir*ir
+        frc = -A*ir
     end if
 
     end subroutine
