@@ -9,6 +9,7 @@ module m_ia_vdw
 !! * Style 4. Screened Coulomb + LJ. See [[vdw_lj_coul_debye_set]].
 !! * Style 5. Coulomb + LJ. See [[vdw_lj_coul_set]].
 !! * Style 6. Standard DPD. See [[vdw_dpd_set]].
+!! * Style 7. expnrx. See [[vdw_expnrx_set]].
 
 use m_precision
 use m_constants_math
@@ -48,6 +49,8 @@ subroutine ia_vdw_setup()
             call vdw_lj_coul_set(vdw_params(:,i))
         case(6)
             call vdw_dpd_set(vdw_params(:,i))
+        case(7)
+            call vdw_expnrx_set(vdw_params(:,i))
         case default
             continue
         end select
@@ -578,6 +581,90 @@ pure subroutine vdw_dpd(r, params, enrg, frc)
     if ( r < rcut ) then
         enrg = 0.5_rp*A*rcut*ir*ir
         frc = -A*ir
+    end if
+
+    end subroutine
+
+!******************************************************************************
+
+subroutine vdw_expnrx_set(params,eps,alpha,Rm,exponent,sign,rcut)
+    !! Setter for expn/rx interaction.
+    !!
+    !! The potential `U` is given by:
+    !!```
+    !!   V = eps/(alpha-6)*(sign*6*exp(alpha*(1-rij/Rm))-alpha*(Rm/rij)**exponent)
+    !!   U = V - V(rcut) - (r-rcut)*dV/dr, r < rcut
+    !        0, r >= rcut
+    !!```
+    !! where `dV/dr` is evaluated at `r = rcut`.
+    !!
+    !! User-set parameters:
+    !!
+    !! * params(1) = `eps`
+    !! * params(2) = `alpha`
+    !! * params(3) = `Rm`
+    !! * params(4) = `exponent`
+    !! * params(5) = `sign` (optional:1,-1)
+    !! * params(6) = `rcut`
+    !!
+    !! Internally stored parameters:
+    !! * params(7) = `V(rcut)`
+    !! * params(8) = `dV/dr(rcut)`
+
+    real(rp), dimension(:), intent(in out) :: params
+    real(rp), intent(in), optional :: eps
+    real(rp), intent(in), optional :: alpha
+    real(rp), intent(in), optional :: Rm
+    integer, intent(in), optional :: exponent
+    integer, intent(in), optional :: sign
+    real(rp), intent(in), optional :: rcut
+    real(rp) :: pot_rcut, pot_deriv_rcut
+    real(rp) :: RmOverrcut
+
+    if (present(eps)) params(1) = eps
+    if (present(alpha)) params(2) = alpha
+    if (present(Rm)) params(3) = Rm
+    if (present(exponent)) params(4) = exponent
+    if (present(sign)) params(5) = sign
+    if (present(rcut)) params(6) = rcut
+
+    RmOverrcut = params(3)/params(6);
+    pot_rcut = params(1)/(params(2)-6)*(params(5)*6*exp(params(2) &
+                *(1-1/RmOverrcut))-params(2)*RmOverrcut**params(4))
+    pot_deriv_rcut = params(1)/(params(2)-6)*(-params(2)/params(3) &
+                *params(5)*6*exp(params(2)*(1-1/RmOverrcut)) &
+                +params(4)*params(2)*RmOverrcut**(params(4)+1))
+    
+    params(7) = pot_rcut
+    params(8) = pot_deriv_rcut
+
+    end subroutine
+
+!******************************************************************************
+
+pure subroutine vdw_expnrx(r, params, enrg, frc)
+    !! Evaluates the potential and its derivative for expnrx interaction.
+    !! See [[vdw_expnrx_set]].
+    real(rp), intent(in) :: r
+    real(rp), dimension(:), intent(in) :: params
+    real(rp), intent(out) :: enrg
+    real(rp), intent(out) :: frc
+    real(rp) :: eps, alpha, Rm, rcut
+    real(rp) :: pot_rcut, pot_deriv_rcut
+    integer :: sign, exponent
+    real(rp) :: RmOverrcut
+    
+    enrg = 0.0_rp; frc = 0.0_rp
+    
+    eps = params(1); alpha = params(2); Rm = params(3)
+    exponent = params(4); sign = params(5)
+    rcut = params(6); pot_rcut = params(7); pot_deriv_rcut = params(8)
+    
+    if (r < rcut) then
+        enrg = eps/(alpha-6)*(sign*6*exp(alpha*(1-r/Rm)) &
+                -alpha*(Rm/r)**exponent) - pot_rcut - (r-rcut)*pot_deriv_rcut
+        frc = eps/(alpha-6)*(-alpha/Rm*sign*6*exp(alpha*(1-r/Rm)) &
+                +alpha*exponent*(Rm/r)**(exponent+1))
     end if
 
     end subroutine
