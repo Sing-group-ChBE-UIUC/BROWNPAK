@@ -9,7 +9,7 @@ module m_ia_vdw
 !! * Style 4. Screened Coulomb + LJ. See [[vdw_lj_coul_debye_set]].
 !! * Style 5. Coulomb + LJ. See [[vdw_lj_coul_set]].
 !! * Style 6. Standard DPD. See [[vdw_dpd_set]].
-!! * Style 7. expnrx. See [[vdw_expnrx_set]].
+!! * Style 7. expn/rx. See [[vdw_expnrx_set]].
 
 use m_precision
 use m_constants_math
