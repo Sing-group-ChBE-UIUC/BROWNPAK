@@ -9,7 +9,7 @@ module m_ia_vdw
 !! * Style 4. Screened Coulomb + LJ. See [[vdw_lj_coul_debye_set]].
 !! * Style 5. Coulomb + LJ. See [[vdw_lj_coul_set]].
 !! * Style 6. Standard DPD. See [[vdw_dpd_set]].
-!! * Style 7. expn/rx. See [[vdw_expnrx_set]].
+!! * Style 7. expnrx. See [[vdw_expnrx_set]].
 
 use m_precision
 use m_constants_math
@@ -96,6 +96,8 @@ subroutine ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
         call vdw_lj_coul(rij_mag, qi*qj, vdw_params(:,typ), enrg, frc)
     case(6)
         call vdw_dpd(rij_mag, vdw_params(:,typ), enrg, frc)
+    case(7)
+        call vdw_expnrx(rij_mag, vdw_params(:,typ), enrg, frc)
     case default
         continue
     end select
@@ -633,7 +635,7 @@ subroutine vdw_expnrx_set(params,eps,alpha,Rm,exponent,sign,rcut)
                 *(1-1/RmOverrcut))-params(2)*RmOverrcut**params(4))
     pot_deriv_rcut = params(1)/(params(2)-6)*(-params(2)/params(3) &
                 *params(5)*6*exp(params(2)*(1-1/RmOverrcut)) &
-                +params(4)*params(2)*RmOverrcut**(params(4)+1))
+                +params(4)*params(2)/params(3)*RmOverrcut**(params(4)+1))
     
     params(7) = pot_rcut
     params(8) = pot_deriv_rcut
@@ -663,8 +665,8 @@ pure subroutine vdw_expnrx(r, params, enrg, frc)
     if (r < rcut) then
         enrg = eps/(alpha-6)*(sign*6*exp(alpha*(1-r/Rm)) &
                 -alpha*(Rm/r)**exponent) - pot_rcut - (r-rcut)*pot_deriv_rcut
-        frc = eps/(alpha-6)*(-alpha/Rm*sign*6*exp(alpha*(1-r/Rm)) &
-                +alpha*exponent*(Rm/r)**(exponent+1))
+        frc = -(eps/(alpha-6)*(-alpha/Rm*sign*6*exp(alpha*(1-r/Rm)) &
+                +exponent/Rm*alpha*(Rm/r)**(exponent+1)) - pot_deriv_rcut)
     end if
 
     end subroutine
