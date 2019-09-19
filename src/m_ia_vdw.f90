@@ -10,6 +10,9 @@ module m_ia_vdw
 !! * Style 5. Coulomb + LJ. See [[vdw_lj_coul_set]].
 !! * Style 6. Standard DPD. See [[vdw_dpd_set]].
 !! * Style 7. expnrx. See [[vdw_expnrx_set]].
+!!     modified from https://lammps.sandia.gov/doc/pair_exp6_rx.html
+!! * Style 8. brush. See [[vdw_brush_set]]. 
+!!     from T.L. Kuhl, D.E. Leckband, D.D. Lasic, J.N. Israelachvili (1994)
 
 use m_precision
 use m_constants_math
@@ -51,6 +54,8 @@ subroutine ia_vdw_setup()
             call vdw_dpd_set(vdw_params(:,i))
         case(7)
             call vdw_expnrx_set(vdw_params(:,i))
+        case(8)
+            call vdw_brush_set(vdw_params(:,i))
         case default
             continue
         end select
@@ -98,6 +103,8 @@ subroutine ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
         call vdw_dpd(rij_mag, vdw_params(:,typ), enrg, frc)
     case(7)
         call vdw_expnrx(rij_mag, vdw_params(:,typ), enrg, frc)
+    case(8)
+        call vdw_brush(rij_mag, vdw_params(:,typ), enrg, frc)
     case default
         continue
     end select
@@ -594,7 +601,8 @@ subroutine vdw_expnrx_set(params,eps,alpha,Rm,exponent,sign,rcut)
     !!
     !! The potential `U` is given by:
     !!```
-    !!   V = eps/(alpha-6)*(sign*6*exp(alpha*(1-rij/Rm))-alpha*(Rm/rij)**exponent)
+    !!   V = eps/(alpha-exponent)*(sign*exponent*exp(alpha*(1-rij/Rm)) &
+    !!       -alpha*(Rm/rij)**exponent)
     !!   U = V - V(rcut) - (r-rcut)*dV/dr, r < rcut
     !        0, r >= rcut
     !!```
@@ -603,10 +611,10 @@ subroutine vdw_expnrx_set(params,eps,alpha,Rm,exponent,sign,rcut)
     !! User-set parameters:
     !!
     !! * params(1) = `eps`
-    !! * params(2) = `alpha`
-    !! * params(3) = `Rm`
+    !! * params(2) = `alpha` !!!must be smaller than exponent!!!
+    !! * params(3) = `Rm` !!!must be smaller than rcut!!!
     !! * params(4) = `exponent`
-    !! * params(5) = `sign` (optional:1,-1)
+    !! * params(5) = `sign` (1 for attr+rep,-1 for purely repulsive)
     !! * params(6) = `rcut`
     !!
     !! Internally stored parameters:
@@ -617,8 +625,8 @@ subroutine vdw_expnrx_set(params,eps,alpha,Rm,exponent,sign,rcut)
     real(rp), intent(in), optional :: eps
     real(rp), intent(in), optional :: alpha
     real(rp), intent(in), optional :: Rm
-    integer, intent(in), optional :: exponent
-    integer, intent(in), optional :: sign
+    real(rp), intent(in), optional :: exponent
+    real(rp), intent(in), optional :: sign
     real(rp), intent(in), optional :: rcut
     real(rp) :: pot_rcut, pot_deriv_rcut
     real(rp) :: RmOverrcut
@@ -631,10 +639,11 @@ subroutine vdw_expnrx_set(params,eps,alpha,Rm,exponent,sign,rcut)
     if (present(rcut)) params(6) = rcut
 
     RmOverrcut = params(3)/params(6);
-    pot_rcut = params(1)/(params(2)-6)*(params(5)*6*exp(params(2) &
-                *(1-1/RmOverrcut))-params(2)*RmOverrcut**params(4))
-    pot_deriv_rcut = params(1)/(params(2)-6)*(-params(2)/params(3) &
-                *params(5)*6*exp(params(2)*(1-1/RmOverrcut)) &
+    pot_rcut = params(1)/(params(2)-params(4))*(params(5)*params(4) &
+                *exp(params(2)*(1-1/RmOverrcut))-params(2) &
+                *RmOverrcut**params(4))
+    pot_deriv_rcut = params(1)/(params(2)-params(4))*(-params(2)/params(3) &
+                *params(5)*params(4)*exp(params(2)*(1-1/RmOverrcut)) &
                 +params(4)*params(2)/params(3)*RmOverrcut**(params(4)+1))
     
     params(7) = pot_rcut
@@ -651,9 +660,9 @@ pure subroutine vdw_expnrx(r, params, enrg, frc)
     real(rp), dimension(:), intent(in) :: params
     real(rp), intent(out) :: enrg
     real(rp), intent(out) :: frc
-    real(rp) :: eps, alpha, Rm, rcut
+    real(rp) :: eps, alpha, Rm, rcut, exponent
     real(rp) :: pot_rcut, pot_deriv_rcut
-    integer :: sign, exponent
+    real(rp) :: sign
     real(rp) :: RmOverrcut
     
     enrg = 0.0_rp; frc = 0.0_rp
@@ -663,10 +672,70 @@ pure subroutine vdw_expnrx(r, params, enrg, frc)
     rcut = params(6); pot_rcut = params(7); pot_deriv_rcut = params(8)
     
     if (r < rcut) then
-        enrg = eps/(alpha-6)*(sign*6*exp(alpha*(1-r/Rm)) &
+        enrg = eps/(alpha-exponent)*(sign*exponent*exp(alpha*(1-r/Rm)) &
                 -alpha*(Rm/r)**exponent) - pot_rcut - (r-rcut)*pot_deriv_rcut
-        frc = -(eps/(alpha-6)*(-alpha/Rm*sign*6*exp(alpha*(1-r/Rm)) &
-                +exponent/Rm*alpha*(Rm/r)**(exponent+1)) - pot_deriv_rcut)
+        frc = -(eps/(alpha-exponent)*(-alpha/Rm*sign*exponent &
+                *exp(alpha*(1.0_rp-r/Rm))+exponent/Rm*alpha*(Rm/r) &
+                **(exponent+1)) - pot_deriv_rcut)
+    end if
+
+    end subroutine
+
+!******************************************************************************
+
+subroutine vdw_brush_set(params,eps,rcut)
+    !! Setter for polymer brush repulsive interaction.
+    !!
+    !! The potential `U` is given by:
+    !!```
+    !!   V = eps*(rcut**3)*(28*(rcut/r)**0.25-20.0/11.0*(r/rcut) &
+    !!          **2.75+12*(r/rcut-1))
+    !!   U = V - V(rcut), r < rcut
+    !!       0, r >= rcut
+    !!```
+    !!
+    !! User-set parameters:
+    !!
+    !! * params(1) = `eps`
+    !! * params(2) = `rcut`
+    !!
+    !! Internally stored parameters:
+    !! * params(3) = `V(rcut)`
+
+    real(rp), dimension(:), intent(in out) :: params
+    real(rp), intent(in), optional :: eps
+    real(rp), intent(in), optional :: rcut
+    real(rp) :: pot_rcut
+
+    if (present(eps)) params(1) = eps
+    if (present(rcut)) params(2) = rcut
+
+    pot_rcut = params(1)*(params(2)**3)*288.0_rp/11.0_rp
+    params(3) = pot_rcut
+
+    end subroutine
+
+!******************************************************************************
+
+pure subroutine vdw_brush(r,params,enrg, frc)
+    !! Evaluates the potential and its derivative for expnrx interaction.
+    !! See [[vdw_brush_set]].
+    real(rp), intent(in) :: r
+    real(rp), dimension(:), intent(in) :: params
+    real(rp), intent(out) :: enrg
+    real(rp), intent(out) :: frc
+    real(rp) :: eps, rcut
+    real(rp) :: pot_rcut
+
+    enrg = 0.0_rp; frc = 0.0_rp
+
+    eps = params(1); rcut = params(2)
+    pot_rcut = params(3)
+
+    if (r < rcut) then
+        enrg = eps*(rcut**3)*(28*(rcut/r)**0.25-20.0/11.0*(r/rcut) &
+                **2.75+12*(r/rcut-1)) - pot_rcut
+        frc = eps*(rcut**2)*((7.0*((rcut/r)**1.25))+5.0*((r/rcut)**1.75)-12.0)
     end if
 
     end subroutine
