@@ -710,7 +710,7 @@ subroutine vdw_brush_set(params,eps,rcut)
     if (present(eps)) params(1) = eps
     if (present(rcut)) params(2) = rcut
 
-    pot_rcut = params(1)*(params(2)**3)*288.0_rp/11.0_rp
+    pot_rcut = params(1)*(params(2)**3.0)*288.0/11.0
     params(3) = pot_rcut
 
     end subroutine
@@ -733,9 +733,10 @@ pure subroutine vdw_brush(r,params,enrg, frc)
     pot_rcut = params(3)
 
     if (r < rcut) then
-        enrg = eps*(rcut**3)*(28*(rcut/r)**0.25-20.0/11.0*(r/rcut) &
-                **2.75+12*(r/rcut-1)) - pot_rcut
-        frc = eps*(rcut**2)*((7.0*((rcut/r)**1.25))+5.0*((r/rcut)**1.75)-12.0)
+        enrg = eps*(rcut**3.0)*(28.0*(rcut/r)**(1.0/4.0) &
+                -20.0/11.0*(r/rcut)**(11.0/4.0)+12.0*(r/rcut-1.0)) - pot_rcut
+        frc = -eps*(rcut**2.0)*((7.0*((rcut/r)**(5.0/4.0))) &
+                +5.0*((r/rcut)**(7.0/4.0))-12.0)
     end if
 
     end subroutine
