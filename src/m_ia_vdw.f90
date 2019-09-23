@@ -674,9 +674,9 @@ pure subroutine vdw_expnrx(r, params, enrg, frc)
     if (r < rcut) then
         enrg = eps/(alpha-exponent)*(sign*exponent*exp(alpha*(1-r/Rm)) &
                 -alpha*(Rm/r)**exponent) - pot_rcut - (r-rcut)*pot_deriv_rcut
-        frc = -(eps/(alpha-exponent)*(-alpha/Rm*sign*exponent &
+        frc = eps/(alpha-exponent)*(-alpha/Rm*sign*exponent &
                 *exp(alpha*(1.0_rp-r/Rm))+exponent/Rm*alpha*(Rm/r) &
-                **(exponent+1)) - pot_deriv_rcut)
+                **(exponent+1)) - pot_deriv_rcut
     end if
 
     end subroutine
