@@ -13,6 +13,8 @@ module m_ia_vdw
 !!     modified from https://lammps.sandia.gov/doc/pair_exp6_rx.html
 !! * Style 8. brush. See [[vdw_brush_set]]. 
 !!     from T.L. Kuhl, D.E. Leckband, D.D. Lasic, J.N. Israelachvili (1994)
+!! * Style 9. bottlebrush. See [[vdw_bb_set]]. 
+!!     modified from J. Chem. Phys. 89, 5323 (1988) etc.
 
 use m_precision
 use m_constants_math
@@ -56,6 +58,8 @@ subroutine ia_vdw_setup()
             call vdw_expnrx_set(vdw_params(:,i))
         case(8)
             call vdw_brush_set(vdw_params(:,i))
+        case(9)
+            call vdw_bb_set(vdw_params(:,i))
         case default
             continue
         end select
@@ -105,6 +109,8 @@ subroutine ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
         call vdw_expnrx(rij_mag, vdw_params(:,typ), enrg, frc)
     case(8)
         call vdw_brush(rij_mag, vdw_params(:,typ), enrg, frc)
+    case(9)
+        call vdw_bb(rij_mag, vdw_params(:,typ), enrg, frc)
     case default
         continue
     end select
@@ -718,7 +724,7 @@ subroutine vdw_brush_set(params,eps,rcut)
 !******************************************************************************
 
 pure subroutine vdw_brush(r,params,enrg, frc)
-    !! Evaluates the potential and its derivative for expnrx interaction.
+    !! Evaluates the potential and its derivative for polymer brush interaction.
     !! See [[vdw_brush_set]].
     real(rp), intent(in) :: r
     real(rp), dimension(:), intent(in) :: params
@@ -737,6 +743,58 @@ pure subroutine vdw_brush(r,params,enrg, frc)
                 -20.0/11.0*(r/rcut)**(11.0/4.0)+12.0*(r/rcut-1.0)) - pot_rcut
         frc = -eps*(rcut**2.0)*((7.0*((rcut/r)**(5.0/4.0))) &
                 +5.0*((r/rcut)**(7.0/4.0))-12.0)
+    end if
+
+    end subroutine
+
+!******************************************************************************
+
+subroutine vdw_bb_set(params,eps,rcut,exponent)
+    !! Setter for bottlebrush repulsive interaction.
+    !!
+    !! The potential `U` is given by:
+    !!```
+    !!   U = eps*((r/rcut)^exponent-1)
+    !!       0, r >= rcut
+    !!   eps = 2pi*(3**(-3/4))*(b**(5/8))*(N^(3/8))*(lambda**(-13/8))
+    !!   exponent = 13/8*ln2/ln(b/rcut)
+    !!```
+    !!
+    !! User-set parameters:
+    !!
+    !! * params(1) = `eps`
+    !! * params(2) = `rcut`
+    !! * params(3) = `exponent`
+
+    real(rp), dimension(:), intent(in out) :: params
+    real(rp), intent(in), optional :: eps
+    real(rp), intent(in), optional :: rcut
+    real(rp), intent(in), optional :: exponent
+
+    if (present(eps)) params(1) = eps
+    if (present(rcut)) params(2) = rcut
+    if (present(exponent)) params(3) = exponent
+
+    end subroutine
+
+!******************************************************************************
+
+pure subroutine vdw_bb(r,params,enrg,frc)
+    !! Evaluates the potential and its derivative for bottlebrush interaction.
+    !! See [[vdw_bb_set]].
+    real(rp), intent(in) :: r
+    real(rp), dimension(:), intent(in) :: params
+    real(rp), intent(out) :: enrg
+    real(rp), intent(out) :: frc
+    real(rp) :: eps, rcut, exponent
+
+    enrg = 0.0_rp; frc = 0.0_rp
+
+    eps = params(1); rcut = params(2); exponent = params(3)
+
+    if (r < rcut) then
+        enrg = eps*((r/rcut)**exponent-1)
+        frc = eps*exponent*(r**(exponent-1))/(rcut**exponent)
     end if
 
     end subroutine
