@@ -1,6 +1,7 @@
 module m_bd_solver
     !! Routines implementing Brownian Dynamics (BD) solver.
 
+use omp_lib
 use iso_c_binding, only: c_loc, c_ptr, c_f_pointer
 
 use blas95
@@ -36,7 +37,18 @@ subroutine bds_init(ierr)
 
     integer, intent(out) :: ierr
     logical :: lexists
+    integer :: proc_num, thread_num, thread_id
+    integer :: i
 
+    proc_num = omp_get_num_procs ( )
+    thread_num = omp_get_max_threads ( )
+    ! !$omp parallel &
+    ! !$omp private (thread_id)
+    !     thread_id = omp_get_thread_num()
+    !     write ( *, '(a,i8)' ) 'Hello from process: ', thread_id
+    ! !$omp end parallel
+    call logger%info('bds_run', 'The number of processors available is: '//str_from_num(proc_num))
+    call logger%info('bds_run', 'The number of threads being used is: '//str_from_num(thread_num))
     ierr = 0
 
     !Allocate memory for BD integration
@@ -196,7 +208,7 @@ subroutine bds_run()
     end do
     !Dump the final configuration
     call write_dump(fn_revive//trim(adjustl(job_tag)))
-
+    call write_config(fn_final//trim(adjustl(job_tag)), 'final_config')
     end subroutine
 
 !******************************************************************************
