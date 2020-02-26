@@ -15,6 +15,7 @@ module m_ia_vdw
 !!     from T.L. Kuhl, D.E. Leckband, D.D. Lasic, J.N. Israelachvili (1994)
 !! * Style 9. bottlebrush. See [[vdw_bb_set]]. 
 !!     modified from J. Chem. Phys. 89, 5323 (1988) etc.
+!! * Style 10. r2exp. See [[vdw_morse_set]].
 
 use m_precision
 use m_constants_math
@@ -60,6 +61,8 @@ subroutine ia_vdw_setup()
             call vdw_brush_set(vdw_params(:,i))
         case(9)
             call vdw_bb_set(vdw_params(:,i))
+        case(10)
+            call vdw_r2exp_set(vdw_params(:,i))
         case default
             continue
         end select
@@ -111,6 +114,8 @@ subroutine ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
         call vdw_brush(rij_mag, vdw_params(:,typ), enrg, frc)
     case(9)
         call vdw_bb(rij_mag, vdw_params(:,typ), enrg, frc)
+    case(10)
+        call vdw_r2exp(rij_mag, vdw_params(:,typ), enrg, frc)
     case default
         continue
     end select
@@ -795,6 +800,62 @@ pure subroutine vdw_bb(r,params,enrg,frc)
     if (r < rcut) then
         enrg = eps*((r/rcut)**exponent-1)
         frc = eps*exponent*(r**(exponent-1))/(rcut**exponent)
+    end if
+
+    end subroutine
+
+!******************************************************************************
+
+subroutine vdw_r2exp_set(params,eps,rcut,Rm)
+    !! Setter for r2exp interaction.
+    !!
+    !! The potential `U` is given by:
+    !!```
+    !!   U = -eps*(rconbine**2)*(np.exp((rcut-r)/rconbine)/(rcut**2)-(1/r)**2)
+    !!   rconbine = (rcut-rm)/(2*np.log(rcut/rm))
+    !!```
+    !!
+    !! User-set parameters:
+    !!
+    !! * params(1) = `eps`
+    !! * params(2) = `rcut`
+    !! * params(3) = `Rm`
+    !! * params(4) = `rcombine`
+
+    real(rp), dimension(:), intent(in out) :: params
+    real(rp), intent(in), optional :: eps
+    real(rp), intent(in), optional :: Rm
+    real(rp), intent(in), optional :: rcut
+    real(rp) :: rcombine
+    
+    if (present(eps)) params(1) = eps
+    if (present(rcut)) params(2) = rcut
+    if (present(Rm)) params(3) = Rm
+    rcombine = (params(2)-params(3))/(2*log(params(2)/params(3)))
+    params(4) = rcombine
+
+    end subroutine
+
+!******************************************************************************
+
+pure subroutine vdw_r2exp(r,params,enrg,frc)
+    !! Evaluates the potential and its derivative for morse interaction.
+    !! See [[vdw_r2exp_set]].
+    real(rp), intent(in) :: r
+    real(rp), dimension(:), intent(in) :: params
+    real(rp), intent(out) :: enrg
+    real(rp), intent(out) :: frc
+    real(rp) :: eps, Rm, rcut, rcombine
+
+    enrg = 0.0_rp; frc = 0.0_rp
+    
+    eps = params(1); rcut = params(2); Rm = params(3)
+    rcombine = params(4)
+
+    if (r < rcut) then
+        enrg = -eps*(rcombine**2)*(exp((rcut-r)/rcombine)/(rcut**2)-(1/r)**2)
+        frc = -eps*(rcombine**2)*(-1/rcombine*exp((rcut-r)/rcombine) &
+                /(rcut**2)+2*(1/r)**3)
     end if
 
     end subroutine
