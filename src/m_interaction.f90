@@ -1,6 +1,7 @@
 module m_interaction
 !! Driver routines for force & energy calculation.
 
+use omp_lib
 use m_precision
 use m_constants_math
 use m_globals
@@ -210,17 +211,19 @@ subroutine ia_add_vdw_forces(ierr)
             forces(:,j) = forces(:,j) - fi
 
             !Update stress
-            stress(1,1) = stress(1,1) - rij(1)*fi(1)
-            stress(2,1) = stress(2,1) - rij(2)*fi(1)
-            stress(3,1) = stress(3,1) - rij(3)*fi(1)
+            if (update_stress /= 0) then
+                stress(1,1) = stress(1,1) - rij(1)*fi(1)
+                stress(2,1) = stress(2,1) - rij(2)*fi(1)
+                stress(3,1) = stress(3,1) - rij(3)*fi(1)
 
-            stress(1,2) = stress(1,2) - rij(1)*fi(2)
-            stress(2,2) = stress(2,2) - rij(2)*fi(2)
-            stress(3,2) = stress(3,2) - rij(3)*fi(2)
+                stress(1,2) = stress(1,2) - rij(1)*fi(2)
+                stress(2,2) = stress(2,2) - rij(2)*fi(2)
+                stress(3,2) = stress(3,2) - rij(3)*fi(2)
 
-            stress(1,3) = stress(1,3) - rij(1)*fi(3)
-            stress(2,3) = stress(2,3) - rij(2)*fi(3)
-            stress(3,3) = stress(3,3) - rij(3)*fi(3)
+                stress(1,3) = stress(1,3) - rij(1)*fi(3)
+                stress(2,3) = stress(2,3) - rij(2)*fi(3)
+                stress(3,3) = stress(3,3) - rij(3)*fi(3)
+            end if
         end do
     end do
 
@@ -281,17 +284,19 @@ subroutine ia_add_vdw_forces_vl(ierr)
             forces(:,j) = forces(:,j) - fi
 
             !Update stress
-            stress(1,1) = stress(1,1) - rij(1)*fi(1)
-            stress(2,1) = stress(2,1) - rij(2)*fi(1)
-            stress(3,1) = stress(3,1) - rij(3)*fi(1)
+            if (update_stress /= 0) then
+                stress(1,1) = stress(1,1) - rij(1)*fi(1)
+                stress(2,1) = stress(2,1) - rij(2)*fi(1)
+                stress(3,1) = stress(3,1) - rij(3)*fi(1)
 
-            stress(1,2) = stress(1,2) - rij(1)*fi(2)
-            stress(2,2) = stress(2,2) - rij(2)*fi(2)
-            stress(3,2) = stress(3,2) - rij(3)*fi(2)
+                stress(1,2) = stress(1,2) - rij(1)*fi(2)
+                stress(2,2) = stress(2,2) - rij(2)*fi(2)
+                stress(3,2) = stress(3,2) - rij(3)*fi(2)
 
-            stress(1,3) = stress(1,3) - rij(1)*fi(3)
-            stress(2,3) = stress(2,3) - rij(2)*fi(3)
-            stress(3,3) = stress(3,3) - rij(3)*fi(3)
+                stress(1,3) = stress(1,3) - rij(1)*fi(3)
+                stress(2,3) = stress(2,3) - rij(2)*fi(3)
+                stress(3,3) = stress(3,3) - rij(3)*fi(3)
+            end if
         end do
     end do
 
@@ -309,17 +314,32 @@ subroutine ia_add_vdw_forces_cl(ierr)
     integer, dimension(:), pointer :: ainc => null()
     integer, dimension(:), pointer :: nbr_cells => null()
     real(rp), dimension(3) :: ri, rj, rij, fi
+    real(rp), dimension(3,num_atoms) :: forces_temp
+    real(rp) :: enrg_temp
     real(rp) :: rij_mag
     real(rp) :: qi, qj
     real(rp) :: enrg, frc
     integer :: num_cells
     integer :: icell, jcell, iatm, jatm
     integer :: i, j, k, at_i, at_j, typ
+    logical :: is_parallel = .false.
 
     ierr = 0
 
     call cl_build(coordinates(:,1:num_atoms))
     num_cells = cl_get_num_cells()
+
+    !$omp parallel &
+    !$omp default(shared) &
+    !$omp private(icell,aic,nbr_cells,i,iatm,ri,qi,at_i,j,jatm,rj,qj,at_j,typ,rij,rij_mag,frc,fi,forces_temp,enrg_temp,jcell,ainc) 
+
+    forces_temp = 0.0_rp
+    enrg_temp = 0.0_rp
+    ! is_parallel = omp_in_parallel()
+    ! if (nts <= 10 .and. is_parallel) then
+    !     write(*,*) '1'
+    ! end if
+    !$omp do schedule(static)
 
     do icell = 0, (num_cells-1)
         call cl_get_contents(icell, aic)
@@ -349,27 +369,37 @@ subroutine ia_add_vdw_forces_cl(ierr)
                 if (imcon /= 0) call simbox%get_image(rij)
                 rij_mag = norm2(rij)
                 call ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
-                if (ierr /= 0) return
+                ! if (ierr /= 0) return
 
-                energy_vdw = energy_vdw + enrg
+                enrg_temp = enrg_temp + enrg
                 fi = frc*rij/rij_mag
 
                 !Update forces
-                forces(:,iatm) = forces(:,iatm) + fi
-                forces(:,jatm) = forces(:,jatm) - fi
+                forces_temp(:,iatm) = forces_temp(:,iatm) + fi
+                forces_temp(:,jatm) = forces_temp(:,jatm) - fi
+                ! !$omp atomic update
+                !     forces(1,i) = forces(1,i) + fi(1)
+                !     forces(2,i) = forces(2,i) + fi(2)
+                !     forces(3,i) = forces(3,i) + fi(3)
+                ! !$omp atomic update 
+                !     forces(1,j) = forces(1,j) - fi(1)
+                !     forces(2,j) = forces(2,j) - fi(2)
+                !     forces(3,j) = forces(3,j) - fi(3)
 
                 !Update stress
-                stress(1,1) = stress(1,1) - rij(1)*fi(1)
-                stress(2,1) = stress(2,1) - rij(2)*fi(1)
-                stress(3,1) = stress(3,1) - rij(3)*fi(1)
+                if (update_stress /= 0) then
+                    stress(1,1) = stress(1,1) - rij(1)*fi(1)
+                    stress(2,1) = stress(2,1) - rij(2)*fi(1)
+                    stress(3,1) = stress(3,1) - rij(3)*fi(1)
 
-                stress(1,2) = stress(1,2) - rij(1)*fi(2)
-                stress(2,2) = stress(2,2) - rij(2)*fi(2)
-                stress(3,2) = stress(3,2) - rij(3)*fi(2)
+                    stress(1,2) = stress(1,2) - rij(1)*fi(2)
+                    stress(2,2) = stress(2,2) - rij(2)*fi(2)
+                    stress(3,2) = stress(3,2) - rij(3)*fi(2)
 
-                stress(1,3) = stress(1,3) - rij(1)*fi(3)
-                stress(2,3) = stress(2,3) - rij(2)*fi(3)
-                stress(3,3) = stress(3,3) - rij(3)*fi(3)
+                    stress(1,3) = stress(1,3) - rij(1)*fi(3)
+                    stress(2,3) = stress(2,3) - rij(2)*fi(3)
+                    stress(3,3) = stress(3,3) - rij(3)*fi(3)
+                end if
             end do
         end do
 
@@ -402,27 +432,29 @@ subroutine ia_add_vdw_forces_cl(ierr)
                     if (imcon /= 0) call simbox%get_image(rij)
                     rij_mag = norm2(rij)
                     call ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
-                    if (ierr /= 0) return
+                    ! if (ierr /= 0) return
 
-                    energy_vdw = energy_vdw + enrg
+                    enrg_temp = enrg_temp + enrg
                     fi = frc*rij/rij_mag
 
                     !Update forces
-                    forces(:,iatm) = forces(:,iatm) + fi
-                    forces(:,jatm) = forces(:,jatm) - fi
-                    
+                    forces_temp(:,iatm) = forces_temp(:,iatm) + fi
+                    forces_temp(:,jatm) = forces_temp(:,jatm) - fi
+
                     !Update stress
-                    stress(1,1) = stress(1,1) - rij(1)*fi(1)
-                    stress(2,1) = stress(2,1) - rij(2)*fi(1)
-                    stress(3,1) = stress(3,1) - rij(3)*fi(1)
+                    if (update_stress /= 0) then
+                        stress(1,1) = stress(1,1) - rij(1)*fi(1)
+                        stress(2,1) = stress(2,1) - rij(2)*fi(1)
+                        stress(3,1) = stress(3,1) - rij(3)*fi(1)
 
-                    stress(1,2) = stress(1,2) - rij(1)*fi(2)
-                    stress(2,2) = stress(2,2) - rij(2)*fi(2)
-                    stress(3,2) = stress(3,2) - rij(3)*fi(2)
+                        stress(1,2) = stress(1,2) - rij(1)*fi(2)
+                        stress(2,2) = stress(2,2) - rij(2)*fi(2)
+                        stress(3,2) = stress(3,2) - rij(3)*fi(2)
 
-                    stress(1,3) = stress(1,3) - rij(1)*fi(3)
-                    stress(2,3) = stress(2,3) - rij(2)*fi(3)
-                    stress(3,3) = stress(3,3) - rij(3)*fi(3)
+                        stress(1,3) = stress(1,3) - rij(1)*fi(3)
+                        stress(2,3) = stress(2,3) - rij(2)*fi(3)
+                        stress(3,3) = stress(3,3) - rij(3)*fi(3)
+                    end if
                 end do
 
             end do
@@ -430,6 +462,16 @@ subroutine ia_add_vdw_forces_cl(ierr)
         end do
 
     end do
+    !$omp end do
+
+    !$omp critical
+    forces = forces + forces_temp
+
+    energy_vdw = energy_vdw + enrg_temp
+
+    !$omp end critical
+
+    !$omp end parallel
 
     end subroutine
 
@@ -448,6 +490,11 @@ subroutine ia_add_bond_forces(ierr)
 
     ierr = 0
 
+    ! abandoned paralization: not acceleration
+    ! $omp parallel &
+    ! $omp default(private) &
+    ! $omp shared (forces,stress,ierr,imcon,energy_bond,bndlen_min,bndlen_max) 
+    ! $omp do
     do ibnd = 1, num_bonds
         typ = bonds(1,ibnd)
         i = bonds(2,ibnd)
@@ -459,30 +506,40 @@ subroutine ia_add_bond_forces(ierr)
         rij_mag = norm2(rij)
 
         bndlen = bndlen + rij_mag
+        ! $omp atomic update
         bndlen_min = min(bndlen_min, rij_mag)
         bndlen_max = max(bndlen_max, rij_mag)
 
         call ia_get_bond_force(rij_mag, typ, enrg, frc, ierr)
         if (ierr /= 0) return
+        ! this should be commented out because Openmp does not
+        ! support jumping in/out of parallel regions
+        fi = frc*rij/rij_mag 
         energy_bond = energy_bond + enrg
-        fi = frc*rij/rij_mag
+        ! $omp atomic update
+
         forces(:,i) = forces(:,i) + fi
         forces(:,j) = forces(:,j) - fi
 
         !Update stress
-        stress(1,1) = stress(1,1) - rij(1)*fi(1)
-        stress(2,1) = stress(2,1) - rij(2)*fi(1)
-        stress(3,1) = stress(3,1) - rij(3)*fi(1)
+        ! $omp atomic update             
+        if (update_stress /= 0) then
+            stress(1,1) = stress(1,1) - rij(1)*fi(1)
+            stress(2,1) = stress(2,1) - rij(2)*fi(1)
+            stress(3,1) = stress(3,1) - rij(3)*fi(1)
 
-        stress(1,2) = stress(1,2) - rij(1)*fi(2)
-        stress(2,2) = stress(2,2) - rij(2)*fi(2)
-        stress(3,2) = stress(3,2) - rij(3)*fi(2)
+            stress(1,2) = stress(1,2) - rij(1)*fi(2)
+            stress(2,2) = stress(2,2) - rij(2)*fi(2)
+            stress(3,2) = stress(3,2) - rij(3)*fi(2)
 
-        stress(1,3) = stress(1,3) - rij(1)*fi(3)
-        stress(2,3) = stress(2,3) - rij(2)*fi(3)
-        stress(3,3) = stress(3,3) - rij(3)*fi(3)
+            stress(1,3) = stress(1,3) - rij(1)*fi(3)
+            stress(2,3) = stress(2,3) - rij(2)*fi(3)
+            stress(3,3) = stress(3,3) - rij(3)*fi(3)
+        end if
     end do
 
+    ! $omp end do
+    ! $omp end parallel
     bndlen = bndlen/num_bonds
 
     end subroutine
@@ -522,17 +579,19 @@ subroutine ia_add_angle_forces()
         forces(:,ip1) = forces(:,ip1) + fip1
 
         !Update stress
-        stress(1,1) = stress(1,1) - q1(1)*fim1(1) + q2(1)*fip1(1)
-        stress(2,1) = stress(2,1) - q1(2)*fim1(1) + q2(2)*fip1(1)
-        stress(3,1) = stress(3,1) - q1(3)*fim1(1) + q2(3)*fip1(1)
+        if (update_stress /= 0) then
+            stress(1,1) = stress(1,1) - q1(1)*fim1(1) + q2(1)*fip1(1)
+            stress(2,1) = stress(2,1) - q1(2)*fim1(1) + q2(2)*fip1(1)
+            stress(3,1) = stress(3,1) - q1(3)*fim1(1) + q2(3)*fip1(1)
 
-        stress(1,2) = stress(1,2) - q1(1)*fim1(2) + q2(1)*fip1(2)
-        stress(2,2) = stress(2,2) - q1(2)*fim1(2) + q2(2)*fip1(2)
-        stress(3,2) = stress(3,2) - q1(3)*fim1(2) + q2(3)*fip1(2)
+            stress(1,2) = stress(1,2) - q1(1)*fim1(2) + q2(1)*fip1(2)
+            stress(2,2) = stress(2,2) - q1(2)*fim1(2) + q2(2)*fip1(2)
+            stress(3,2) = stress(3,2) - q1(3)*fim1(2) + q2(3)*fip1(2)
 
-        stress(1,3) = stress(1,3) - q1(1)*fim1(3) + q2(1)*fip1(3)
-        stress(2,3) = stress(2,3) - q1(2)*fim1(3) + q2(2)*fip1(3)
-        stress(3,3) = stress(3,3) - q1(3)*fim1(3) + q2(3)*fip1(3)
+            stress(1,3) = stress(1,3) - q1(1)*fim1(3) + q2(1)*fip1(3)
+            stress(2,3) = stress(2,3) - q1(2)*fim1(3) + q2(2)*fip1(3)
+            stress(3,3) = stress(3,3) - q1(3)*fim1(3) + q2(3)*fip1(3)
+        end if
     end do
 
     end subroutine
@@ -611,17 +670,19 @@ subroutine ia_add_tether_forces(ierr)
 
         !Update stress
         !Sign flipped since fj, not fi is involved
-        stress(1,1) = stress(1,1) + q(1)*fj(1)
-        stress(2,1) = stress(2,1) + q(2)*fj(1)
-        stress(3,1) = stress(3,1) + q(3)*fj(1)
+        if (update_stress /= 0) then
+            stress(1,1) = stress(1,1) + q(1)*fj(1)
+            stress(2,1) = stress(2,1) + q(2)*fj(1)
+            stress(3,1) = stress(3,1) + q(3)*fj(1)
 
-        stress(1,2) = stress(1,2) + q(1)*fj(2)
-        stress(2,2) = stress(2,2) + q(2)*fj(2)
-        stress(3,2) = stress(3,2) + q(3)*fj(2)
+            stress(1,2) = stress(1,2) + q(1)*fj(2)
+            stress(2,2) = stress(2,2) + q(2)*fj(2)
+            stress(3,2) = stress(3,2) + q(3)*fj(2)
 
-        stress(1,3) = stress(1,3) + q(1)*fj(3)
-        stress(2,3) = stress(2,3) + q(2)*fj(3)
-        stress(3,3) = stress(3,3) + q(3)*fj(3)
+            stress(1,3) = stress(1,3) + q(1)*fj(3)
+            stress(2,3) = stress(2,3) + q(2)*fj(3)
+            stress(3,3) = stress(3,3) + q(3)*fj(3)
+        end if
     end do
 
     end subroutine
