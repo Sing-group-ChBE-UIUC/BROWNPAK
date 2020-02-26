@@ -40,6 +40,7 @@ subroutine read_control(fn)
         if (key=='lhdia') read(val,*) lhdia
         if (key=='mob_fctr') read(val,*) mob_fctr
         if (key=='lelectrostatics') read(val,*) lelectrostatics
+        if (key=='update_stress') read(val,*) update_stress
 
         if (key=='tim_stp')  tim_stp    = str_to_d(val)
         if (key=='nts_md')   nts_md     = int(str_to_d(val))
@@ -51,6 +52,7 @@ subroutine read_control(fn)
         if (key=='nts_sim')  nts_sim  = int(str_to_d(val), ip_long)
 
         if (key == 'fn_cfg')    fn_cfg    = val
+        if (key == 'fn_final')  fn_final  = val
         if (key == 'fn_revive') fn_revive = val
         if (key == 'fn_stats')  fn_stats  = val
         if (key == 'fn_traj')   fn_traj   = val
