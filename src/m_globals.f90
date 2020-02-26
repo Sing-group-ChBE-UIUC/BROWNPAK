@@ -214,6 +214,8 @@ logical :: use_cell_list = .false.
 !Variables for I/O
 character(len=:), allocatable :: fn_cfg
     !! Name of the file containing the initial configuration
+character(len=:), allocatable :: fn_final
+    !! Name of the file containing the final configuratio
 character(len=:), allocatable :: fn_revive
     !! Name of the revive file
 character(len=:), allocatable :: fn_traj
@@ -279,6 +281,10 @@ integer :: excluded_atoms = 0
     !! Control for excluded atoms in vdw calculation.
     !! 0: No exclusion, 1: exclude 1-ring bonded neighbors,
     !! 2: exclude 2-ring bonded neighbors, 3: exclude 3-ring bonded neighbors.
+integer :: update_stress = 0
+    !! Control for updating stress in forces calculation.
+    !! 0: No updating stress
+    !! 1: Updating stress
 logical :: lvdw = .true.
     !! Whether to calculate VDW interactions
 character(len=4) :: mob_fctr
