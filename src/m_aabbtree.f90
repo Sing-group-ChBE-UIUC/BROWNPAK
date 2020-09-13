@@ -1,4 +1,8 @@
 module m_aabbtree
+!! Implements an axis-aligned bounding box (AABB) tree.
+!! This code is adapted from the C++ implementation by 
+!! [Lester Hedges](http://lesterhedges.net). The original
+!! C++ implementation can be found [here](https://github.com/lohedges/aabbcc#readme).
 
 use m_precision
 use m_strings

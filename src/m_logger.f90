@@ -100,7 +100,12 @@ subroutine logger_log_msg(this, msg)
 !********************************************************************************
 
 subroutine timestring ( string )
-    !! TIMESTRING writes the current YMDHMS date into a string.
+    !! summary: TIMESTRING writes the current YMDHMS date into a string.
+    !! author: John Burkardt
+    !!
+    !! This routine is extracted from the
+    !! [TIMESTAMP](https://people.sc.fsu.edu/~jburkardt/f_src/timestamp/timestamp.html)
+    !! package.
     !
     !  Example:
     !
