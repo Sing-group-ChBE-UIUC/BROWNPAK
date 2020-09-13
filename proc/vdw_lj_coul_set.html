@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.2</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.6% of total for procedures.">33 statements</a>
+    title=" 0.3% of total for procedures.">33 statements</a>
      </li> 
      
      
@@ -211,15 +211,15 @@ private subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
     
     <p>Setter for 12-6 LJ with Coulombic interaction.</p>
 <p>The potential <code>U</code> is given by:</p>
-<div class="codehilite"><pre><span></span> <span class="nv">V</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="nv">eps</span><span class="o">*</span>[<span class="ss">(</span><span class="nv">r</span><span class="o">/</span><span class="nv">sigma</span><span class="ss">)</span><span class="o">^</span><span class="mi">12</span> <span class="o">-</span> <span class="ss">(</span><span class="nv">r</span><span class="o">/</span><span class="nv">sigma</span><span class="ss">)</span><span class="o">^</span><span class="mi">6</span>]
- <span class="nv">W</span> <span class="o">=</span> <span class="nv">C</span><span class="o">*</span><span class="nv">qi</span><span class="o">*</span><span class="nv">qj</span><span class="o">/</span><span class="nv">r</span>
- <span class="k">if</span> <span class="nv">rcut_coul</span> <span class="o">&gt;</span> <span class="mi">0</span>:
-     <span class="nv">U</span> <span class="o">=</span> <span class="nv">V</span> <span class="o">-</span> <span class="nv">V</span><span class="ss">(</span><span class="nv">rcut</span><span class="ss">)</span> <span class="o">+</span> <span class="nv">W</span> <span class="o">-</span> <span class="nv">W</span><span class="ss">(</span><span class="nv">rcut_coul</span><span class="ss">)</span>, <span class="nv">r</span> <span class="o">&lt;</span> <span class="nv">rcut</span>
-         <span class="nv">W</span> <span class="o">-</span> <span class="nv">W</span><span class="ss">(</span><span class="nv">rcut_coul</span><span class="ss">)</span>, <span class="nv">rcut</span> <span class="o">&lt;=</span> <span class="nv">r</span> <span class="o">&lt;</span> <span class="nv">rcut_coul</span>
-         <span class="mi">0</span>, <span class="nv">r</span> <span class="o">&gt;=</span> <span class="nv">rcut_coul</span>
- <span class="k">if</span> <span class="nv">rcut_coul</span> <span class="o">&lt;=</span> <span class="mi">0</span>:
-     <span class="nv">U</span> <span class="o">=</span> <span class="nv">V</span> <span class="o">-</span> <span class="nv">V</span><span class="ss">(</span><span class="nv">rcut</span><span class="ss">)</span> <span class="o">+</span> <span class="nv">W</span>, <span class="nv">r</span> <span class="o">&lt;</span> <span class="nv">rcut</span>
-         <span class="nv">W</span>, <span class="nv">r</span> <span class="o">&gt;=</span> <span class="nv">rcut</span>
+<div class="codehilite"><pre><span></span><span class="err"> V = 4*eps*[(r/sigma)^12 - (r/sigma)^6]</span>
+<span class="err"> W = C*qi*qj/r</span>
+<span class="err"> if rcut_coul &gt; 0:</span>
+<span class="err">     U = V - V(rcut) + W - W(rcut_coul), r &lt; rcut</span>
+<span class="err">         W - W(rcut_coul), rcut &lt;= r &lt; rcut_coul</span>
+<span class="err">         0, r &gt;= rcut_coul</span>
+<span class="err"> if rcut_coul &lt;= 0:</span>
+<span class="err">     U = V - V(rcut) + W, r &lt; rcut</span>
+<span class="err">         W, r &gt;= rcut</span>
 </pre></div>
 
 
@@ -262,7 +262,7 @@ private subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
   
 <tr>
   
-  <td><span class="anchor" id="variable-params%7E22"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-params%7E10"></span>real(kind=rp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -277,7 +277,7 @@ private subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
   
 <tr>
   
-  <td><span class="anchor" id="variable-eps%7E5"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-eps%7E3"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -292,7 +292,7 @@ private subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
   
 <tr>
   
-  <td><span class="anchor" id="variable-sigma%7E4"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-sigma%7E3"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -415,7 +415,7 @@ private subroutine vdw_lj_coul_set(params, eps, sigma, rcut, rcut_coul, C)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

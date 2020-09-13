@@ -19,6 +19,8 @@ type ivector_t
         procedure :: set_val => ivector_set_val
         procedure :: get_data => ivector_get_data
         procedure :: append => ivector_append
+        procedure :: pop => ivector_pop
+        procedure :: resize => ivector_resize
         procedure :: shrink_to_fit => ivector_shrink_to_fit
         procedure :: sort => ivector_sort
         procedure :: unique => ivector_unique
@@ -38,12 +40,23 @@ type dvector_t
         procedure :: set_val => dvector_set_val
         procedure :: get_data => dvector_get_data
         procedure :: append => dvector_append
+        procedure :: pop => dvector_pop
+        procedure :: resize => dvector_resize
         procedure :: shrink_to_fit => dvector_shrink_to_fit
         procedure :: sort => dvector_sort
         procedure :: unique => dvector_unique
         procedure :: print => dvector_print
 end type dvector_t
 
+interface ivector_init
+    module procedure ivector_init
+    module procedure ivector_from_array
+end interface
+
+interface dvector_init
+    module procedure dvector_init
+    module procedure dvector_from_array
+end interface
 
 interface assignment(=)
     module procedure ivector_assign
@@ -450,6 +463,34 @@ subroutine dvector_append(this, val)
 
 !******************************************************************************
 
+!> Removes the last element and returns it. Calling this method on an empty list
+! will generate an error.
+function ivector_pop(this) result(val)
+
+    class(ivector_t), intent(in out) :: this
+    integer :: val
+
+    val = this%buffer(this%len)
+    this%len = this%len - 1
+
+    end function
+
+!******************************************************************************
+
+!> Removes the last element and returns it. Calling this method on an empty list
+! will generate an error.
+function dvector_pop(this) result(val)
+
+    class(dvector_t), intent(in out) :: this
+    real(rp) :: val
+
+    val = this%buffer(this%len)
+    this%len = this%len - 1
+
+    end function
+
+!******************************************************************************
+
 !> Returns a pointer to the underlying data of an *ivector*
 ! No bounds checking is performed
 subroutine ivector_get_data(this, res, ibeg, iend)
@@ -503,6 +544,71 @@ subroutine dvector_get_data(this, res, ibeg, iend)
     end if
 
     res => this%buffer(ibeg_:iend_)
+
+    end subroutine
+
+!******************************************************************************
+
+!> Resizes a vector to a given size. Existing data is truncated if desired size
+!> is smaller than current size. Otherwise, the empty spaces are filled with
+!> zero.
+subroutine ivector_resize(this, new_size, ierr)
+
+    class(ivector_t), intent(in out) :: this
+    integer, intent(in) :: new_size
+    integer, intent(out), optional :: ierr
+    integer, dimension(:), allocatable :: temp
+    integer :: istat
+
+    if (this%len_max >= new_size) then
+        this%buffer(this%len+1:new_size) = 0
+        this%len = new_size
+    else
+       allocate(temp(new_size), stat=istat) 
+       if (istat /= 0) then
+            write(*,*) 'error: allocation failure for `temp` from `this%buffer`.'
+            if (present(ierr)) ierr = 1
+            return
+        end if
+        temp = 0; temp(1:this%len_max) = this%buffer
+        call move_alloc(temp, this%buffer)
+        this%len_max = new_size; this%len = new_size
+    end if
+
+    if (present(ierr)) ierr = 0
+
+    end subroutine
+
+!******************************************************************************
+
+!> Resizes a vector to a given size. Existing data is truncated if desired size
+!> is smaller than current size. Otherwise, the empty spaces are filled with
+!> zero.
+subroutine dvector_resize(this, new_size, ierr)
+
+    class(dvector_t), intent(in out) :: this
+    integer, intent(in) :: new_size
+    integer, intent(out), optional :: ierr
+    real(rp), dimension(:), allocatable :: temp
+    integer :: istat
+
+    ierr = 0
+    if (this%len_max > new_size) then
+        this%buffer(this%len+1:new_size) = 0.0_rp
+        this%len = new_size
+    else
+       allocate(temp(new_size), stat=istat) 
+       if (istat /= 0) then
+            write(*,*) 'error: allocation failure for `temp` from `this%buffer`.'
+            if (present(ierr)) ierr = 1
+            return
+        end if
+        temp = 0.0_rp; temp(1:this%len_max) = this%buffer
+        call move_alloc(temp, this%buffer)
+        this%len_max = new_size; this%len = new_size
+    end if
+
+    if (present(ierr)) ierr = 0
 
     end subroutine
 

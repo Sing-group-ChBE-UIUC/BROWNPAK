@@ -14,7 +14,6 @@ use m_globals
 use m_interaction, only: ia_calc_forces
 use m_stats_io
 use m_config_io
-use m_logger, only: logger => master_logger
 
 implicit none
 
@@ -48,7 +47,7 @@ subroutine rlx_run()
     end if
 
     !Log & dump starting configuration
-    call logger%info('rlx_run', ' nts: '//str_from_num(nts))
+    call logger%log_msg('<rlx_run> nts = '//str_from_num(nts))
     call write_dump(fn_revive//trim(adjustl(job_tag)))
 
     !Relaxation run
@@ -72,7 +71,7 @@ subroutine rlx_run()
 
         !Logging
         if (mod(nts,nts_log) == 0) then
-            call logger%info('rlx_run', ' nts: '//str_from_num(nts))
+            call logger%log_msg('<rlx_run> nts: '//str_from_num(nts))
         end if
 
         !Dump revive file
@@ -93,9 +92,9 @@ subroutine rlx_run()
 
     !Log end of run
     if (ierr /= 0) then
-        call logger%info('finish_rlx_run', 'Relaxation completed with violations')
+        call logger%log_msg('<rlx_run> Relaxation completed with violations')
     else
-        call logger%info('finish_rlx_run', 'Relaxation completed')
+        call logger%log_msg('<rlx_run> Relaxation completed')
     end if
 
     !Dump the final configuration

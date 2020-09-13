@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.2</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.3% of total for procedures.">14 statements</a>
+    title=" 0.1% of total for procedures.">14 statements</a>
      </li> 
      
      
@@ -212,9 +212,9 @@ private subroutine vdw_gaussian_set(params, A, B, rcut)
     <p>Setter for gaussian interaction. The potential is truncated and
  force-shifted.</p>
 <p>The potential <code>U</code> is given by:</p>
-<div class="codehilite"><pre><span></span>   <span class="n">V</span> <span class="o">=</span> <span class="n">A</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">B</span><span class="o">*</span><span class="n">r</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span>  
-   <span class="n">U</span> <span class="o">=</span> <span class="n">V</span> <span class="o">-</span> <span class="n">V</span><span class="p">(</span><span class="n">rcut</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">rcut</span><span class="p">)</span><span class="o">*</span><span class="n">dV</span><span class="o">/</span><span class="n">dr</span><span class="p">,</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">rcut</span>  
-       <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="n">rcut</span><span class="p">,</span>
+<div class="codehilite"><pre><span></span><span class="err">   V = A*exp(-B*r^2)  </span>
+<span class="err">   U = V - V(rcut) - (r - rcut)*dV/dr, r &lt; rcut  </span>
+<span class="err">       0, r &gt;= rcut,</span>
 </pre></div>
 
 
@@ -250,7 +250,7 @@ private subroutine vdw_gaussian_set(params, A, B, rcut)
   
 <tr>
   
-  <td><span class="anchor" id="variable-params%7E16"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-params%7E4"></span>real(kind=rp),</td>
   <td>intent(inout),</td>
   <td></td>
   
@@ -265,7 +265,7 @@ private subroutine vdw_gaussian_set(params, A, B, rcut)
   
 <tr>
   
-  <td><span class="anchor" id="variable-a"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-a%7E6"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -280,7 +280,7 @@ private subroutine vdw_gaussian_set(params, A, B, rcut)
   
 <tr>
   
-  <td><span class="anchor" id="variable-b"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-b%7E2"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -373,7 +373,7 @@ private subroutine vdw_gaussian_set(params, A, B, rcut)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

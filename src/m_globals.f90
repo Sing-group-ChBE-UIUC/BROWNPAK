@@ -5,6 +5,7 @@ module m_globals
 use m_precision
 use m_trajectory
 use m_simbox
+use m_logger
 
 implicit none
 
@@ -54,7 +55,7 @@ integer , dimension(:), allocatable:: atoms
     !! is *forces(:,i)*.
 real(rp), dimension(:), allocatable :: charge
     !! (*num_atoms*,) array.
-real(rp), dimension(:,:), allocatable :: coordinates
+real(rp), dimension(:,:), allocatable, target :: coordinates
     !!  (3, *num_atoms_tot*) array
 real(rp), dimension(:,:), allocatable :: orientation
     !!  (4, *num_atoms*) array
@@ -200,8 +201,13 @@ integer(ip_long) :: nts_eql_samp = 1
     !! Sampling interval during equilibration (in BD time steps)
 integer(ip_long) :: nts_sim = 0
     !! Total number of BD time steps in production run
+integer(ip) :: nts_mobsam = 1
+    !! Number of time steps for which the same mobility tensor is used for BD
+    !! with HI. If `nts_mobsam == 1`, mobility is updated every step.
 logical :: use_verlet_tab = .false.
     !! Use Verlet neighbor table? {T, F}
+logical :: use_aabbtree = .false.
+    !! Use AABB tree for pairwise interactions? {T, F}
 real(rp) :: rcutoff = 0.0_rp
     !! Cut off for short-ranged interaction. Also used as the radius of the
     !! skin sphere for short-ranged forces
@@ -236,8 +242,6 @@ logical :: write_seed = .false.
     !!  Whether to write the random number generator seed. If
     !!  `write_seed` == T the seed will be written to a file named
     !!  'random_seed.txt'
-logical :: write_eql_stats = .false.
-    !! During equilibration, should the statistics file be written? {T, F}
 logical :: write_traj = .false.
     !! Should the trajectory be written to file? {T, F}
 integer, dimension(4) :: traj_frmcmp = 0
@@ -251,6 +255,8 @@ logical :: traj_wmpcd = .false.
 !Miscellaneous variables
 real(rp), dimension(3,3) :: stress = 0.0_rp
     !! Stress tensor due to non-MPCD atoms
+real(rp), dimension(3,3) :: stress_accu = 0.0_rp
+    !! Stress tensor accumulator due to non-MPCD atoms
 real(rp), dimension(3,3) :: stress_slvnt = 0.0_rp
     !! Stress tensor due to MPCD atoms (solvent)
 real(rp) :: energy_kin = 0.0_rp
@@ -281,8 +287,14 @@ integer :: excluded_atoms = 0
     !! 2: exclude 2-ring bonded neighbors, 3: exclude 3-ring bonded neighbors.
 logical :: lvdw = .true.
     !! Whether to calculate VDW interactions
+character(len=4) :: bdintg
+    !! Integration method {'EM', 'SE', 'RK'}
 character(len=4) :: mob_fctr
-    !! Factorization method for mobility matrix {'CHOL', 'KRYL'}
+    !! Factorization method for mobility matrix {'CHOL', 'LANC'}
+integer :: lanc_mxitr
+    !! Maximum number of iterations for Lanczos algorithm
+real(rp) :: lanc_tol = 1.0e-3_rp
+    !! Error tolerance for Lanczos algorithm
 logical :: lhdia = .true.
     !! Whether to include hydrodynamic interactions in BD
 logical :: lelectrostatics = .false.

@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.2</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -210,7 +210,7 @@ private subroutine bond_harm_set(params, k, r0)
 
     
     <p>Setter for harmonic bond interaction.</p>
-<div class="codehilite"><pre><span></span>  <span class="n">U</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="n">r</span> <span class="o">-</span> <span class="n">r0</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+<div class="codehilite"><pre><span></span><span class="err">  U = (1/2)*k*(r - r0)^2</span>
 </pre></div>
 
 
@@ -239,11 +239,7 @@ private subroutine bond_harm_set(params, k, r0)
   
 <tr>
   
-<<<<<<< HEAD
   <td><span class="anchor" id="variable-params%7E18"></span>real(kind=rp),</td>
-=======
-  <td><span class="anchor" id="variable-params%7E2"></span>real(kind=rp),</td>
->>>>>>> 253afbd038f4d310844c8c0a526bd59c877c05ea
   <td>intent(inout),</td>
   <td></td>
   
@@ -258,7 +254,7 @@ private subroutine bond_harm_set(params, k, r0)
   
 <tr>
   
-  <td><span class="anchor" id="variable-k%7E2"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-k%7E3"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -273,7 +269,7 @@ private subroutine bond_harm_set(params, k, r0)
   
 <tr>
   
-  <td><span class="anchor" id="variable-r0"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-r0%7E3"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -351,7 +347,7 @@ private subroutine bond_harm_set(params, k, r0)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

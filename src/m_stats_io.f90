@@ -56,56 +56,26 @@ subroutine stats_init()
 
     if (lrevive) then
         !Restarting simulation
-        if (leql) then
-            !Equilibration
-            if (write_eql_stats) then
-                !Check if file exists
-                inquire(file=fn_stats//'.eq'//trim(adjustl(job_tag)), exist=lexists)
-                if (lexists) then
-                    !Open existing file for appending equilibration statistics
-                    open(newunit=fu_stats, file=fn_stats//'.eq'//trim(adjustl(job_tag)), &
-                        action='write', position='append', status='old')
-                else
-                    !Open new file for writing equilibration statistics
-                    open(newunit=fu_stats, file=fn_stats//'.eq'//trim(adjustl(job_tag)), &
-                        action='write', status='new')
-                    !Write header
-                    call stats_write_hdr()
-                end if
-            end if
-        else
-            !Production (or relaxation)
-            !Check if file exists
-            inquire(file=fn_stats//trim(adjustl(job_tag)), exist=lexists)
-            if (lexists) then
-                !Open existing file for appending statistics
-                open(newunit=fu_stats, file=fn_stats//trim(adjustl(job_tag)), &
-                    action='write', position='append', status='old')
-            else
-                !Open new file for writing statistics
-                open(newunit=fu_stats, file=fn_stats//trim(adjustl(job_tag)), &
-                    action='write', status='new')
-                !Write header
-                call stats_write_hdr()
-            end if
-        end if
-    else
-        !New simulation
-        if (leql) then
-            !Open file for writing equilibration statistics
-            if (write_eql_stats) then
-                open(newunit=fu_stats, file=fn_stats//'.eq'//trim(adjustl(job_tag)), &
-                    action='write', status='replace')
-                !Write header
-                call stats_write_hdr()
-            end if
-        else
-            !Open file for writing production (or relaxation) statistics
+        !Check if file exists
+        inquire(file=fn_stats//trim(adjustl(job_tag)), exist=lexists)
+        if (lexists) then
+            !Open existing file for appending statistics
             open(newunit=fu_stats, file=fn_stats//trim(adjustl(job_tag)), &
-                action='write', status='replace')
+                action='write', position='append', status='old')
+        else
+            !Open new file for writing statistics
+            open(newunit=fu_stats, file=fn_stats//trim(adjustl(job_tag)), &
+                action='write', status='new')
             !Write header
             call stats_write_hdr()
         end if
+    else
+        !New simulation
+        !Open file for writing production (or relaxation) statistics
+        open(newunit=fu_stats, file=fn_stats//trim(adjustl(job_tag)), &
+            action='write', status='replace')
+        !Write header
+        call stats_write_hdr()
     end if
 
     !Allocate space for unwrapping molecule under PBC
@@ -123,10 +93,6 @@ subroutine stats_finish()
 
     integer :: fu
     logical :: lopened
-
-    inquire(file=fn_stats//'.eq'//trim(adjustl(job_tag)), number=fu, &
-        opened=lopened)
-    if (lopened) close(fu)
 
     inquire(file=fn_stats//trim(adjustl(job_tag)), number=fu, &
         opened=lopened)
@@ -182,15 +148,13 @@ subroutine stats_write_hdr()
     end if
 
     !Stress (written only during production run)
-    if (.not. leql) then
-        if (num_atoms > 0) then
-            write(fu_stats,'(*(2x,a16))', advance='no') 'sxx', 'syx', 'szx', &
-                'sxy', 'syy', 'szy', 'sxz', 'syz', 'szz'
-        end if
-        if (sim_style == 2) then
-            write(fu_stats,'(*(2x,a16))', advance='no') 'slv_sxx', 'slv_syx', 'slv_szx', &
-                'slv_sxy', 'slv_syy', 'slv_szy', 'slv_sxz', 'slv_syz', 'slv_szz'
-        end if
+    if (num_atoms > 0) then
+        write(fu_stats,'(*(2x,a16))', advance='no') 'sxx', 'syx', 'szx', &
+            'sxy', 'syy', 'szy', 'sxz', 'syz', 'szz'
+    end if
+    if (sim_style == 2) then
+        write(fu_stats,'(*(2x,a16))', advance='no') 'slv_sxx', 'slv_syx', 'slv_szx', &
+            'slv_sxy', 'slv_syy', 'slv_szy', 'slv_sxz', 'slv_syz', 'slv_szz'
     end if
 
     !Structural properties: Size (for multiple molecules these will be
@@ -201,17 +165,15 @@ subroutine stats_write_hdr()
     end if
 
     !Further structural properties (for single molecule)
-    if (.not. leql) then
-        if ( (imcon == 0) .and. (num_bonds > 0) ) then
-            write(fu_stats,'(*(2x,a16))', advance='no') 'reevx', 'reevy', &
-                'reevz', 'asph', 'prol'
-            if (num_branches > 0) then
-                write(fu_stats,'(*(2x,a16))', advance='no') 'rgsq_bbone',  &
-                    'rgsq_sc', 'reedsq_sc', 'asph_sc', 'prol_sc'
-            end if
-            if (flow_style == 0) then
-                write(fu_stats,'(*(2x,a16))', advance='no') 'comx', 'comy', 'comz'
-            end if
+    if ( (imcon == 0) .and. (num_bonds > 0) ) then
+        write(fu_stats,'(*(2x,a16))', advance='no') 'reevx', 'reevy', &
+            'reevz', 'asph', 'prol'
+        if (num_branches > 0) then
+            write(fu_stats,'(*(2x,a16))', advance='no') 'rgsq_bbone',  &
+                'rgsq_sc', 'reedsq_sc', 'asph_sc', 'prol_sc'
+        end if
+        if (flow_style == 0) then
+            write(fu_stats,'(*(2x,a16))', advance='no') 'comx', 'comy', 'comz'
         end if
     end if
 
@@ -264,13 +226,11 @@ subroutine stats_write()
     end if
 
     !Stress (calculated only during production run)
-    if (.not. leql) then
-        if (num_atoms > 0) then
-            write(fu_stats,'(*(2x,es16.7))', advance='no') stress
-        end if
-        if (sim_style == 2) then
-            write(fu_stats,'(*(2x,es16.7))', advance='no') stress_slvnt
-        end if
+    if (num_atoms > 0) then
+        write(fu_stats,'(*(2x,es16.7))', advance='no') stress_accu
+    end if
+    if (sim_style == 2) then
+        write(fu_stats,'(*(2x,es16.7))', advance='no') stress_slvnt
     end if
 
     !Structural properties: Size (for multiple molecules these will be
@@ -286,16 +246,14 @@ subroutine stats_write()
     end if
 
     !Further structural properties (for single molecule in unbounded domain)
-    if (.not. leql) then
-        if ( (imcon == 0) .and. (num_bonds > 0) ) then
-            write(fu_stats,'(*(2x,es16.7))', advance='no') reev, asph, prol
-            if (num_branches > 0) then
-                write(fu_stats,'(*(2x,es16.7))', advance='no') rgsq_bbone,  &
-                    rgsq_sc, reedsq_sc, asph_sc, prol_sc
-            end if
-            if (flow_style == 0) then
-                write(fu_stats,'(*(2x,es16.7))', advance='no') molecule_com
-            end if
+    if ( (imcon == 0) .and. (num_bonds > 0) ) then
+        write(fu_stats,'(*(2x,es16.7))', advance='no') reev, asph, prol
+        if (num_branches > 0) then
+            write(fu_stats,'(*(2x,es16.7))', advance='no') rgsq_bbone,  &
+                rgsq_sc, reedsq_sc, asph_sc, prol_sc
+        end if
+        if (flow_style == 0) then
+            write(fu_stats,'(*(2x,es16.7))', advance='no') molecule_com
         end if
     end if
 
@@ -395,9 +353,6 @@ subroutine stats_compute_ic0()
     end do
     S = S/num_atoms
     rgsq = S(1,1) + S(2,2) + S(3,3)
-
-    !Do not compute any more stuff suring equilibration
-    if (leql) return
 
     call dsyevc3(S, gt_ev)
     call calc_shape(gt_ev(1), gt_ev(3), gt_ev(2), asph, prol) 

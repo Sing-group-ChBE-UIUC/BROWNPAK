@@ -842,9 +842,10 @@ subroutine str_append(dest, source, sep)
 
     ipos  = len_dest + 1
 
-    dest( ipos:(ipos+len_sep_) ) = sep_
-
-    ipos  = ipos + len_sep_ + 1
+    if (len_sep_ > 0) then
+        dest( ipos:(ipos+len_sep_) ) = sep_
+        ipos  = ipos + len_sep_ + 1
+    end if
 
     dest( ipos:(ipos+len_source) ) = trim(adjustl(source))
 
@@ -949,6 +950,4 @@ subroutine readline(nunitr, line, comment_str, ios)
 
 !******************************************************************************
 
-end module m_strings  
-
-
+end module m_strings

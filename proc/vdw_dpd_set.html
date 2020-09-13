@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.2</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -211,7 +211,7 @@ private subroutine vdw_dpd_set(params, A, rcut)
     
     <p>Setter for standard DPD interaction.</p>
 <p>The potential <code>U</code> is given by:</p>
-<div class="codehilite"><pre><span></span>   <span class="n">U</span> <span class="o">=</span> <span class="p">(</span><span class="n">A</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">rcut</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="n">rcut</span><span class="p">))</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="n">rcut</span>
+<div class="codehilite"><pre><span></span><span class="err">   U = (A/2)*rcut*(1 - (r/rcut))^2, r &lt; rcut</span>
 </pre></div>
 
 
@@ -352,7 +352,7 @@ private subroutine vdw_dpd_set(params, A, rcut)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

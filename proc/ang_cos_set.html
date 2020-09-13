@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.2</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">5 statements</a>
+    title=" 0.0% of total for procedures.">5 statements</a>
      </li> 
      
      
@@ -210,8 +210,8 @@ private subroutine ang_cos_set(params, k)
 
     
     <p>Setter for angular cosine interaction.</p>
-<div class="codehilite"><pre><span></span>   <span class="n">U</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">=</span> <span class="n">k</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">cos</span> <span class="n">theta</span><span class="p">),</span>
-   <span class="k">where</span> <span class="n">theta</span> <span class="k">is</span> <span class="n">the</span> <span class="n">complementary</span> <span class="n">angle</span> <span class="k">between</span> <span class="n">bonds</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">).</span>
+<div class="codehilite"><pre><span></span><span class="err">   U(theta) = k*(1 - cos theta),</span>
+<span class="err">   where theta is the complementary angle between bonds i &amp; (i+1).</span>
 </pre></div>
 
 
@@ -330,7 +330,7 @@ private subroutine ang_cos_set(params, k)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.2</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -132,7 +132,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.3% of total for procedures.">18 statements</a>
+    title=" 0.2% of total for procedures.">18 statements</a>
      </li> 
      
      
@@ -210,10 +210,10 @@ private subroutine bond_kg_set(params, k, rmax, eps, sigma)
 
     
     <p>Setter for FENE bond interaction.</p>
-<div class="codehilite"><pre><span></span>   <span class="n">V</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">eps</span><span class="o">*</span><span class="p">[(</span><span class="n">r</span><span class="o">/</span><span class="n">sigma</span><span class="p">)</span><span class="o">^</span><span class="mi">12</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="n">sigma</span><span class="p">)</span><span class="o">^</span><span class="mi">6</span><span class="p">]</span> <span class="o">+</span> <span class="n">eps</span>
-   <span class="n">W</span> <span class="o">=</span> <span class="o">-</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span> <span class="n">k</span> <span class="n">rmax</span><span class="o">^</span><span class="mi">2</span> <span class="n">log</span> <span class="p">[</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">r</span><span class="o">/</span><span class="n">rmax</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span>
-   <span class="n">U</span> <span class="o">=</span> <span class="n">W</span> <span class="o">+</span> <span class="n">V</span><span class="p">,</span> <span class="n">r</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span>
-       <span class="n">W</span><span class="p">,</span> <span class="n">r</span> <span class="o">&gt;=</span> <span class="mi">2</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">6</span><span class="p">)</span><span class="o">*</span><span class="n">sigma</span>
+<div class="codehilite"><pre><span></span><span class="err">   V = 4*eps*[(r/sigma)^12 - (r/sigma)^6] + eps</span>
+<span class="err">   W = -0.5 k rmax^2 log [1 - (r/rmax)^2]</span>
+<span class="err">   U = W + V, r &lt; 2^(1/6)*sigma</span>
+<span class="err">       W, r &gt;= 2^(1/6)*sigma</span>
 </pre></div>
 
 
@@ -249,11 +249,7 @@ private subroutine bond_kg_set(params, k, rmax, eps, sigma)
   
 <tr>
   
-<<<<<<< HEAD
   <td><span class="anchor" id="variable-params%7E22"></span>real(kind=rp),</td>
-=======
-  <td><span class="anchor" id="variable-params%7E6"></span>real(kind=rp),</td>
->>>>>>> 253afbd038f4d310844c8c0a526bd59c877c05ea
   <td>intent(inout),</td>
   <td></td>
   
@@ -268,7 +264,7 @@ private subroutine bond_kg_set(params, k, rmax, eps, sigma)
   
 <tr>
   
-  <td><span class="anchor" id="variable-k%7E4"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-k%7E5"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -298,7 +294,7 @@ private subroutine bond_kg_set(params, k, rmax, eps, sigma)
   
 <tr>
   
-  <td><span class="anchor" id="variable-eps"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-eps%7E5"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -313,7 +309,7 @@ private subroutine bond_kg_set(params, k, rmax, eps, sigma)
   
 <tr>
   
-  <td><span class="anchor" id="variable-sigma"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-sigma%7E4"></span>real(kind=rp),</td>
   <td>intent(in),</td>
   <td>optional</td>
   
@@ -391,7 +387,7 @@ private subroutine bond_kg_set(params, k, rmax, eps, sigma)
     <footer>
       <div class="container">
       <div class="row">
-        <div class="col-xs-6 col-md-4"><p>&copy; 2019 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
                                           </p></div>
         <div class="col-xs-6 col-md-4 col-md-push-4">
           <p class="text-right">

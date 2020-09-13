@@ -4,9 +4,7 @@ module m_interaction
 use m_precision
 use m_constants_math
 use m_globals
-use m_connectivity
-use m_verlet
-use m_cell_list
+use m_pairtab
 use m_ia_bond
 use m_ia_angle
 use m_ia_dihedral
@@ -17,7 +15,6 @@ use m_ia_external
 implicit none
 
 private
-
 public :: ia_setup, ia_finish, ia_calc_forces
 
 contains
@@ -25,60 +22,18 @@ contains
 !******************************************************************************
 
 subroutine ia_setup()
-    !! Sets up parameters for potentials 
+    !! Builds necessary neighbor tables and sets up parameters for potentials.
 
-    !Initialize and build atom -> bond, atom -> atom and next nearest bonded
-    !neighbor tables
-    call atbo_build()
-
-    !Debug statements
-    !write(*,*) 'ATBO_TAB'
-    !call atbo_tab%print()
-
-    !Build excluded atoms table
-    call exat_build()
-
-    !Debug statements
-    !write(*,*) 'EXAT_TAB'
-    !call exat_tab%print()
-
-    !Delete atom -> bond table, it is no longer needed.
-    call atbo_tab%delete()
-
-    !Check
     if (num_vdw_types == 0) lvdw = .false.
-
-    if ((imcon==0) .and. use_cell_list) use_cell_list = .false.
-    if (use_verlet_tab .and. use_cell_list) use_verlet_tab = .false.
-
-    !Initialize verlet list
-    if (use_verlet_tab) call verlet_init(rcutoff+tskin, tskin)
-
-    !Initialize cell list
-    if ( (sim_style == 0) .or. (sim_style == 1) ) then
-        ! For relaxation/BD simulation the cell list is used for short range
-        ! force calculation.
-        if (use_cell_list) then
-            call cl_init(num_atoms, rcutoff)
-            call cl_set_cell_size(rcutoff)
-            call cl_build_cell_nbrs()
-        end if
-    else if (sim_style == 2) then
-        ! For MPCD simulation the cell list is always used for sorting. If
-        ! use_cell_list == .true., the cell list will also be used for force
-        ! calculation.
-        call cl_init(num_atoms_tot, 1.0_rp) !Collision cell size is 1.0.
-        if (use_cell_list) then
-            call cl_set_cell_size(rcutoff) !Set cell size to global cutoff 
-            call cl_build_cell_nbrs()
-        end if
+    if (lvdw) then
+        call pt_init()
+        call ia_vdw_setup()
     end if
 
     if (num_bonds > 0) call ia_bond_setup()
     if (num_angles > 0) call ia_angle_setup()
     if (num_dihedrals > 0) call ia_dihedral_setup()
     if (num_tethers > 0) call ia_tether_setup()
-    if (lvdw) call ia_vdw_setup()
     if (num_externals > 0) call ia_external_setup()
 
     end subroutine
@@ -86,11 +41,9 @@ subroutine ia_setup()
 !******************************************************************************
 
 subroutine ia_finish()
-    !! Releases memory allocated in `ia_setup`.
+    !! Cleanup routine for interaction calculation.
 
-    call exat_tab%delete()
-    if (use_verlet_tab) call verlet_delete()
-    if (use_cell_list) call cl_delete()
+    call pt_finish()
 
     end subroutine
 
@@ -141,13 +94,7 @@ subroutine ia_calc_forces(ierr)
 
     !Calculation for pairwise interactions
     if (lvdw) then
-        if (use_verlet_tab) then
-            call ia_add_vdw_forces_vl(ierr)
-        else if (use_cell_list) then
-            call ia_add_vdw_forces_cl(ierr)
-        else
-            call ia_add_vdw_forces(ierr)
-        end if
+        call ia_add_vdw_forces(ierr)
         if (ierr /= 0) return
     end if
 
@@ -170,71 +117,11 @@ subroutine ia_calc_forces(ierr)
 
 subroutine ia_add_vdw_forces(ierr)
     !! Calculates force and energy due to all short-ranged non-bonded pairwise
-    !! interactions and adds to `energy_vdw` & 'forces` in module `m_globals`.
-    !! Uses direct N^2 calculation.
+    !! interactions based on `pair_tab` and adds to `energy_vdw` & `forces`
+    !! in module `m_globals`.
 
     integer, intent(out) :: ierr
-    real(rp), dimension(3) :: ri, rj, rij, fi
-    real(rp) :: rij_mag
-    real(rp) :: qi, qj
-    real(rp) :: enrg, frc
-    integer :: i, j, at_i, at_j, typ
-
-    ierr = 0
-
-    do i = 1, (num_atoms-1)
-        ri = coordinates(:,i)
-        qi = charge(i)
-        at_i = atoms(i)
-        do j = i+1, num_atoms
-            !Check if atom j is an excluded atom for atom i
-            if ( exat_tab%is_in(i,j) ) cycle
-            rj = coordinates(:,j)
-            qj = charge(j)
-            at_j = atoms(j)
-            if (at_i < at_j) then
-                typ = at_j + (2*num_atom_types-at_i)*(at_i-1)/2
-            else
-                typ = at_i + (2*num_atom_types-at_j)*(at_j-1)/2
-            end if
-            rij = rj - ri
-            if (imcon /= 0) call simbox%get_image(rij)
-            rij_mag = norm2(rij)
-            call ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
-            if (ierr /= 0) return
-            energy_vdw = energy_vdw + enrg
-            fi = frc*rij/rij_mag
-
-            !Update forces
-            forces(:,i) = forces(:,i) + fi
-            forces(:,j) = forces(:,j) - fi
-
-            !Update stress
-            stress(1,1) = stress(1,1) - rij(1)*fi(1)
-            stress(2,1) = stress(2,1) - rij(2)*fi(1)
-            stress(3,1) = stress(3,1) - rij(3)*fi(1)
-
-            stress(1,2) = stress(1,2) - rij(1)*fi(2)
-            stress(2,2) = stress(2,2) - rij(2)*fi(2)
-            stress(3,2) = stress(3,2) - rij(3)*fi(2)
-
-            stress(1,3) = stress(1,3) - rij(1)*fi(3)
-            stress(2,3) = stress(2,3) - rij(2)*fi(3)
-            stress(3,3) = stress(3,3) - rij(3)*fi(3)
-        end do
-    end do
-
-    end subroutine
-
-!********************************************************************************
-
-subroutine ia_add_vdw_forces_vl(ierr)
-    !! Calculates force and energy due to all short-ranged non-bonded pairwise
-    !! interactions and adds to `energy_vdw` & 'forces` in module `m_globals`.
-    !! Uses Verlet table.
-
-    integer, intent(out) :: ierr
-    integer, dimension(:), pointer :: nbrs => null()
+    integer, dimension(:), pointer :: pnbrs => null()
     real(rp), dimension(3) :: ri, rj, rij, fi
     real(rp) :: rij_mag
     real(rp) :: qi, qj
@@ -243,23 +130,18 @@ subroutine ia_add_vdw_forces_vl(ierr)
 
     ierr = 0
 
-    call verlet_build()
+    call pt_build()
 
-    !call verlet_tab%print()
-
-    do i = 1, (num_atoms-1)
+    do i = 1, num_atoms
         ri = coordinates(:,i)
         qi = charge(i)
         at_i = atoms(i)
 
-        !Getting list of neighbors of particle i using pointer nbrs
-        call verlet_tab%get_row(i, nbrs)
+        !Getting list of neighbors of atom i using pointer pnbrs
+        call pair_tab%get_row(i, pnbrs)
 
-        do k = 1, size(nbrs)
-            j = nbrs(k)
-            !Check if atom j is an excluded atom for atom i
-            if ( exat_tab%is_in(i,j) ) cycle
-
+        do k = 1, size(pnbrs)
+            j = pnbrs(k)
             rj = coordinates(:,j)
             qj = charge(j)
             at_j = atoms(j)
@@ -298,142 +180,6 @@ subroutine ia_add_vdw_forces_vl(ierr)
     end subroutine
     
 !********************************************************************************
-
-subroutine ia_add_vdw_forces_cl(ierr)
-    !! Calculates force and energy due to all short-ranged non-bonded pairwise
-    !! interactions and adds to `energy_vdw` & 'forces` in module `m_globals`.
-    !! Uses cell list.
-
-    integer, intent(out) :: ierr
-    integer, dimension(:), pointer :: aic => null()
-    integer, dimension(:), pointer :: ainc => null()
-    integer, dimension(:), pointer :: nbr_cells => null()
-    real(rp), dimension(3) :: ri, rj, rij, fi
-    real(rp) :: rij_mag
-    real(rp) :: qi, qj
-    real(rp) :: enrg, frc
-    integer :: num_cells
-    integer :: icell, jcell, iatm, jatm
-    integer :: i, j, k, at_i, at_j, typ
-
-    ierr = 0
-
-    call cl_build(coordinates(:,1:num_atoms))
-    num_cells = cl_get_num_cells()
-
-    do icell = 0, (num_cells-1)
-        call cl_get_contents(icell, aic)
-        call cl_get_nbr_cells(icell, nbr_cells)
-
-        !Interaction with particles within the cell
-        do i = 1, size(aic) - 1
-            iatm = aic(i)
-            ri = coordinates(:,iatm)
-            qi = charge(iatm)
-            at_i = atoms(iatm)
-
-            do j = i+1, size(aic)
-                jatm = aic(j)
-                !Check if atom jatm is an excluded atom for atom iatm
-                if ( exat_tab%is_in(iatm,jatm) ) cycle
-
-                rj = coordinates(:,jatm)
-                qj = charge(jatm)
-                at_j = atoms(jatm)
-                if (at_i < at_j) then
-                    typ = at_j + (2*num_atom_types-at_i)*(at_i-1)/2
-                else
-                    typ = at_i + (2*num_atom_types-at_j)*(at_j-1)/2
-                end if
-                rij = rj - ri
-                if (imcon /= 0) call simbox%get_image(rij)
-                rij_mag = norm2(rij)
-                call ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
-                if (ierr /= 0) return
-
-                energy_vdw = energy_vdw + enrg
-                fi = frc*rij/rij_mag
-
-                !Update forces
-                forces(:,iatm) = forces(:,iatm) + fi
-                forces(:,jatm) = forces(:,jatm) - fi
-
-                !Update stress
-                stress(1,1) = stress(1,1) - rij(1)*fi(1)
-                stress(2,1) = stress(2,1) - rij(2)*fi(1)
-                stress(3,1) = stress(3,1) - rij(3)*fi(1)
-
-                stress(1,2) = stress(1,2) - rij(1)*fi(2)
-                stress(2,2) = stress(2,2) - rij(2)*fi(2)
-                stress(3,2) = stress(3,2) - rij(3)*fi(2)
-
-                stress(1,3) = stress(1,3) - rij(1)*fi(3)
-                stress(2,3) = stress(2,3) - rij(2)*fi(3)
-                stress(3,3) = stress(3,3) - rij(3)*fi(3)
-            end do
-        end do
-
-        !Interaction with particles belonging to neighboring cells
-        do i = 1, size(aic)
-            iatm = aic(i)
-            ri = coordinates(:,iatm)
-            qi = charge(iatm)
-            at_i = atoms(iatm)
-
-            do j = 1, size(nbr_cells)
-                jcell = nbr_cells(j)
-                call cl_get_contents(jcell, ainc)
-
-                do k = 1, size(ainc)
-                    jatm = ainc(k)
-                    !Check if atom jatm is an excluded atom for atom iatm
-                    if ( exat_tab%is_in(iatm,jatm) ) cycle
-
-                    rj = coordinates(:,jatm)
-                    qj = charge(jatm)
-                    at_j = atoms(jatm)
-
-                    if (at_i < at_j) then
-                        typ = at_j + (2*num_atom_types-at_i)*(at_i-1)/2
-                    else
-                        typ = at_i + (2*num_atom_types-at_j)*(at_j-1)/2
-                    end if
-                    rij = rj - ri
-                    if (imcon /= 0) call simbox%get_image(rij)
-                    rij_mag = norm2(rij)
-                    call ia_get_vdw_force(rij_mag, qi, qj, typ, enrg, frc, ierr)
-                    if (ierr /= 0) return
-
-                    energy_vdw = energy_vdw + enrg
-                    fi = frc*rij/rij_mag
-
-                    !Update forces
-                    forces(:,iatm) = forces(:,iatm) + fi
-                    forces(:,jatm) = forces(:,jatm) - fi
-                    
-                    !Update stress
-                    stress(1,1) = stress(1,1) - rij(1)*fi(1)
-                    stress(2,1) = stress(2,1) - rij(2)*fi(1)
-                    stress(3,1) = stress(3,1) - rij(3)*fi(1)
-
-                    stress(1,2) = stress(1,2) - rij(1)*fi(2)
-                    stress(2,2) = stress(2,2) - rij(2)*fi(2)
-                    stress(3,2) = stress(3,2) - rij(3)*fi(2)
-
-                    stress(1,3) = stress(1,3) - rij(1)*fi(3)
-                    stress(2,3) = stress(2,3) - rij(2)*fi(3)
-                    stress(3,3) = stress(3,3) - rij(3)*fi(3)
-                end do
-
-            end do
-
-        end do
-
-    end do
-
-    end subroutine
-
-!*******************************************************************************
 
 subroutine ia_add_bond_forces(ierr)
     !! Calculates forces & energy due to all bonds. Will add to 

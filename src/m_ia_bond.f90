@@ -14,7 +14,7 @@ use m_precision
 use m_constants_math
 use m_strings
 use m_globals
-use m_logger, only: logger_init, logger => master_logger
+use m_logger
 
 implicit none
 
@@ -183,8 +183,8 @@ subroutine bond_fene(r, params, enrg, frc, ierr)
 
     if ( r >= (rmax+r0) ) then
         ierr = 1
-        call logger%fatal('bond_fene', 'bondlength too large')
-        call logger%info('bond_fene', 'r = '//str_from_num(r))
+        call logger%log_msg('<bond_fene> bondlength too large')
+        call logger%log_msg('<bond_fene> r = '//str_from_num(r))
         return
     else
         enrg = -0.5_rp*k*rmaxsq*log(1.0_rp - extnsq/rmaxsq)
@@ -260,8 +260,8 @@ subroutine bond_kg(r, params, enrg, frc, ierr)
 
     if ( r >= rmax ) then
         ierr = 1
-        call logger%fatal('bond_kg', 'r > rmax')
-        call logger%info('bond_kg', 'r = '//str_from_num(r))
+        call logger%log_msg('<bond_kg> r > rmax')
+        call logger%log_msg('<bond_kg> r = '//str_from_num(r))
         return
     else if ( (r >= rcut) .and. (r < rmax) ) then
         enrg = -0.5_rp*k*rmaxsq*log(1.0_rp - rsq/rmaxsq)
@@ -321,8 +321,8 @@ subroutine bond_ms(r, params, enrg, frc, ierr)
 
     if ( r >= rmax ) then
         ierr = 1
-        call logger%fatal('bond_kg', 'r > rmax')
-        call logger%info('bond_kg', 'r = '//str_from_num(r))
+        call logger%log_msg('<bond_ms> r > rmax')
+        call logger%log_msg('<bond_ms> r = '//str_from_num(r))
         return
     else
         rtilde = r/rmax; rrtilde = 1.0_rp/(1.0_rp-rtilde)
