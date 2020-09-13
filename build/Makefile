@@ -1,10 +1,10 @@
-#Makefile for Taylor with GCC-8.2.0 compilers
+#Makefile for Taylor with GCC-9.2.0 compilers
 
 SHELL = /bin/bash
 
 DEBUG = true#{true, false}  (NOTE: no whitespace at end)
 
-FC = $(gfortran8)
+FC = $(gfortran9)
 
 #*************************************************
 
@@ -32,7 +32,7 @@ EXECUTABLE = brownpak
 vpath %.f90 $(SRC_DIR)
 vpath $(EXECUTABLE) $(INSTALL_DIR)
 
-MKL_INTRFC = $(HOME)/soft/mkl/gcc-8
+MKL_INTRFC = $(HOME)/soft/mkl/gcc-9
 
 INCS = \
 	-I$(SRC_DIR) \

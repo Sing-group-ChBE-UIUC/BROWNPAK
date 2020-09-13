@@ -237,9 +237,8 @@ pure subroutine vdw_gaussian(r, params, enrg, frc)
     A = params(1); B = params(2); rcut = params(3)
     pot_rcut = params(4); pot_deriv_rcut = params(5)
 
-    exrs = exp(-B*r*r)
-
     if ( r < rcut ) then
+        exrs = exp(-B*r*r)
         enrg = A*exrs - pot_rcut - (r - rcut)*pot_deriv_rcut
         frc = -2*A*B*r*exrs - pot_deriv_rcut
     end if
