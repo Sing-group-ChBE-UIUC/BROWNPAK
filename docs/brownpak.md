@@ -1,7 +1,7 @@
 ---
 project: BROWNPAK
 project_github: https://github.com/saridut/BROWNPAK
-version: 0.2
+version: 0.6
 author: Sarit Dutta
 email: saridut@gmail.com
 github: https://github.com/saridut
@@ -12,11 +12,12 @@ display: public
 display: protected
 display: private
 source: true
-graph: true
+graph: false
 coloured_edges: true
 license: bsd
-exclude_dir: ../src/extra
 search: true
 docmark_alt:
+fpp_extensions: fpp
+preprocessor: fypp
 
 ---

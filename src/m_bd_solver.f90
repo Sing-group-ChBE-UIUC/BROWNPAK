@@ -180,8 +180,8 @@ subroutine bds_finish()
 subroutine bds_run()
     !! Driver for BD integrator.
     !!
-    !! Repeatedly calls [[bds_integrate_fd]] or [[bds_integrate_hi]] to update
-    !! atom positions.
+    !! Repeatedly calls [[integrate_em]] or [[integrate_se]] or [[integrate_rk]]
+    !! to update atom positions.
 
     real(rp), dimension(3) :: com
     real(rp), dimension(3,3) :: delta
