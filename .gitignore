@@ -41,3 +41,6 @@ docs/html/
 
 #Tests
 tests/
+
+#Utils(models)
+utils/models
