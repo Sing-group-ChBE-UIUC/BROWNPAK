@@ -30,6 +30,8 @@ subroutine ia_angle_setup()
         select case(sty)
         case(1)
             call ang_cos_set(angle_params(:,i))
+        case(2)
+            call ang_harm_set(angle_params(:,i))
         case default
             continue
         end select
@@ -51,7 +53,7 @@ subroutine ia_get_angle_force(q1, q2, typ, enrg, fim1, fi, fip1)
     real(rp), dimension(3), intent(out) :: fip1
     real(rp), dimension(3) :: q1hat, q2hat
     real(rp) :: kang
-    real(rp) :: q1mag, q2mag, ctheta
+    real(rp) :: q1mag, q2mag, ctheta, stheta, theta
     integer :: styl
 
     q1mag = norm2(q1); q2mag = norm2(q2)
@@ -70,6 +72,15 @@ subroutine ia_get_angle_force(q1, q2, typ, enrg, fim1, fi, fip1)
         fim1 = kang*(-q2hat + ctheta*q1hat)/q1mag
         fip1 = kang*(q1hat - ctheta*q2hat)/q2mag
         fi = -(fim1 + fip1)
+    case(2)
+        kang = angle_params(1,typ)
+        theta = ACOS(ctheta)
+        stheta = sqrt(1.0_rp - ctheta*ctheta)
+        stheta = MAX(1.0e-10_rp, stheta)
+        enrg = 0.5_rp*kang*theta*theta
+        fim1 = kang*theta/stheta*(-q2hat + ctheta*q1hat)/q1mag
+        fip1 = kang*theta/stheta*(q1hat - ctheta*q2hat)/q2mag
+        fi = -(fim1 + fip1)
     case default
         continue
     end select
@@ -83,6 +94,26 @@ subroutine ang_cos_set(params, k)
     !!
     !!```
     !!   U(theta) = k*(1 - cos theta),
+    !!   where theta is the complementary angle between bonds i & (i+1).
+    !!```
+    !! User-set parameters:
+    !!
+    !! params(1) = `k`
+
+    real(rp), dimension(:), intent(in out) :: params
+    real(rp), intent(in), optional :: k
+
+    if (present(k)) params(1) = k
+
+    end subroutine
+
+!******************************************************************************
+
+subroutine ang_harm_set(params, k)
+    !! Setter for angular harmonic interaction.
+    !!
+    !!```
+    !!   U(theta) = k*(theta)**2,
     !!   where theta is the complementary angle between bonds i & (i+1).
     !!```
     !! User-set parameters:
