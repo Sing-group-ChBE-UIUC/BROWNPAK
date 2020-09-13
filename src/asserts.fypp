@@ -1,0 +1,32 @@
+#:mute
+
+#! Enable debug feature if the preprocessor variable DEBUG has been defined
+#:set DEBUG = defined('DEBUG')
+
+
+#! Stops the code, if the condition passed to it is not fulfilled
+#! Only included in debug mode.
+#:def ASSERT(cond, msg=None)
+  #:if DEBUG
+    if (.not. (${cond}$)) then
+      write(*,*) 'Assertion failure'
+      write(*,*) 'Condition: ${cond.replace("'", "''")}$'
+      #:if msg is not None
+        write(*,*) 'Message: ', ${msg}$
+      #:endif
+      write(*,*) 'File: ${_FILE_}$'
+      write(*,*) 'Line: ', ${_LINE_}$
+      stop
+    end if
+  #:endif
+#:enddef ASSERT
+
+
+#! Includes code if in debug mode.
+#:def DEBUG_CODE(code)
+  #:if DEBUG
+$:code
+  #:endif
+#:enddef DEBUG_CODE
+
+#:endmute

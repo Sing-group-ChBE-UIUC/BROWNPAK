@@ -1,20 +1,19 @@
 module m_mpcd
     !! Routines implementing the MPCD solver.
 
-use f95_precision
-use lapack95
-
 use m_precision
 use m_constants_math
 use m_utils_math
 use m_strings
+use m_logger
 use m_ran_num
 use m_globals
 use m_cell_list
 use m_interaction, only: ia_calc_forces
 use m_stats_io
 use m_config_io
-use m_logger, only: logger => master_logger
+use f95_precision
+use lapack95
 
 implicit none
 
@@ -140,45 +139,8 @@ subroutine mpcd_run()
     if (flow_style /= 0) flow_style = 0
 
     !Log & dump starting configuration
-    call logger%info('mpcd_run', ' nts: '//str_from_num(nts))
+    call logger%log_msg('<mpcd_run> nts: '//str_from_num(nts))
     call write_dump(fn_revive//trim(adjustl(job_tag)))
-
-    !Equilibration run
-    if (leql) then
-        do while (nts < nts_eql)
-            !Streaming
-            call mpcd_stream(ierr)
-            if (ierr /= 0) return
-
-            !Collision
-            call mpcd_collide()
-
-            nts = nts + 1
-
-            !Logging
-            if (mod(nts,nts_log) == 0) then
-                call logger%info('mpcd_run', ' nts: '//str_from_num(nts))
-            end if
-
-            !Dump revive file
-            if (mod(nts,nts_dump)==0) then
-                call write_dump(fn_revive//trim(adjustl(job_tag)))
-            end if
-
-            !Equilibration stats
-            if (write_eql_stats) then
-                if (mod(nts,nts_eql_samp)==0) call stats_write()
-            end if
-        end do
-
-        call logger%info('finish_equil_run', 'Equilibration completed')
-        call stats_finish()
-        call write_dump(fn_revive//trim(adjustl(job_tag)))
-        leql = .false.
-        nts = 0
-        !If continue on to production run, create new stats file.
-        if (nts_sim > 0) call stats_init()
-    end if
 
     !Production run
     do while (nts < nts_sim)
@@ -191,7 +153,7 @@ subroutine mpcd_run()
 
         !Logging
         if (mod(nts,nts_log) == 0) then
-            call logger%info('mpcd_run', ' nts: '//str_from_num(nts))
+            call logger%log_msg('<mpcd_run> nts: '//str_from_num(nts))
         end if
 
         !Dump revive file

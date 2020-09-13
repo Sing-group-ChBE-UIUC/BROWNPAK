@@ -2,7 +2,6 @@ module m_trajectory
     !! Routines for reading and writing frames from a trajectory file.
  
 use m_precision
-use m_logger, only: logger => master_logger
 
 implicit none
 
@@ -119,9 +118,7 @@ subroutine traj_open(this, fn, mode, ierr)
             form='unformatted', action='read', status='old')
     !Unknown mode
     else
-        call logger%fatal('traj_open', 'file open error. Bad mode '//mode)
-        ierr = 1
-        return
+        ierr = 1; return
     end if
 
     this%isopen = .true.

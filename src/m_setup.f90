@@ -6,11 +6,11 @@ use m_ran_num
 use m_simbox
 use m_globals
 use m_config_io
-use m_interaction, only: ia_setup, ia_finish
-use m_bd_solver, only: bds_init, bds_finish
-use m_mpcd, only: mpcd_init, mpcd_finish
-use m_stats_io, only: stats_init, stats_finish
-use m_logger, only: logger => master_logger
+use m_interaction
+use m_bd_solver
+use m_mpcd
+use m_relax
+use m_stats_io
 
 implicit none
 
@@ -24,38 +24,6 @@ subroutine setup()
 
     ierr = 0
 
-    !Create the simulation box. Its attributes will change later based on input
-    !data.
-    call smbx_init(simbox)
-
-    !Read configuration from files
-    if ( lrevive ) then
-        !Restarting simulation
-        !Read revive file
-        call read_dump(fn_revive//trim(adjustl(job_tag)))
-    else 
-        !New simulation
-        !Read initial configuration file
-        call read_config(fn_cfg//trim(adjustl(job_tag)))
-
-        !No equilibration for energy minimization
-        if (sim_style == 0) then
-            leql = .false.
-        else
-            leql = .true.
-        end if
-        nts = 0
-    end if
-
-    !Allocate memory for forces. Forces are not saved in revive file or
-    !in config file as they can be calculated based from position data.
-    !MPCD particles do not have any forces acting on them.
-    allocate( forces(3,num_atoms) )
-    forces = 0.0_rp
-
-    !Initialize stats collection
-    call stats_init()
-
     !Initialize random number generator
     if (read_seed) then
         call init_stream('random_seed.txt'//trim(adjustl(job_tag)))
@@ -64,8 +32,32 @@ subroutine setup()
     end if
     if (write_seed) call save_seed('random_seed.txt'//trim(adjustl(job_tag)))
 
+    !Create the simulation box. Its attributes will change later based on input
+    !data.
+    call smbx_init(simbox)
+
+    !Read configuration from files
+    if ( lrevive ) then
+        !Restarting simulation: Read revive file
+        call read_dump(fn_revive//trim(adjustl(job_tag)))
+    else 
+        !New simulation: Read initial configuration file
+        call read_config(fn_cfg//trim(adjustl(job_tag)))
+        nts = 0
+    end if
+
+    !Allocate memory for forces. Forces are not saved in revive file or
+    !in config file as they can be calculated from position data.
+    !MPCD particles do not have any forces acting on them.
+    allocate( forces(3,num_atoms) )
+    forces = 0.0_rp
+
+    !Initialize stats collection
+    call stats_init()
+
     !Set up interactions
     call ia_setup()
+
     !Set up solver. No need to set up for structure relaxation.
     if (sim_style == 1) then
         call bds_init(ierr)
@@ -73,6 +65,20 @@ subroutine setup()
         call mpcd_init(ierr)
     end if
     if (ierr /= 0) call finish()
+
+    end subroutine
+
+!*******************************************************************************
+
+subroutine run()
+
+    if (sim_style == 0) then
+        call rlx_run()
+    else if (sim_style == 1) then
+        call bds_run()
+    else if (sim_style == 2) then
+        call mpcd_run()
+    end if
 
     end subroutine
 

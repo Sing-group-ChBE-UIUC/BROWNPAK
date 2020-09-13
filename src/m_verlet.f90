@@ -19,7 +19,6 @@ real(rp), dimension(:,:), allocatable :: coordinates_save
     !!  (3, *num_atoms*) array
 real(rp), dimension(:,:), allocatable :: coordinates_dr
     !!  (3, *num_atoms*) array
-
 real(rp) :: rskin_sq = 0.0_rp
 real(rp) :: tskin_sq = 0.0_rp
 
