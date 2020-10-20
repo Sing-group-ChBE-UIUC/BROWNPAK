@@ -2,7 +2,7 @@
 
 SHELL = /bin/bash
 
-DEBUG = true#{true, false}  (NOTE: no whitespace at end)
+DEBUG = false#{true, false}  (NOTE: no whitespace at end)
 
 FC = $(gfortran9)
 
@@ -27,6 +27,7 @@ endif
 SRC_DIR = ../src
 BUILD_DIR = .
 INSTALL_DIR = ../bin
+LIB_DIR = ../lib
 EXECUTABLE = brownpak
 
 vpath %.f90 $(SRC_DIR)
@@ -41,6 +42,7 @@ INCS = \
 	#-I$(MKLROOT)/include
 
 LIBS = \
+	$(LIB_DIR)/libnitsol.a \
 	$(MKL_INTRFC)/lib/libmkl_blas95_lp64.a \
 	$(MKL_INTRFC)/lib/libmkl_lapack95_lp64.a \
 	-L$(MKLROOT)/lib -Wl,-rpath,$(MKLROOT)/lib \
@@ -50,39 +52,37 @@ LIBS = \
 FYPPFLAGS = #-D DEBUG=1
 
 OBJ_NAMES = \
-		  m_precision        \
-		  m_constants_math   \
-		  m_utils_math       \
-		  m_strings          \
-		  m_logger           \
-          m_ran_num          \
-		  m_qsort            \
-		  m_vector           \
-		  m_table            \
-		  m_aabb             \
-		  m_aabbtree         \
-		  sm_aabbtree        \
-		  m_trajectory       \
-		  m_simbox           \
-		  m_globals          \
-		  m_control_io       \
-		  m_config_io        \
-		  m_stats_io         \
-		  m_connectivity     \
-		  m_cell_list        \
-		  m_pairtab          \
-		  m_ia_bond          \
-		  m_ia_angle         \
-		  m_ia_dihedral      \
-		  m_ia_vdw           \
-		  m_ia_tether        \
-		  m_ia_external      \
-		  m_interaction      \
-		  m_relax            \
-		  m_brown            \
-		  m_bd_solver        \
-		  m_mpcd             \
-		  m_setup            \
+		  constants_m    \
+		  utils_math_m   \
+		  strings_m      \
+		  timestamp_m    \
+		  logger_m       \
+          random_m       \
+		  qsort_m        \
+		  vector_m       \
+		  table_m        \
+		  aabb_m         \
+		  aabbtree_m     \
+		  aabbtree_sm    \
+		  trajectory_m   \
+		  simbox_m       \
+		  atmcfg_m       \
+		  control_m      \
+		  config_io_m    \
+		  stats_m        \
+		  connectivity_m \
+		  cell_list_m    \
+		  pairtab_m      \
+		  ia_bond_m      \
+		  ia_angle_m     \
+		  ia_dihedral_m  \
+		  ia_vdw_m       \
+		  ia_tether_m    \
+		  ia_external_m  \
+		  interaction_m  \
+		  brown_m        \
+		  bd_solver_m    \
+		  setup_m        \
 		  main  
 
 OBJECTS = $(addsuffix .o,$(OBJ_NAMES))
@@ -105,8 +105,10 @@ $(OBJECTS) : %.o : %.f90
 docs :
 	ford ../docs/brownpak.md 
 
-.PHONY : clean clobber
+.PHONY : clean
 clean:
 	-rm -rf *.o *.mod *.smod $(BUILD_DIR)/*.f90
+
+.PHONY : clobber
 clobber:
 	-rm -rf $(INSTALL_DIR)/$(EXECUTABLE) *.o *.mod *.smod $(BUILD_DIR)/*.f90
