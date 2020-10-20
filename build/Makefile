@@ -19,7 +19,7 @@ FCFLAGS = -c -O3 -std=f2008ts \
 		  -fdefault-double-8 \
 		  -fdefault-real-8 \
 		  -funroll-loops \
-		  -flto          \
+		  -flto \
 		  -fno-unsafe-math-optimizations \
 		  -frounding-math -fsignaling-nans
 endif
@@ -30,14 +30,15 @@ INSTALL_DIR = ../bin
 EXECUTABLE = brownpak
 
 vpath %.f90 $(SRC_DIR)
+vpath %.fpp $(SRC_DIR)
 vpath $(EXECUTABLE) $(INSTALL_DIR)
 
 MKL_INTRFC = $(HOME)/soft/mkl/gcc-9
 
 INCS = \
 	-I$(SRC_DIR) \
-	-I$(MKL_INTRFC)/include \
-	-I$(MKLROOT)/include
+	-I$(MKL_INTRFC)/include
+	#-I$(MKLROOT)/include
 
 LIBS = \
 	$(MKL_INTRFC)/lib/libmkl_blas95_lp64.a \
@@ -45,6 +46,8 @@ LIBS = \
 	-L$(MKLROOT)/lib -Wl,-rpath,$(MKLROOT)/lib \
 	-lmkl_intel_lp64 -lmkl_sequential -lmkl_core -lpthread \
 	-lz -ldl -lm
+
+FYPPFLAGS = #-D DEBUG=1
 
 OBJ_NAMES = \
 		  m_precision        \
@@ -56,6 +59,9 @@ OBJ_NAMES = \
 		  m_qsort            \
 		  m_vector           \
 		  m_table            \
+		  m_aabb             \
+		  m_aabbtree         \
+		  sm_aabbtree        \
 		  m_trajectory       \
 		  m_simbox           \
 		  m_globals          \
@@ -63,8 +69,8 @@ OBJ_NAMES = \
 		  m_config_io        \
 		  m_stats_io         \
 		  m_connectivity     \
-		  m_verlet	         \
 		  m_cell_list        \
+		  m_pairtab          \
 		  m_ia_bond          \
 		  m_ia_angle         \
 		  m_ia_dihedral      \
@@ -73,6 +79,7 @@ OBJ_NAMES = \
 		  m_ia_external      \
 		  m_interaction      \
 		  m_relax            \
+		  m_brown            \
 		  m_bd_solver        \
 		  m_mpcd             \
 		  m_setup            \
@@ -89,11 +96,17 @@ $(EXECUTABLE) : $(OBJECTS)
 $(OBJECTS) : %.o : %.f90
 	$(FC) $(INCS) $(FCFLAGS) $^ -o $@
 
+%.f90 : %.fpp
+	fypp $(FYPPFLAGS) $< $@
+
+%.o : %.f90
+	$(FC) $(INCS) $(FCFLAGS) $^ -o $@ 
+
 docs :
 	ford ../docs/brownpak.md 
 
 .PHONY : clean clobber
 clean:
-	-rm -rf *.o *.mod
+	-rm -rf *.o *.mod *.smod $(BUILD_DIR)/*.f90
 clobber:
-	-rm -rf $(INSTALL_DIR)/$(EXECUTABLE) *.o *.mod
+	-rm -rf $(INSTALL_DIR)/$(EXECUTABLE) *.o *.mod *.smod $(BUILD_DIR)/*.f90
