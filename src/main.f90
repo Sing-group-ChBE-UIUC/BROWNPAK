@@ -1,11 +1,34 @@
+!********************************************************************************!
+! The MIT License (MIT)                                                          !
+!                                                                                !
+! Copyright (c) 2020 Sarit Dutta <saridut@gmail.com>                             !
+!                                                                                !
+! Permission is hereby granted, free of charge, to any person obtaining a copy   !
+! of this software and associated documentation files (the "Software"), to deal  !
+! in the Software without restriction, including without limitation the rights   !
+! to use, copy, modify, merge, publish, distribute, sublicense, and/or sell      !
+! copies of the Software, and to permit persons to whom the Software is          !
+! furnished to do so, subject to the following conditions:                       !
+!                                                                                !
+! The above copyright notice and this permission notice shall be included in all !
+! copies or substantial portions of the Software.                                !
+!                                                                                !
+! THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR     !
+! IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,       !
+! FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE    !
+! AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER         !
+! LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,  !
+! OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE  !
+! SOFTWARE.                                                                      !
+!********************************************************************************!
+
 program main
 
-use m_precision
-use m_strings
-use m_logger
-use m_globals, only: job_tag
-use m_control_io, only: read_control
-use m_setup, only: setup, finish, run
+use constants_m
+use strings_m
+use logger_m
+use control_m
+use setup_m
 
 implicit none
 
@@ -14,15 +37,17 @@ implicit none
 character(len=64) :: cla
 character(len=:), allocatable :: key
 character(len=:), allocatable :: val
+character(len=:), allocatable :: job_tag
 character(len=:), allocatable :: fn_control
-character(len=128) :: msg
+type(ctrlpar_t) :: cpar
 integer :: ierr
 integer :: icla
 integer :: ncla ! number of command line arguments, without the command name
-integer(int64) :: ccbeg, ccend, crate
 
 !Two command line arguments may be provided -- (i) fn_control=val and 
 !(ii) job_tag=val
+!
+!Usage: ./brownpak fn_control=<str> job_tag=<int>
 
 fn_control = 'control.txt'
 
@@ -45,25 +70,13 @@ do icla = 1, ncla
     end if
 end do
 
-call read_control(fn_control)
+call cpar%read(fn_control)
 
-call logger_init(logger, 'brownpak.log'//job_tag, .true.)
+call logger%init('brownpak.log'//job_tag, .true.)
 
-call setup()
-
-call system_clock(ccbeg, crate)
-
-call run()
-
-call system_clock(ccend, crate)
-
-write(msg,'(a,es12.5)') 'execution time(s) = ', (ccend-ccbeg)/real(crate,rp)
-
-call logger%log_msg(msg)
+call run(cpar, job_tag)
 
 call logger%finish()
-
-call finish()
 
 !*******************************************************************************
 

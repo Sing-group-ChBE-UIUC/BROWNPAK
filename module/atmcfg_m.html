@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>atmcfg_m &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>atmcfg_m 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 1.4% of total for modules and submodules.">103 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/atmcfg_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/atmcfg_m.f90.html'>atmcfg_m.f90</a></li>
+    
+  
+     <li class="active">atmcfg_m</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/atmcfg_m.html#variable-mxparam">mxparam</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/atmcfg_m.html#type-atmcfg_t">atmcfg_t</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/atmcfg_m.html#proc-atmcfg_delete">atmcfg_delete</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/constants_m.html'>constants_m</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~atmcfg_m~~UsesGraph Pages: 1 -->
+<svg id="moduleatmcfg_mUsesGraph" width="296pt" height="32pt"
+ viewBox="0.00 0.00 296.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~atmcfg_m~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~atmcfg_m~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 292,-28 292,4 -4,4"/>
+<!-- module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsesGraph_node1" class="node">
+<title>module~atmcfg_m</title>
+<polygon fill="none" stroke="#000000" points="288,-24 229,-24 229,0 288,0 288,-24"/>
+<text text-anchor="middle" x="258.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">atmcfg_m</text>
+</g>
+<!-- module~constants_m -->
+<g id="module~~atmcfg_m~~UsesGraph_node2" class="node">
+<title>module~constants_m</title>
+<g id="a_module~~atmcfg_m~~UsesGraph_node2"><a xlink:href=".././module/constants_m.html" xlink:title="constants_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="193,-24 121,-24 121,0 193,0 193,-24"/>
+<text text-anchor="middle" x="157" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">constants_m</text>
+</a>
+</g>
+</g>
+<!-- module~atmcfg_m&#45;&gt;module~constants_m -->
+<g id="module~~atmcfg_m~~UsesGraph_edge1" class="edge">
+<title>module~atmcfg_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M228.8691,-12C220.8783,-12 212.0373,-12 203.3681,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="203.3314,-8.5001 193.3314,-12 203.3314,-15.5001 203.3314,-8.5001"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~atmcfg_m~~UsesGraph_node3" class="node">
+<title>iso_fortran_env</title>
+<g id="a_module~~atmcfg_m~~UsesGraph_node3"><a xlink:href="http://fortranwiki.org/fortran/show/ISO_FORTRAN_ENV" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="85,-24 0,-24 0,0 85,0 85,-24"/>
+<text text-anchor="middle" x="42.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- module~constants_m&#45;&gt;iso_fortran_env -->
+<g id="module~~atmcfg_m~~UsesGraph_edge2" class="edge">
+<title>module~constants_m&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M120.7715,-12C112.6719,-12 103.9204,-12 95.304,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="95.2984,-8.5001 85.2984,-12 95.2984,-15.5001 95.2984,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~atmcfg_m~~UsedByGraph Pages: 1 -->
+<svg id="moduleatmcfg_mUsedByGraph" width="582pt" height="445pt"
+ viewBox="0.00 0.00 582.00 444.76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~atmcfg_m~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 440.7571)">
+<title>module~~atmcfg_m~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-440.7571 578,-440.7571 578,4 -4,4"/>
+<!-- module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node1" class="node">
+<title>module~atmcfg_m</title>
+<polygon fill="none" stroke="#000000" points="59,-209 0,-209 0,-185 59,-185 59,-209"/>
+<text text-anchor="middle" x="29.5" y="-194.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">atmcfg_m</text>
+</g>
+<!-- module~ia_dihedral_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node2" class="node">
+<title>module~ia_dihedral_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node2"><a xlink:href=".././module/ia_dihedral_m.html" xlink:title="ia_dihedral_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="173,-24 95,-24 95,0 173,0 173,-24"/>
+<text text-anchor="middle" x="134" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_dihedral_m</text>
+</a>
+</g>
+</g>
+<!-- module~ia_dihedral_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge1" class="edge">
+<title>module~ia_dihedral_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M111.117,-24.0095C105.2945,-27.8784 99.4373,-32.5883 95,-38 60.6462,-79.8982 42.0823,-142.3002 34.186,-175.0778"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="30.7378,-174.4558 31.9096,-184.9856 37.56,-176.0233 30.7378,-174.4558"/>
+</g>
+<!-- module~ia_vdw_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node3" class="node">
+<title>module~ia_vdw_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node3"><a xlink:href=".././module/ia_vdw_m.html" xlink:title="ia_vdw_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="164,-272 104,-272 104,-248 164,-248 164,-272"/>
+<text text-anchor="middle" x="134" y="-257.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_vdw_m</text>
+</a>
+</g>
+</g>
+<!-- module~ia_vdw_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge2" class="edge">
+<title>module~ia_vdw_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M110.7408,-247.851C105.5198,-245.0203 100.0365,-241.9649 95,-239 82.0128,-231.3546 67.9057,-222.3964 56.1212,-214.7216"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="57.9008,-211.7032 47.6192,-209.1458 54.0619,-217.5567 57.9008,-211.7032"/>
+</g>
+<!-- module~ia_external_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node4" class="node">
+<title>module~ia_external_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node4"><a xlink:href=".././module/ia_external_m.html" xlink:title="ia_external_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="173,-230 95,-230 95,-206 173,-206 173,-230"/>
+<text text-anchor="middle" x="134" y="-215.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_external_m</text>
+</a>
+</g>
+</g>
+<!-- module~ia_external_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge3" class="edge">
+<title>module~ia_external_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M94.7907,-210.1206C86.3913,-208.4327 77.5116,-206.6483 69.0976,-204.9574"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="69.6225,-201.493 59.1289,-202.9541 68.2433,-208.3558 69.6225,-201.493"/>
+</g>
+<!-- module~ia_angle_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node5" class="node">
+<title>module~ia_angle_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node5"><a xlink:href=".././module/ia_angle_m.html" xlink:title="ia_angle_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="167.5,-188 100.5,-188 100.5,-164 167.5,-164 167.5,-188"/>
+<text text-anchor="middle" x="134" y="-173.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_angle_m</text>
+</a>
+</g>
+</g>
+<!-- module~ia_angle_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge4" class="edge">
+<title>module~ia_angle_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M100.3603,-182.7601C90.426,-184.7565 79.4593,-186.9603 69.1822,-189.0256"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="68.3131,-185.6302 59.1987,-191.0318 69.6923,-192.493 68.3131,-185.6302"/>
+</g>
+<!-- module~ia_tether_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node6" class="node">
+<title>module~ia_tether_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node6"><a xlink:href=".././module/ia_tether_m.html" xlink:title="ia_tether_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="168,-146 100,-146 100,-122 168,-122 168,-146"/>
+<text text-anchor="middle" x="134" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_tether_m</text>
+</a>
+</g>
+</g>
+<!-- module~ia_tether_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge5" class="edge">
+<title>module~ia_tether_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M110.7408,-146.149C105.5198,-148.9797 100.0365,-152.0351 95,-155 82.0128,-162.6454 67.9057,-171.6036 56.1212,-179.2784"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="54.0619,-176.4433 47.6192,-184.8542 57.9008,-182.2968 54.0619,-176.4433"/>
+</g>
+<!-- module~setup_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node7" class="node">
+<title>module~setup_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node7"><a xlink:href=".././module/setup_m.html" xlink:title="setup_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="484,-312 430,-312 430,-288 484,-288 484,-312"/>
+<text text-anchor="middle" x="457" y="-297.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">setup_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge6" class="edge">
+<title>module~setup_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M357.5,-378C262.7767,-412.7945 223.6492,-464.3269 134,-418"/>
+</g>
+<!-- module~config_io_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node9" class="node">
+<title>module~config_io_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node9"><a xlink:href=".././module/config_io_m.html" xlink:title="config_io_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="281.5,-390 212.5,-390 212.5,-366 281.5,-366 281.5,-390"/>
+<text text-anchor="middle" x="247" y="-375.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">config_io_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~config_io_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge20" class="edge">
+<title>module~setup_m&#45;&gt;module~config_io_m</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M357.5,-378C336.7128,-385.1766 312.3855,-385.9261 291.8566,-384.5654"/>
+<polygon fill="#002eff" stroke="#002eff" points="292.0716,-381.0711 281.8122,-383.7158 291.4816,-388.0462 292.0716,-381.0711"/>
+</g>
+<!-- module~stats_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node10" class="node">
+<title>module~stats_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node10"><a xlink:href=".././module/stats_m.html" xlink:title="stats_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="161,-352 107,-352 107,-328 161,-328 161,-352"/>
+<text text-anchor="middle" x="134" y="-337.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">stats_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~stats_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge22" class="edge">
+<title>module~setup_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M446.6041,-312.2126C429.9985,-330.6661 395.4684,-364.8917 357.5,-378"/>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M357.5,-378C325.7899,-388.9476 317.8977,-363.5669 285,-357 246.7,-349.3548 202.1987,-344.8667 171.4772,-342.441"/>
+<polygon fill="#5c00ff" stroke="#5c00ff" points="171.453,-338.9293 161.2181,-341.6672 170.9265,-345.9095 171.453,-338.9293"/>
+</g>
+<!-- module~bd_solver_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node11" class="node">
+<title>module~bd_solver_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node11"><a xlink:href=".././module/bd_solver_m.html" xlink:title="bd_solver_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="394,-312 321,-312 321,-288 394,-288 394,-312"/>
+<text text-anchor="middle" x="357.5" y="-297.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">bd_solver_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~bd_solver_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge24" class="edge">
+<title>module~setup_m&#45;&gt;module~bd_solver_m</title>
+<path fill="none" stroke="#e700ff" stroke-dasharray="5,2" d="M429.8112,-300C421.9535,-300 413.1431,-300 404.4473,-300"/>
+<polygon fill="#e700ff" stroke="#e700ff" points="404.3558,-296.5001 394.3557,-300 404.3557,-303.5001 404.3558,-296.5001"/>
+</g>
+<!-- module~interaction_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node12" class="node">
+<title>module~interaction_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node12"><a xlink:href=".././module/interaction_m.html" xlink:title="interaction_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="285,-209 209,-209 209,-185 285,-185 285,-209"/>
+<text text-anchor="middle" x="247" y="-194.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">interaction_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~interaction_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge26" class="edge">
+<title>module~setup_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M432.4993,-287.983C394.9803,-269.5808 323.1909,-234.3698 280.7641,-213.5605"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="282.1887,-210.3609 271.6692,-209.0997 279.1062,-216.6457 282.1887,-210.3609"/>
+</g>
+<!-- module~pairtab_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_node8" class="node">
+<title>module~pairtab_m</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node8"><a xlink:href=".././module/pairtab_m.html" xlink:title="pairtab_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="163.5,-104 104.5,-104 104.5,-80 163.5,-80 163.5,-104"/>
+<text text-anchor="middle" x="134" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pairtab_m</text>
+</a>
+</g>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge7" class="edge">
+<title>module~pairtab_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M107.8483,-104.1212C103.3484,-106.7437 98.8779,-109.7256 95,-113 73.2429,-131.3716 53.9615,-158.0336 42.0493,-176.3658"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="39.0607,-174.5432 36.6663,-184.864 44.9742,-178.289 39.0607,-174.5432"/>
+</g>
+<!-- module~config_io_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge8" class="edge">
+<title>module~config_io_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M134,-418C58.9685,-379.227 37.4421,-267.1927 31.5758,-219.2239"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="35.0503,-218.8 30.4721,-209.2454 28.0928,-219.5696 35.0503,-218.8"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M224.5968,-390.2413C196.5075,-404.8458 150.0848,-426.3119 134,-418"/>
+</g>
+<!-- module~stats_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge9" class="edge">
+<title>module~stats_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M111.9402,-327.8957C105.9914,-323.9712 99.8633,-319.2563 95,-314 68.3216,-285.1654 48.354,-243.5066 37.8422,-218.4596"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="41.056,-217.0714 34.043,-209.1299 34.5729,-219.7114 41.056,-217.0714"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge10" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M247,-300C179.1797,-305.9555 154.2024,-314.6175 95,-281 69.5718,-266.5608 50.5666,-237.9112 39.7512,-218.1148"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="42.8344,-216.4577 35.1074,-209.2089 36.6274,-219.6941 42.8344,-216.4577"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M320.8671,-298.6317C299.328,-298.1684 271.5828,-298.1612 247,-300"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~config_io_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge19" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~config_io_m</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M340.2344,-312.1875C322.0701,-325.0094 293.2892,-345.3253 272.507,-359.995"/>
+<polygon fill="#002eff" stroke="#002eff" points="270.2957,-357.2718 264.1444,-365.8981 274.3325,-362.9906 270.2957,-357.2718"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~stats_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge21" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M247,-300C218.6478,-302.4897 188.3387,-313.7352 166.2551,-323.6707"/>
+<polygon fill="#5c00ff" stroke="#5c00ff" points="164.6165,-320.5727 157.0246,-327.9629 167.568,-326.9201 164.6165,-320.5727"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~interaction_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge25" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M344.3903,-287.7801C325.3665,-270.0475 289.9322,-237.0183 267.4547,-216.0664"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="269.7941,-213.4623 260.0927,-209.204 265.0212,-218.5828 269.7941,-213.4623"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge11" class="edge">
+<title>module~interaction_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M244.1441,-184.772C237.2262,-158.3052 216.8135,-96.0792 173,-71 142.9136,-53.7783 124.6318,-53.0074 95,-71 57.6506,-93.6788 40.622,-145.3485 33.6791,-174.9969"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="30.2455,-174.316 31.5586,-184.8292 37.0882,-175.7919 30.2455,-174.316"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_dihedral_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge12" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_dihedral_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M243.8576,-184.9909C235.971,-156.6873 213.0525,-84.6743 173,-38 170.5789,-35.1786 167.7797,-32.5361 164.8147,-30.0986"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="166.8522,-27.2525 156.724,-24.1428 162.7024,-32.8898 166.8522,-27.2525"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_vdw_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge13" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_vdw_m</title>
+<path fill="none" stroke="#ff8b00" stroke-dasharray="5,2" d="M226.0181,-209.0736C211.2415,-217.5358 190.9695,-229.0642 173,-239 170.6214,-240.3152 168.1563,-241.6675 165.6738,-243.0216"/>
+<polygon fill="#ff8b00" stroke="#ff8b00" points="163.854,-240.0269 156.7313,-247.8702 167.1905,-246.1805 163.854,-240.0269"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_external_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge14" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_external_m</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M208.7434,-204.1096C200.5518,-205.632 191.7871,-207.2608 183.2472,-208.8479"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="182.5653,-205.4146 173.3732,-210.6829 183.8444,-212.2967 182.5653,-205.4146"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_angle_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge15" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_angle_m</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M208.7434,-189.8904C198.755,-188.0341 187.9146,-186.0195 177.6685,-184.1154"/>
+<polygon fill="#5cff00" stroke="#5cff00" points="178.1454,-180.6442 167.6742,-182.258 176.8663,-187.5263 178.1454,-180.6442"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_tether_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge16" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_tether_m</title>
+<path fill="none" stroke="#00ff2e" stroke-dasharray="5,2" d="M226.0181,-184.9264C211.2415,-176.4642 190.9695,-164.9358 173,-155 170.6214,-153.6848 168.1563,-152.3325 165.6738,-150.9784"/>
+<polygon fill="#00ff2e" stroke="#00ff2e" points="167.1905,-147.8195 156.7313,-146.1298 163.854,-153.9731 167.1905,-147.8195"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~pairtab_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge18" class="edge">
+<title>module~interaction_m&#45;&gt;module~pairtab_m</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M238.5493,-184.9389C225.849,-167.4477 200.393,-134.759 173,-113 171.4645,-111.7803 169.848,-110.5953 168.1817,-109.45"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="169.9179,-106.4078 159.5819,-104.0798 166.2102,-112.3453 169.9179,-106.4078"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~stats_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge23" class="edge">
+<title>module~interaction_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#5c00ff" stroke-dasharray="5,2" d="M237.3657,-209.1921C217.9349,-233.7815 173.8747,-289.5391 150.0354,-319.7074"/>
+<polygon fill="#5c00ff" stroke="#5c00ff" points="147.0639,-317.8227 143.6099,-327.8388 152.5561,-322.1627 147.0639,-317.8227"/>
+</g>
+<!-- program~main -->
+<g id="module~~atmcfg_m~~UsedByGraph_node13" class="node">
+<title>program~main</title>
+<g id="a_module~~atmcfg_m~~UsedByGraph_node13"><a xlink:href=".././program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="574,-312 520,-312 520,-288 574,-288 574,-312"/>
+<text text-anchor="middle" x="547" y="-297.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~setup_m -->
+<g id="module~~atmcfg_m~~UsedByGraph_edge17" class="edge">
+<title>program~main&#45;&gt;module~setup_m</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M519.997,-300C511.9723,-300 503.0335,-300 494.4691,-300"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="494.295,-296.5001 484.295,-300 494.2949,-303.5001 494.295,-296.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/atmcfg_m.html#variable-mxparam">mxparam</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/atmcfg_m.html#type-atmcfg_t">atmcfg_t</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/atmcfg_m.html#proc-atmcfg_delete">atmcfg_delete</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mxparam"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>mxparam</strong></td><td> =</td><td>12</td><td><p>Maximum number of parameters for bonds, angles, etc.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <section>
+     <h2>Derived Types</h2>
+   
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-atmcfg_t"></span><h3>type, public :: <a href='../type/atmcfg_t.html'>atmcfg_t</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_atom_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_atom_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>atom_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atom_names"></span>character(len=8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atom_names</strong></td><td></td><td></td><td><p>(<em>num_atom_types</em>,) array. Name of atoms of each type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atom_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atom_styles</strong></td><td></td><td></td><td><p>(<em>num_atom_types</em>,) array. Style of atoms of each type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atom_mass"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atom_mass</strong></td><td></td><td></td><td><p>(<em>num_atom_types</em>,) array. Mass of atoms of each type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_atoms%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_atoms</strong></td><td> =</td><td>0</td><td><p>Number of atoms</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atoms"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atoms</strong></td><td></td><td></td><td><p>(<em>num_atoms</em>,) array. </p><a href="None" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-charge"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>charge</strong></td><td></td><td></td><td><p>(<em>num_atoms</em>,) array.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-coordinates"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>coordinates</strong></td><td></td><td></td><td><p>(3, <em>num_atoms</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-forces"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>forces</strong></td><td></td><td></td><td><p>(3, <em>num_atoms</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_bond_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_bond_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>bond_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bond_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>bond_styles</strong></td><td></td><td></td><td><p>(<em>num_bond_types</em>,) array.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bond_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>bond_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>,<em>num_bond_types</em>) array.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_bonds"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_bonds</strong></td><td> =</td><td>0</td><td><p>Total number of bonds.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bonds"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>bonds</strong></td><td></td><td></td><td><p>(3, <em>num_bonds</em>) array. Bond <em>i</em> is of type <em>bt = bonds(1,i)</em>,  directed from
+ atom <em>bonds(2,i)</em> to <em>bonds(3,i)</em>. Its style is <em>bond_styles(bt)</em> with
+ parameters <em>bond_params(:,bt)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_angle_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_angle_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>angle_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-angle_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>angle_styles</strong></td><td></td><td></td><td><p>(<em>num_angle_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-angle_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>angle_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_angle_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_angles"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_angles</strong></td><td> =</td><td>0</td><td><p>Number of angles</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-angles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>angles</strong></td><td></td><td></td><td><p>(4, <em>num_angles</em>) array. Angle <em>i</em> is of type <em>ant = angles(1,i)</em>, incident
+ to atoms <em>angles(2,i)</em>, <em>angles(3,i)</em>, and <em>angles(4,i)</em>. Its style is
+ <em>angle_styles(ant)</em> with parameters <em>angle_params(:,ant)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_dihedral_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_dihedral_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>dihedral_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dihedral_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>dihedral_styles</strong></td><td></td><td></td><td><p>(<em>num_dihedral_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dihedral_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>dihedral_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_dihedral_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_dihedrals"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_dihedrals</strong></td><td> =</td><td>0</td><td><p>Number of dihedrals</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dihedrals"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>dihedrals</strong></td><td></td><td></td><td><p>(5, <em>num_dihedrals</em>) array. Dihedral <em>i</em> is of type <em>dt = dihedrals(1,i)</em>, incident
+ to atoms <em>dihedrals(2,i)</em>, <em>dihedrals(3,i)</em>, <em>dihedrals(4,i)</em>, and <em>dihedrals(5,i)</em>.
+ Its style is <em>dihedral_styles(dt)</em> with parameters <em>dihedral_params(:,dt)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_branches"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_branches</strong></td><td> =</td><td>0</td><td><p>Total number of branches (including the backbone)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-branches"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>branches</strong></td><td></td><td></td><td><p>(3,<em>num_branches</em>) array. Branch <em>i</em> is tethered to atom <em>branches(1,i)</em>,
+ contains <em>branches(2,i)</em> atoms, with the beginning atom index <em>branches(3,i)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_molecule_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_molecule_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>molecule_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecule_names"></span>character(len=8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>molecule_names</strong></td><td></td><td></td><td><p>(<em>num_molecule_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecule_pop"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>molecule_pop</strong></td><td></td><td></td><td><p>(<em>num_molecule_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_molecules"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_molecules</strong></td><td> =</td><td>0</td><td><p>Number of molecules</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecules"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>molecules</strong></td><td></td><td></td><td><p>(9,<em>num_molecules</em>) array. For molecule <em>i</em>, its type <em>mt = molecules(1,i)</em>, 
+ containing <em>molecules(2,i)</em> atoms with beginning index <em>molecules(3,i)</em>,
+ <em>molecules(4,i)</em> bonds with beginning index <em>molecules(5,i)</em>,
+ <em>molecules(6,i)</em> angles with beginning index <em>molecules(7,i)</em>, and
+ <em>molecules(8,i)</em> dihedrals with beginning index <em>molecules(9,i)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecule_com"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>molecule_com</strong></td><td> =</td><td>0.0_rp</td><td><p>Center of mass of the molecule. This is used only when imcon == 0, i.e.
+ for a single molecule without periodic boundaries.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_tether_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_tether_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>tether_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tether_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>tether_styles</strong></td><td></td><td></td><td><p>(<em>num_tether_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tether_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>tether_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_tether_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_tethers"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_tethers</strong></td><td> =</td><td>0</td><td><p>Number of tethers</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tethers"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>tethers</strong></td><td></td><td></td><td><p>(2, <em>num_tethers</em>) array. Tether <em>i</em> is of type <em>tt = tethers(1,i)</em>, tethering
+ atom <em>tethers(2,i)</em> to a point <em>tether_points(:,i)</em>.
+ Its style is <em>tether_styles(tt)</em> with parameters <em>tether_params(:,tt)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tether_points"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>tether_points</strong></td><td></td><td></td><td><p>(3, <em>num_tethers</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_vdw_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_vdw_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>vdw_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vdw_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>vdw_styles</strong></td><td></td><td></td><td><p>(<em>num_vdw_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vdw_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>vdw_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_vdw_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vdw_pairs"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>vdw_pairs</strong></td><td></td><td></td><td><p>(2, <em>num_vdw_types</em>) array. Stores atom type of interacting pairs, such
+ that at_i &gt;= at_j.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_externals"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_externals</strong></td><td> =</td><td>0</td><td><p>Number of external fields</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-external_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>external_styles</strong></td><td></td><td></td><td><p>(<em>num_external</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-external_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>external_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_external</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-flow_style"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>flow_style</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-flow_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>flow_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>,) array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+     
+    </section>
+  <br>
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-atmcfg_delete"></span><h3>
+public subroutine <a href='../proc/atmcfg_delete.html'>atmcfg_delete</a>(this)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Deallocates all memory acquired by a <code>configuration_t</code> object and resets
+ all other components to zero. Exception: <code>num_coeffs</code> is not reset to
+ zero.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

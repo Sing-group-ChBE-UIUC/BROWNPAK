@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,6 +66,8 @@
             <li><a href="../lists/modules.html">Modules</a></li>
         
             
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
         
@@ -85,6 +87,8 @@
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
 
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
@@ -298,9 +302,9 @@ do not require recompilation.</p>
 
 <p>As you can see, it lists a number of keywords and their corresponding values
 separated by whitespace. The maximum length of a line is as specified in
-<a href="../module/m_globals.html#variable-mxrdln">mxrdln</a>.</p>
+<a>m_globals</a>.</p>
 <p></p><div class="alert alert-info" role="alert"><h4>Note</h4><p>Each of the keywords in the control file is a variable listed in
-<a href="../module/m_globals.html">m_globals</a>. Please look up the detailed description and possible set
+<a>m_globals</a>. Please look up the detailed description and possible set
 of allowed values there.</p></div>
 <p></p><div class="alert alert-warning" role="alert"><h4>Warning</h4><p>There are no checks performed on the consistency of the values provided
 in the control file. If you use unphysical values, your results may be incorrect
@@ -321,7 +325,7 @@ discarded. The keywords and the values must be separated by one or more whitespa
   convenience these values may be given in <code>*.D*</code> format. Internally they will
   be cast as long ints. <code>mts_md</code> is not a long int because it does not make
   sense for it to be a large number, else the simulation will never complete.</li>
-<li><code>traj_frmcmp</code>: See <a href="../module/m_globals.html#variable-traj_frmcmp">traj_frmcmp</a> for details. Each element of the
+<li><code>traj_frmcmp</code>: See <a>m_globals</a> for details. Each element of the
   sequence can be either 0 or 1 (separated by whitespaces), e.g. 1 1 1 1 or 1 0 0 1.
   All four being zero is allowed, but makes no sense.</li>
 <li>Choosing <code>nts_dump &lt;= nts_samp</code> is a good idea, but do not dump too frequently
@@ -346,16 +350,16 @@ a sequence of frames. The structure of the header is:</p>
   <code>traj_frmcmp</code> in the control file.</li>
 </ul>
 <p>During creation of a trajectory, <em>num_atoms</em> and <em>num_mpcd_atoms</em> are given
-to <a href="../module/m_trajectory.html#proc-traj_create">traj_create</a>. Depending on <a href="../module/m_globals.html#variable-traj_wmpcd">traj_wmpcd</a>, it is
+to <a>m_trajectory</a>. Depending on <a>m_globals</a>, it is
 possible for an MPCD simulation to not write any MPCD data to <code>traj.bin</code>. This
 should be the commonly used case. For BD/energy-minimization the value of
-<a href="../module/m_globals.html#variable-traj_wmpcd">traj_wmpcd</a> does not matter.</p>
+<a>m_globals</a> does not matter.</p>
 <p>Following the header, there is a sequence of frame data, written according to
-<a href="../module/m_globals.html#variable-traj_wmpcd">traj_wmpcd</a> and <a href="../module/m_globals.html#variable-traj_frmcmp">traj_frmcmp</a>.</p>
+<a>m_globals</a> and <a>m_globals</a>.</p>
 <h2>Structure of the revive file</h2>
 <p>The revive file is a binary dump. It contains enough information to restart the
 simulation if <code>lrevive = T</code> in the control file. To see what gets dumped, please
-examine the source for <a href="../module/m_config_io.html#proc-write_dump">write_dump</a>.</p>
+examine the source for <a>m_config_io</a>.</p>
 <h2>Interactions</h2>
 <p>The following kinds of interactions are available (or can be made available with
 minimal effort):</p>
@@ -367,16 +371,16 @@ by the user. For example, in a A-B diblock polymer, the user may choose A-A bond
 as type 1, B-B bonds as type 2, and the A-B bond as type 3.</p>
 <p>Each <em>bond_type</em> is completely determined by a <em>style</em>, called <em>bond_style</em>,
 and a set of parameters, called <em>bond_params</em>. <em>bond_style</em>s are chosen from the
-list of available styles, as specified in <a href="../module/m_ia_bond.html">m_ia_bond</a>. The number of required
+list of available styles, as specified in <a>m_ia_bond</a>. The number of required
 parameters depend on the chosen style. The maximum number of parameters is
-<a href="../module/m_globals.html#variable-mxparam">mxparam</a>.  For example, in our A-B diblock, the A-A bonds can be
+<a>m_globals</a>.  For example, in our A-B diblock, the A-A bonds can be
 of type 1, with style 3 (corresponding to Kremer-Grest bond), and a set of four
 parameters; the B-B bonds can be of type 2, and also of style 3, with a set
 of four parameters, same as or different from the parameters of A-A bonds.</p>
 </li>
 <li>
 <p><em>Angles</em></p>
-<p>Similar to bonds, angles have types and styles as well. See <a href="../module/m_ia_angle.html">m_ia_angle</a>.
+<p>Similar to bonds, angles have types and styles as well. See <a>m_ia_angle</a>.
 Only one non-trivial style is available, as this is the most commonly used
 style for polymers. However, more styles can be added if necessary.</p>
 </li>
@@ -384,23 +388,23 @@ style for polymers. However, more styles can be added if necessary.</p>
 <p><em>Dihedrals</em></p>
 <p>Dihedrals are not typically used in the kind of polymer models I deal with.
 So, only the trivial style is present. In case you need a dihedral, add the
-appropriate routines to <a href="../module/m_ia_dihedral.html">m_ia_dihedral</a>.</p>
+appropriate routines to <a>m_ia_dihedral</a>.</p>
 </li>
 <li>
 <p><em>Tethers</em></p>
 <p>Tethers are pointwise restraints on one or more atoms. There can be multiple
-tethers, see <a href="../module/m_ia_tether.html">m_ia_tether</a>.</p>
+tethers, see <a>m_ia_tether</a>.</p>
 </li>
 <li>
-<p><em>Pairwise</em>: See <a href="../module/m_ia_vdw.html">m_ia_vdw</a> for a list. </p>
+<p><em>Pairwise</em>: See <a>m_ia_vdw</a> for a list. </p>
 </li>
 <li>
 <p><em>External</em>: There is no working implementation of external interactions. The
   idea is this: I do not know what kind of external interactions you need, but I
 do not want to restrict you into a set of predefined interactions. So, please
-modify the module <a href="../module/m_ia_external.html">m_ia_external</a> to your choice, while keeping the interface
+modify the module <a>m_ia_external</a> to your choice, while keeping the interface
 intact. I assume you are a competent Fortran programmer, so that you will
-immediately get it when you look at <a href="../module/m_ia_external.html">m_ia_external</a>. A guiding principle is
+immediately get it when you look at <a>m_ia_external</a>. A guiding principle is
 that external interactions are generally fields that act on all the atoms in the
 sytem, but in some sense this covers everything. Remember to update the
 stress as you add external interactions.</p>

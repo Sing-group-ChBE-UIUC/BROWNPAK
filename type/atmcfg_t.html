@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>atmcfg_t &ndash; BROWNPAK </title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>atmcfg_t
+    <small>Derived Type</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="<p>19.5% of total for derived types.</p>Including implementation: 49 statements,  4.1% of total for derived types.">49 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/atmcfg_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/atmcfg_m.f90.html'>atmcfg_m.f90</a></li>
+    
+     <li><a href='../module/atmcfg_m.html'>atmcfg_m</a></li>
+    
+  
+     <li class="active">atmcfg_t</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_atom_types">num_atom_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atom_names">atom_names</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atom_styles">atom_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atom_mass">atom_mass</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_atoms%7E2">num_atoms</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atoms">atoms</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-charge">charge</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-coordinates">coordinates</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-forces">forces</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_bond_types">num_bond_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-bond_styles">bond_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-bond_params">bond_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_bonds">num_bonds</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-bonds">bonds</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_angle_types">num_angle_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-angle_styles">angle_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-angle_params">angle_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_angles">num_angles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-angles">angles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_dihedral_types">num_dihedral_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-dihedral_styles">dihedral_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-dihedral_params">dihedral_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_dihedrals">num_dihedrals</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-dihedrals">dihedrals</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_branches">num_branches</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-branches">branches</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_molecule_types">num_molecule_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecule_names">molecule_names</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecule_pop">molecule_pop</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_molecules">num_molecules</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecules">molecules</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecule_com">molecule_com</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_tether_types">num_tether_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tether_styles">tether_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tether_params">tether_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_tethers">num_tethers</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tethers">tethers</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tether_points">tether_points</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_vdw_types">num_vdw_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-vdw_styles">vdw_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-vdw_params">vdw_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-vdw_pairs">vdw_pairs</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_externals">num_externals</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-external_styles">external_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-external_params">external_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-flow_style">flow_style</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-flow_params">flow_params</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../type/atmcfg_t.html#src">atmcfg_t</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: atmcfg_t</h2>
+    
+    
+    
+    
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_atom_types">num_atom_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atom_names">atom_names</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atom_styles">atom_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atom_mass">atom_mass</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_atoms%7E2">num_atoms</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-atoms">atoms</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-charge">charge</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-coordinates">coordinates</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-forces">forces</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_bond_types">num_bond_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-bond_styles">bond_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-bond_params">bond_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_bonds">num_bonds</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-bonds">bonds</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_angle_types">num_angle_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-angle_styles">angle_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-angle_params">angle_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_angles">num_angles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-angles">angles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_dihedral_types">num_dihedral_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-dihedral_styles">dihedral_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-dihedral_params">dihedral_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_dihedrals">num_dihedrals</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-dihedrals">dihedrals</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_branches">num_branches</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-branches">branches</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_molecule_types">num_molecule_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecule_names">molecule_names</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecule_pop">molecule_pop</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_molecules">num_molecules</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecules">molecules</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-molecule_com">molecule_com</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_tether_types">num_tether_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tether_styles">tether_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tether_params">tether_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_tethers">num_tethers</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tethers">tethers</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-tether_points">tether_points</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_vdw_types">num_vdw_types</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-vdw_styles">vdw_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-vdw_params">vdw_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-vdw_pairs">vdw_pairs</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-num_externals">num_externals</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-external_styles">external_styles</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-external_params">external_params</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-flow_style">flow_style</a>
+      
+      <a class="list-group-item" href="../type/atmcfg_t.html#variable-flow_params">flow_params</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../type/atmcfg_t.html#src">atmcfg_t</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+    <section>
+    <h2>Components</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_atom_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_atom_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>atom_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atom_names"></span>character(len=8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atom_names</strong></td><td></td><td></td><td><p>(<em>num_atom_types</em>,) array. Name of atoms of each type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atom_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atom_styles</strong></td><td></td><td></td><td><p>(<em>num_atom_types</em>,) array. Style of atoms of each type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atom_mass"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atom_mass</strong></td><td></td><td></td><td><p>(<em>num_atom_types</em>,) array. Mass of atoms of each type.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_atoms%7E2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_atoms</strong></td><td> =</td><td>0</td><td><p>Number of atoms</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atoms"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>atoms</strong></td><td></td><td></td><td><p>(<em>num_atoms</em>,) array. </p>
+<p>For atom <em>i</em>, its type <em>at = atoms(i)</em>, with style
+ <em>atom_styles(at)</em>, name <em>atom_names(at)</em>, mass <em>atom_mass(at)</em>, charge
+ <em>charge(i)</em>, position <em>coordinates(:,i)</em>, velocity <em>velocities(:,i)</em>,
+ orientation (if the style requires) <em>orientations(:,i)</em>. The force 
+ acting on atom <em>i</em> is <em>forces(:,i)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-charge"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>charge</strong></td><td></td><td></td><td><p>(<em>num_atoms</em>,) array.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-coordinates"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>coordinates</strong></td><td></td><td></td><td><p>(3, <em>num_atoms</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-forces"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>forces</strong></td><td></td><td></td><td><p>(3, <em>num_atoms</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_bond_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_bond_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>bond_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bond_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>bond_styles</strong></td><td></td><td></td><td><p>(<em>num_bond_types</em>,) array.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bond_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>bond_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>,<em>num_bond_types</em>) array.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_bonds"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_bonds</strong></td><td> =</td><td>0</td><td><p>Total number of bonds.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bonds"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>bonds</strong></td><td></td><td></td><td><p>(3, <em>num_bonds</em>) array. Bond <em>i</em> is of type <em>bt = bonds(1,i)</em>,  directed from
+ atom <em>bonds(2,i)</em> to <em>bonds(3,i)</em>. Its style is <em>bond_styles(bt)</em> with
+ parameters <em>bond_params(:,bt)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_angle_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_angle_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>angle_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-angle_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>angle_styles</strong></td><td></td><td></td><td><p>(<em>num_angle_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-angle_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>angle_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_angle_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_angles"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_angles</strong></td><td> =</td><td>0</td><td><p>Number of angles</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-angles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>angles</strong></td><td></td><td></td><td><p>(4, <em>num_angles</em>) array. Angle <em>i</em> is of type <em>ant = angles(1,i)</em>, incident
+ to atoms <em>angles(2,i)</em>, <em>angles(3,i)</em>, and <em>angles(4,i)</em>. Its style is
+ <em>angle_styles(ant)</em> with parameters <em>angle_params(:,ant)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_dihedral_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_dihedral_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>dihedral_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dihedral_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>dihedral_styles</strong></td><td></td><td></td><td><p>(<em>num_dihedral_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dihedral_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>dihedral_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_dihedral_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_dihedrals"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_dihedrals</strong></td><td> =</td><td>0</td><td><p>Number of dihedrals</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dihedrals"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>dihedrals</strong></td><td></td><td></td><td><p>(5, <em>num_dihedrals</em>) array. Dihedral <em>i</em> is of type <em>dt = dihedrals(1,i)</em>, incident
+ to atoms <em>dihedrals(2,i)</em>, <em>dihedrals(3,i)</em>, <em>dihedrals(4,i)</em>, and <em>dihedrals(5,i)</em>.
+ Its style is <em>dihedral_styles(dt)</em> with parameters <em>dihedral_params(:,dt)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_branches"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_branches</strong></td><td> =</td><td>0</td><td><p>Total number of branches (including the backbone)</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-branches"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>branches</strong></td><td></td><td></td><td><p>(3,<em>num_branches</em>) array. Branch <em>i</em> is tethered to atom <em>branches(1,i)</em>,
+ contains <em>branches(2,i)</em> atoms, with the beginning atom index <em>branches(3,i)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_molecule_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_molecule_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>molecule_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecule_names"></span>character(len=8),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>molecule_names</strong></td><td></td><td></td><td><p>(<em>num_molecule_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecule_pop"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>molecule_pop</strong></td><td></td><td></td><td><p>(<em>num_molecule_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_molecules"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_molecules</strong></td><td> =</td><td>0</td><td><p>Number of molecules</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecules"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>molecules</strong></td><td></td><td></td><td><p>(9,<em>num_molecules</em>) array. For molecule <em>i</em>, its type <em>mt = molecules(1,i)</em>, 
+ containing <em>molecules(2,i)</em> atoms with beginning index <em>molecules(3,i)</em>,
+ <em>molecules(4,i)</em> bonds with beginning index <em>molecules(5,i)</em>,
+ <em>molecules(6,i)</em> angles with beginning index <em>molecules(7,i)</em>, and
+ <em>molecules(8,i)</em> dihedrals with beginning index <em>molecules(9,i)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molecule_com"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>molecule_com</strong></td><td> =</td><td>0.0_rp</td><td><p>Center of mass of the molecule. This is used only when imcon == 0, i.e.
+ for a single molecule without periodic boundaries.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_tether_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_tether_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>tether_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tether_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>tether_styles</strong></td><td></td><td></td><td><p>(<em>num_tether_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tether_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>tether_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_tether_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_tethers"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_tethers</strong></td><td> =</td><td>0</td><td><p>Number of tethers</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tethers"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>tethers</strong></td><td></td><td></td><td><p>(2, <em>num_tethers</em>) array. Tether <em>i</em> is of type <em>tt = tethers(1,i)</em>, tethering
+ atom <em>tethers(2,i)</em> to a point <em>tether_points(:,i)</em>.
+ Its style is <em>tether_styles(tt)</em> with parameters <em>tether_params(:,tt)</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tether_points"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>tether_points</strong></td><td></td><td></td><td><p>(3, <em>num_tethers</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_vdw_types"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_vdw_types</strong></td><td> =</td><td>0</td><td><p>Number of <em>vdw_type</em>s</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vdw_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>vdw_styles</strong></td><td></td><td></td><td><p>(<em>num_vdw_types</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vdw_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>vdw_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_vdw_types</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vdw_pairs"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>vdw_pairs</strong></td><td></td><td></td><td><p>(2, <em>num_vdw_types</em>) array. Stores atom type of interacting pairs, such
+ that at_i &gt;= at_j.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-num_externals"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>num_externals</strong></td><td> =</td><td>0</td><td><p>Number of external fields</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-external_styles"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>external_styles</strong></td><td></td><td></td><td><p>(<em>num_external</em>,) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-external_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>external_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>, <em>num_external</em>) array</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-flow_style"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>flow_style</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-flow_params"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>flow_params</strong></td><td></td><td></td><td><p>(<em>mxparam</em>,) array</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="highlight"><pre><span></span><span class="k">type </span><span class="n">atmcfg_t</span>
+    <span class="c">!Particle configuration: Atoms</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_atom_types</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!! Number of *atom_type*s</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">8</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">atom_names</span>
+        <span class="c">!! (*num_atom_types*,) array. Name of atoms of each type.</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">atom_styles</span>
+        <span class="c">!! (*num_atom_types*,) array. Style of atoms of each type.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">atom_mass</span>
+        <span class="c">!! (*num_atom_types*,) array. Mass of atoms of each type.</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_atoms</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of atoms</span>
+    <span class="kt">integer</span> <span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span><span class="kd">::</span> <span class="n">atoms</span>
+        <span class="c">!! (*num_atoms*,) array. </span>
+        <span class="c">!!</span>
+        <span class="c">!! For atom *i*, its type *at = atoms(i)*, with style</span>
+        <span class="c">!! *atom_styles(at)*, name *atom_names(at)*, mass *atom_mass(at)*, charge</span>
+        <span class="c">!! *charge(i)*, position *coordinates(:,i)*, velocity *velocities(:,i)*,</span>
+        <span class="c">!! orientation (if the style requires) *orientations(:,i)*. The force </span>
+        <span class="c">!! acting on atom *i* is *forces(:,i)*.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">charge</span>
+        <span class="c">!! (*num_atoms*,) array.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">coordinates</span>
+        <span class="c">!!  (3, *num_atoms*) array</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">forces</span>
+        <span class="c">!!  (3, *num_atoms*) array</span>
+    
+    <span class="c">!Particle configuration: Bonds</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_bond_types</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of *bond_type*s</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">bond_styles</span>
+        <span class="c">!!  (*num_bond_types*,) array.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">bond_params</span>
+        <span class="c">!!  (*mxparam*,*num_bond_types*) array.</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_bonds</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Total number of bonds.</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">bonds</span>
+        <span class="c">!! (3, *num_bonds*) array. Bond *i* is of type *bt = bonds(1,i)*,  directed from</span>
+        <span class="c">!! atom *bonds(2,i)* to *bonds(3,i)*. Its style is *bond_styles(bt)* with</span>
+        <span class="c">!! parameters *bond_params(:,bt)*.</span>
+    
+    <span class="c">!Particle configuration: Angles</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_angle_types</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of *angle_type*s</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">angle_styles</span>
+        <span class="c">!!  (*num_angle_types*,) array</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">angle_params</span>
+        <span class="c">!!  (*mxparam*, *num_angle_types*) array</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_angles</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of angles</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">angles</span>
+        <span class="c">!! (4, *num_angles*) array. Angle *i* is of type *ant = angles(1,i)*, incident</span>
+        <span class="c">!! to atoms *angles(2,i)*, *angles(3,i)*, and *angles(4,i)*. Its style is</span>
+        <span class="c">!! *angle_styles(ant)* with parameters *angle_params(:,ant)*.</span>
+    
+    <span class="c">!Particle configuration: Dihedrals</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_dihedral_types</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of *dihedral_type*s</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">dihedral_styles</span>
+        <span class="c">!!  (*num_dihedral_types*,) array</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">dihedral_params</span>
+        <span class="c">!!  (*mxparam*, *num_dihedral_types*) array</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_dihedrals</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of dihedrals</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">dihedrals</span>
+        <span class="c">!! (5, *num_dihedrals*) array. Dihedral *i* is of type *dt = dihedrals(1,i)*, incident</span>
+        <span class="c">!! to atoms *dihedrals(2,i)*, *dihedrals(3,i)*, *dihedrals(4,i)*, and *dihedrals(5,i)*.</span>
+        <span class="c">!! Its style is *dihedral_styles(dt)* with parameters *dihedral_params(:,dt)*.</span>
+    
+    <span class="c">!Particle configuration: Branches</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_branches</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!! Total number of branches (including the backbone)</span>
+    <span class="kt">integer</span> <span class="p">,</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span><span class="kd">::</span> <span class="n">branches</span>
+        <span class="c">!! (3,*num_branches*) array. Branch *i* is tethered to atom *branches(1,i)*,</span>
+        <span class="c">!! contains *branches(2,i)* atoms, with the beginning atom index *branches(3,i)*.</span>
+    
+    <span class="c">!Particle configuration: Molecules</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_molecule_types</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of *molecule_type*s</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">8</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">molecule_names</span>
+        <span class="c">!! (*num_molecule_types*,) array</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">molecule_pop</span>
+        <span class="c">!! (*num_molecule_types*,) array</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_molecules</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of molecules</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">molecules</span>
+        <span class="c">!! (9,*num_molecules*) array. For molecule *i*, its type *mt = molecules(1,i)*, </span>
+        <span class="c">!! containing *molecules(2,i)* atoms with beginning index *molecules(3,i)*,</span>
+        <span class="c">!! *molecules(4,i)* bonds with beginning index *molecules(5,i)*,</span>
+        <span class="c">!! *molecules(6,i)* angles with beginning index *molecules(7,i)*, and</span>
+        <span class="c">!! *molecules(8,i)* dihedrals with beginning index *molecules(9,i)*.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="kd">::</span> <span class="n">molecule_com</span> <span class="o">=</span> <span class="mf">0.0_rp</span>
+        <span class="c">!! Center of mass of the molecule. This is used only when imcon == 0, i.e.</span>
+        <span class="c">!! for a single molecule without periodic boundaries.</span>
+    
+    <span class="c">!Particle configuration: Tethers</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_tether_types</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of *tether_type*s</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">tether_styles</span>
+        <span class="c">!!  (*num_tether_types*,) array</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">tether_params</span>
+        <span class="c">!!  (*mxparam*, *num_tether_types*) array</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_tethers</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of tethers</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">tethers</span>
+        <span class="c">!! (2, *num_tethers*) array. Tether *i* is of type *tt = tethers(1,i)*, tethering</span>
+        <span class="c">!! atom *tethers(2,i)* to a point *tether_points(:,i)*.</span>
+        <span class="c">!! Its style is *tether_styles(tt)* with parameters *tether_params(:,tt)*.</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">tether_points</span>
+        <span class="c">!!  (3, *num_tethers*) array</span>
+    
+    <span class="c">!Particle configuration: VDW (pair) interactions</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_vdw_types</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of *vdw_type*s</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">vdw_styles</span>
+        <span class="c">!!  (*num_vdw_types*,) array</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">vdw_params</span>
+        <span class="c">!!  (*mxparam*, *num_vdw_types*) array</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">vdw_pairs</span>
+        <span class="c">!!  (2, *num_vdw_types*) array. Stores atom type of interacting pairs, such</span>
+        <span class="c">!! that at_i &gt;= at_j.</span>
+    
+    <span class="c">!Particle configuration: External force field</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">num_externals</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="c">!!  Number of external fields</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">external_styles</span>
+        <span class="c">!!  (*num_external*,) array</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:,:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">external_params</span>
+        <span class="c">!!  (*mxparam*, *num_external*) array</span>
+    
+    <span class="c">!Particle configuration: Flow field</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">flow_style</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">flow_params</span>
+        <span class="c">!!  (*mxparam*,) array</span>
+<span class="k">end type </span><span class="n">atmcfg_t</span>
+</pre></div>
+
+    </section>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

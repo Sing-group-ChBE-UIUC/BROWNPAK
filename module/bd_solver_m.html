@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>bd_solver_m &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>bd_solver_m 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 4.9% of total for modules and submodules.">357 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/bd_solver_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/bd_solver_m.f90.html'>bd_solver_m.f90</a></li>
+    
+  
+     <li class="active">bd_solver_m</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-lhdia%7E2">lhdia</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-write_traj%7E2">write_traj</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-lanc_mxitr%7E2">lanc_mxitr</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nlmxitr">nlmxitr</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-kdmax%7E3">kdmax</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_mobsam%7E2">nts_mobsam</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-tim_stp%7E2">tim_stp</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-lanc_tol%7E2">lanc_tol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-ftol%7E3">ftol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-stptol%7E3">stptol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts%7E7">nts</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_sim%7E2">nts_sim</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_dump%7E2">nts_dump</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_samp%7E2">nts_samp</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_log%7E2">nts_log</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-mob_fctr%7E2">mob_fctr</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-bdintg%7E2">bdintg</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-fn_revive%7E2">fn_revive</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-psmbx">psmbx</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-patc">patc</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-cntr_mobsam">cntr_mobsam</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-sqrt_two_dt">sqrt_two_dt</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-drift">drift</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-diffusion">diffusion</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-mob%7E7">mob</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-crd0">crd0</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-sol">sol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nitsol_rwork">nitsol_rwork</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-pvcrd">pvcrd</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-pvfrc">pvfrc</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-bds_init">bds_init</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-bds_finish">bds_finish</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-bds_run">bds_run</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-integrate_em">integrate_em</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-integrate_se">integrate_se</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-se_fval">se_fval</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-se_jacv">se_jacv</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-calc_diffusion">calc_diffusion</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-calc_drift">calc_drift</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-calc_rpy_tensor">calc_rpy_tensor</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <p>Routines implementing Brownian Dynamics (BD) solver.</p>
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href="http://fortranwiki.org/fortran/show/ISO_C_BINDING">iso_c_binding</a></li>
+    
+    <li>mkl_blas</li>
+    
+    <li><a href='../module/constants_m.html'>constants_m</a></li>
+    
+    <li><a href='../module/logger_m.html'>logger_m</a></li>
+    
+    <li><a href='../module/control_m.html'>control_m</a></li>
+    
+    <li><a href='../module/atmcfg_m.html'>atmcfg_m</a></li>
+    
+    <li><a href='../module/interaction_m.html'>interaction_m</a></li>
+    
+    <li><a href='../module/brown_m.html'>brown_m</a></li>
+    
+    <li><a href='../module/stats_m.html'>stats_m</a></li>
+    
+    <li><a href='../module/config_io_m.html'>config_io_m</a></li>
+    
+    <li><a href='../module/trajectory_m.html'>trajectory_m</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~bd_solver_m~~UsesGraph Pages: 1 -->
+<svg id="modulebd_solver_mUsesGraph" width="641pt" height="623pt"
+ viewBox="0.00 0.00 641.00 623.33" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~bd_solver_m~~UsesGraph" class="graph" transform="scale(.6601 .6601) rotate(0) translate(4 940.229)">
+<title>module~~bd_solver_m~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-940.229 967,-940.229 967,4 -4,4"/>
+<!-- module~bd_solver_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node1" class="node">
+<title>module~bd_solver_m</title>
+<polygon fill="none" stroke="#000000" points="963,-372.229 890,-372.229 890,-348.229 963,-348.229 963,-372.229"/>
+<text text-anchor="middle" x="926.5" y="-357.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">bd_solver_m</text>
+</g>
+<!-- iso_c_binding -->
+<g id="module~~bd_solver_m~~UsesGraph_node2" class="node">
+<title>iso_c_binding</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node2"><a xlink:href="http://fortranwiki.org/fortran/show/ISO_C_BINDING" xlink:title="iso_c_binding">
+<polygon fill="#337ab7" stroke="#337ab7" points="418,-936.229 341,-936.229 341,-912.229 418,-912.229 418,-936.229"/>
+<text text-anchor="middle" x="379.5" y="-921.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">iso_c_binding</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;iso_c_binding -->
+<g id="module~~bd_solver_m~~UsesGraph_edge2" class="edge">
+<title>module~bd_solver_m&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M486,-923.229C467.1198,-924.8004 446.2925,-925.2742 428.1011,-925.2772"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="428.0289,-921.7769 418.0133,-925.2318 427.9974,-928.7768 428.0289,-921.7769"/>
+</g>
+<!-- module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node3" class="node">
+<title>module~constants_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node3"><a xlink:href=".././module/constants_m.html" xlink:title="constants_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="193,-414.229 121,-414.229 121,-390.229 193,-390.229 193,-414.229"/>
+<text text-anchor="middle" x="157" y="-399.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">constants_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge3" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M486,-760.229C442.0127,-735.2969 428.6946,-708.5504 379.5,-720.229"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M595,-883.229C524.9593,-903.9559 549.5455,-796.2467 486,-760.229"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M816,-682.229C712.7164,-765.6588 722.3131,-845.5536 595,-883.229"/>
+</g>
+<!-- module~brown_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node4" class="node">
+<title>module~brown_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node4"><a xlink:href=".././module/brown_m.html" xlink:title="brown_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="514,-895.229 458,-895.229 458,-871.229 514,-871.229 514,-895.229"/>
+<text text-anchor="middle" x="486" y="-880.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">brown_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~brown_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge4" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~brown_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M595,-883.229C572.3362,-889.9358 545.8417,-890.0983 524.649,-888.5058"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="524.6821,-884.9944 514.4055,-887.5715 524.0462,-891.9655 524.6821,-884.9944"/>
+</g>
+<!-- module~config_io_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node5" class="node">
+<title>module~config_io_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node5"><a xlink:href=".././module/config_io_m.html" xlink:title="config_io_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="629.5,-618.229 560.5,-618.229 560.5,-594.229 629.5,-594.229 629.5,-618.229"/>
+<text text-anchor="middle" x="595" y="-603.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">config_io_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~config_io_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge5" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~config_io_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M707,-606.229C686.0428,-597.4397 660.877,-596.6758 639.7135,-598.4413"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="639.2648,-594.969 629.6817,-599.4872 639.9907,-601.9313 639.2648,-594.969"/>
+</g>
+<!-- module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node6" class="node">
+<title>module~atmcfg_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node6"><a xlink:href=".././module/atmcfg_m.html" xlink:title="atmcfg_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="515.5,-414.229 456.5,-414.229 456.5,-390.229 515.5,-390.229 515.5,-414.229"/>
+<text text-anchor="middle" x="486" y="-399.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">atmcfg_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge6" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M906.705,-348.0333C843.0889,-309.5772 645.1015,-195.8539 595,-238.229"/>
+</g>
+<!-- module~stats_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node7" class="node">
+<title>module~stats_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node7"><a xlink:href=".././module/stats_m.html" xlink:title="stats_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="622,-576.229 568,-576.229 568,-552.229 622,-552.229 622,-576.229"/>
+<text text-anchor="middle" x="595" y="-561.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">stats_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~stats_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge7" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M816,-682.229C784.5026,-707.2034 775.0208,-653.1512 742,-630.229 726.5058,-619.4733 724.3937,-613.5238 707,-606.229"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M924.1117,-372.4963C913.3647,-426.378 867.753,-641.1938 816,-682.229"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M707,-606.229C682.2553,-595.8512 653.9571,-585.2498 631.9963,-577.2942"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="632.9821,-573.9293 622.3877,-573.8355 630.6112,-580.5156 632.9821,-573.9293"/>
+</g>
+<!-- module~logger_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node8" class="node">
+<title>module~logger_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node8"><a xlink:href=".././module/logger_m.html" xlink:title="logger_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="407.5,-894.229 351.5,-894.229 351.5,-870.229 407.5,-870.229 407.5,-894.229"/>
+<text text-anchor="middle" x="379.5" y="-879.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">logger_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~logger_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge1" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M595,-883.229C545.5178,-897.8721 537.4256,-918.9487 486,-923.229"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M486,-923.229C471.4688,-924.4385 438.4386,-910.7023 412.9867,-898.8076"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="414.1917,-895.5052 403.6574,-894.374 411.187,-901.8276 414.1917,-895.5052"/>
+</g>
+<!-- module~control_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node9" class="node">
+<title>module~control_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node9"><a xlink:href=".././module/control_m.html" xlink:title="control_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="515.5,-650.229 456.5,-650.229 456.5,-626.229 515.5,-626.229 515.5,-650.229"/>
+<text text-anchor="middle" x="486" y="-635.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">control_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~control_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge9" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~control_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M816,-682.229C770.218,-718.5297 611.2817,-671.7414 554,-660.229 544.6198,-658.3438 534.721,-655.5982 525.467,-652.6817"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="526.3265,-649.2801 515.7336,-649.4825 524.1407,-655.9301 526.3265,-649.2801"/>
+</g>
+<!-- mkl_blas -->
+<g id="module~~bd_solver_m~~UsesGraph_node10" class="node">
+<title>mkl_blas</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="406.5,-772.229 352.5,-772.229 352.5,-748.229 406.5,-748.229 406.5,-772.229"/>
+<text text-anchor="middle" x="379.5" y="-757.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_blas</text>
+</g>
+<!-- module~bd_solver_m&#45;&gt;mkl_blas -->
+<g id="module~~bd_solver_m~~UsesGraph_edge8" class="edge">
+<title>module~bd_solver_m&#45;&gt;mkl_blas</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M486,-760.229C465.2649,-748.4763 438.4083,-748.5595 416.8526,-751.5389"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="416.0489,-748.1238 406.7465,-753.1949 417.1809,-755.0316 416.0489,-748.1238"/>
+</g>
+<!-- module~trajectory_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node11" class="node">
+<title>module~trajectory_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node11"><a xlink:href=".././module/trajectory_m.html" xlink:title="trajectory_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="742,-734.229 672,-734.229 672,-710.229 742,-710.229 742,-734.229"/>
+<text text-anchor="middle" x="707" y="-719.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">trajectory_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~trajectory_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge10" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~trajectory_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M816,-682.229C797.4557,-696.9328 772.9949,-706.563 751.9448,-712.6806"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="750.9635,-709.3203 742.2373,-715.329 752.806,-716.0735 750.9635,-709.3203"/>
+</g>
+<!-- module~interaction_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node12" class="node">
+<title>module~interaction_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node12"><a xlink:href=".././module/interaction_m.html" xlink:title="interaction_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="854,-372.229 778,-372.229 778,-348.229 854,-348.229 854,-372.229"/>
+<text text-anchor="middle" x="816" y="-357.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">interaction_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~interaction_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge11" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M889.7051,-360.229C881.5817,-360.229 872.8569,-360.229 864.3535,-360.229"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="864.1463,-356.7291 854.1463,-360.229 864.1463,-363.7291 864.1463,-356.7291"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~bd_solver_m~~UsesGraph_node26" class="node">
+<title>iso_fortran_env</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node26"><a xlink:href="http://fortranwiki.org/fortran/show/ISO_FORTRAN_ENV" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="85,-654.229 0,-654.229 0,-630.229 85,-630.229 85,-654.229"/>
+<text text-anchor="middle" x="42.5" y="-639.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- module~constants_m&#45;&gt;iso_fortran_env -->
+<g id="module~~bd_solver_m~~UsesGraph_edge12" class="edge">
+<title>module~constants_m&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#ff8b00" stroke-dasharray="5,2" d="M151.1645,-414.4606C132.7889,-452.9771 75.9605,-572.0935 52.6424,-620.9697"/>
+<polygon fill="#ff8b00" stroke="#ff8b00" points="49.4708,-619.4895 48.3237,-630.022 55.7886,-622.5036 49.4708,-619.4895"/>
+</g>
+<!-- module~brown_m&#45;&gt;iso_c_binding -->
+<g id="module~~bd_solver_m~~UsesGraph_edge14" class="edge">
+<title>module~brown_m&#45;&gt;iso_c_binding</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M457.7396,-894.1086C446.2487,-898.5323 432.7501,-903.7289 420.2303,-908.5488"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="418.9714,-905.2829 410.8966,-912.142 421.4864,-911.8156 418.9714,-905.2829"/>
+</g>
+<!-- module~brown_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge16" class="edge">
+<title>module~brown_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M475.5794,-870.9003C463.112,-856.798 441.0208,-833.7839 418,-819.229 357.0992,-780.7244 324.9496,-803.0467 267,-760.229"/>
+</g>
+<!-- module~brown_m&#45;&gt;module~logger_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge13" class="edge">
+<title>module~brown_m&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M457.7396,-882.9636C445.4861,-882.8486 430.9496,-882.7121 417.7515,-882.5882"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="417.5554,-879.0863 407.523,-882.4921 417.4896,-886.086 417.5554,-879.0863"/>
+</g>
+<!-- module~brown_m&#45;&gt;mkl_blas -->
+<g id="module~~bd_solver_m~~UsesGraph_edge19" class="edge">
+<title>module~brown_m&#45;&gt;mkl_blas</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M479.4719,-871.1379C468.5644,-851.6778 445.1372,-812.8968 418,-786.229 415.1686,-783.4466 412.0028,-780.773 408.7359,-778.2692"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="410.715,-775.3818 400.5396,-772.4301 406.6534,-781.083 410.715,-775.3818"/>
+</g>
+<!-- module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node18" class="node">
+<title>module~strings_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node18"><a xlink:href=".././module/strings_m.html" xlink:title="strings_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="408.5,-414.229 350.5,-414.229 350.5,-390.229 408.5,-390.229 408.5,-414.229"/>
+<text text-anchor="middle" x="379.5" y="-399.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">strings_m</text>
+</a>
+</g>
+</g>
+<!-- module~brown_m&#45;&gt;module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge15" class="edge">
+<title>module~brown_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M481.654,-870.9785C474.7328,-850.9871 461.2499,-809.9876 454,-774.229 426.1761,-636.993 465.5332,-592.9427 418,-461.229 412.9549,-447.249 404.0248,-433.2473 396.0346,-422.3945"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="398.7848,-420.2291 389.9203,-414.4263 393.2313,-424.4906 398.7848,-420.2291"/>
+</g>
+<!-- module~random_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node24" class="node">
+<title>module~random_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node24"><a xlink:href=".././module/random_m.html" xlink:title="random_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="411,-494.229 348,-494.229 348,-470.229 411,-470.229 411,-494.229"/>
+<text text-anchor="middle" x="379.5" y="-479.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">random_m</text>
+</a>
+</g>
+</g>
+<!-- module~brown_m&#45;&gt;module~random_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge17" class="edge">
+<title>module~brown_m&#45;&gt;module~random_m</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M482.307,-871.1719C476.1987,-851.1161 463.7026,-809.606 454,-774.229 426.4045,-673.6123 396.5946,-552.5648 384.7653,-503.9714"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="388.1604,-503.1206 382.3986,-494.2295 381.3583,-504.7731 388.1604,-503.1206"/>
+</g>
+<!-- mkl_lapack -->
+<g id="module~~bd_solver_m~~UsesGraph_node25" class="node">
+<title>mkl_lapack</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="412,-852.229 347,-852.229 347,-828.229 412,-828.229 412,-852.229"/>
+<text text-anchor="middle" x="379.5" y="-837.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_lapack</text>
+</g>
+<!-- module~brown_m&#45;&gt;mkl_lapack -->
+<g id="module~~bd_solver_m~~UsesGraph_edge18" class="edge">
+<title>module~brown_m&#45;&gt;mkl_lapack</title>
+<path fill="none" stroke="#e7ff00" stroke-dasharray="5,2" d="M457.7396,-871.8187C445.8559,-867.0206 431.8248,-861.3554 418.9498,-856.1571"/>
+<polygon fill="#e7ff00" stroke="#e7ff00" points="419.9673,-852.7934 409.3842,-852.2949 417.3465,-859.2843 419.9673,-852.7934"/>
+</g>
+<!-- module~config_io_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge22" class="edge">
+<title>module~config_io_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M486,-722.229C439.9608,-733.2574 425.5615,-709.2942 379.5,-720.229"/>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M571.2614,-618.3374C565.1416,-622.2067 558.9051,-626.8921 554,-632.229 520.0747,-669.1405 534.7544,-710.5502 486,-722.229"/>
+</g>
+<!-- module~config_io_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge23" class="edge">
+<title>module~config_io_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M563.658,-594.0034C560.0105,-591.5415 556.6527,-588.6369 554,-585.229 510.0274,-528.7369 555.8412,-488.9989 518,-428.229 516.5764,-425.9427 514.88,-423.7669 513.0217,-421.7184"/>
+<polygon fill="#5cff00" stroke="#5cff00" points="514.9817,-418.7592 505.2875,-414.4845 510.2001,-423.8716 514.9817,-418.7592"/>
+</g>
+<!-- module~config_io_m&#45;&gt;module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge20" class="edge">
+<title>module~config_io_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M560.3622,-607.9559C528.4876,-607.5796 482.035,-601.7478 454,-574.229 406.3053,-527.4125 456.2471,-483.0353 418,-428.229 416.1076,-425.5172 413.8338,-423.0071 411.3493,-420.7037"/>
+<polygon fill="#5cff00" stroke="#5cff00" points="413.4423,-417.8965 403.4346,-414.4184 409.0891,-423.3783 413.4423,-417.8965"/>
+</g>
+<!-- module~simbox_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node21" class="node">
+<title>module~simbox_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node21"><a xlink:href=".././module/simbox_m.html" xlink:title="simbox_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="516,-494.229 456,-494.229 456,-470.229 516,-470.229 516,-494.229"/>
+<text text-anchor="middle" x="486" y="-479.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">simbox_m</text>
+</a>
+</g>
+</g>
+<!-- module~config_io_m&#45;&gt;module~simbox_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge21" class="edge">
+<title>module~config_io_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#5cff00" stroke-dasharray="5,2" d="M566.4135,-594.0264C562.0033,-591.4741 557.6938,-588.5368 554,-585.229 527.8588,-561.8196 507.3356,-526.2101 495.9404,-503.5894"/>
+<polygon fill="#5cff00" stroke="#5cff00" points="499.026,-501.9316 491.4926,-494.4819 492.736,-505.0035 499.026,-501.9316"/>
+</g>
+<!-- module~atmcfg_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge24" class="edge">
+<title>module~atmcfg_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ff2e" stroke-dasharray="5,2" d="M471.5923,-390.0793C451.1798,-374.4072 412.6345,-350.4789 379.5,-362.229"/>
+</g>
+<!-- module~stats_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge26" class="edge">
+<title>module~stats_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M486,-560.229C468.6885,-549.9892 463.8677,-545.7553 454,-528.229 420.9999,-469.6164 460.0994,-433.6893 418,-381.229 406.0573,-366.3471 397.4417,-355.7334 379.5,-362.229"/>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M567.9144,-570.0402C544.5555,-573.5454 510.7738,-574.8828 486,-560.229"/>
+</g>
+<!-- module~stats_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge28" class="edge">
+<title>module~stats_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M567.657,-554.1011C562.5782,-551.2188 557.7113,-547.6315 554,-543.229 519.4809,-502.2805 548.0604,-472.5542 518,-428.229 516.3427,-425.7852 514.3886,-423.4539 512.2765,-421.2623"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="514.4492,-418.508 504.6879,-414.3887 509.7499,-423.6961 514.4492,-418.508"/>
+</g>
+<!-- module~stats_m&#45;&gt;module~control_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge29" class="edge">
+<title>module~stats_m&#45;&gt;module~control_m</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M569.4294,-576.3815C564.2221,-579.1171 558.8549,-582.1328 554,-585.229 537.8504,-595.5282 520.8548,-608.7743 507.8944,-619.4475"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="505.4411,-616.9362 500.0097,-626.0329 509.9284,-622.3088 505.4411,-616.9362"/>
+</g>
+<!-- module~stats_m&#45;&gt;module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge25" class="edge">
+<title>module~stats_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M486,-560.229C470.6986,-551.1782 464.3948,-550.6511 454,-536.229 424.4157,-495.183 448.5916,-468.5298 418,-428.229 415.9519,-425.5308 413.5395,-423.0181 410.9375,-420.7027"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="412.7888,-417.7099 402.7374,-414.3601 408.506,-423.2468 412.7888,-417.7099"/>
+</g>
+<!-- module~stats_m&#45;&gt;module~simbox_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge27" class="edge">
+<title>module~stats_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#00ffb9" stroke-dasharray="5,2" d="M568.8259,-552.1033C563.769,-549.4077 558.6132,-546.4005 554,-543.229 536.2506,-531.0267 518.1954,-514.603 505.1544,-501.8714"/>
+<polygon fill="#00ffb9" stroke="#00ffb9" points="507.29,-499.0593 497.7301,-494.492 502.3553,-504.024 507.29,-499.0593"/>
+</g>
+<!-- module~timestamp_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node15" class="node">
+<title>module~timestamp_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node15"><a xlink:href=".././module/timestamp_m.html" xlink:title="timestamp_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="305,-854.229 229,-854.229 229,-830.229 305,-830.229 305,-854.229"/>
+<text text-anchor="middle" x="267" y="-839.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">timestamp_m</text>
+</a>
+</g>
+</g>
+<!-- module~logger_m&#45;&gt;module~timestamp_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge31" class="edge">
+<title>module~logger_m&#45;&gt;module~timestamp_m</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M351.4017,-872.2385C339.1471,-867.8813 324.4906,-862.6701 310.8563,-857.8224"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="311.7528,-854.4265 301.1581,-854.3741 309.4077,-861.022 311.7528,-854.4265"/>
+</g>
+<!-- module~logger_m&#45;&gt;iso_fortran_env -->
+<g id="module~~bd_solver_m~~UsesGraph_edge30" class="edge">
+<title>module~logger_m&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#00b9ff" stroke-dasharray="5,2" d="M351.3047,-884.5622C319.603,-885.904 267.5291,-884.1636 229,-863.229 141.2566,-815.5539 77.274,-708.5483 53.0988,-663.1896"/>
+<polygon fill="#00b9ff" stroke="#00b9ff" points="56.16,-661.4903 48.4265,-654.2485 49.9559,-664.7323 56.16,-661.4903"/>
+</g>
+<!-- module~control_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge33" class="edge">
+<title>module~control_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M379.5,-720.229C353.6842,-726.3576 288.34,-775.9966 267,-760.229"/>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M466.8236,-650.3419C462.5444,-653.1745 458.0705,-656.2397 454,-659.229 419.5075,-684.5594 421.1372,-710.3445 379.5,-720.229"/>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M267,-760.229C211.0324,-718.8757 171.7548,-496.3942 160.3848,-424.5878"/>
+<polygon fill="#002eff" stroke="#002eff" points="163.7968,-423.751 158.8013,-414.4078 156.88,-424.827 163.7968,-423.751"/>
+</g>
+<!-- module~control_m&#45;&gt;module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge32" class="edge">
+<title>module~control_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#002eff" stroke-dasharray="5,2" d="M466.6007,-626.0418C461.8208,-622.1722 457.1695,-617.5064 454,-612.229 411.0975,-540.7938 464.0151,-497.7 418,-428.229 416.1739,-425.4721 413.9452,-422.9313 411.4897,-420.6082"/>
+<polygon fill="#002eff" stroke="#002eff" points="413.6089,-417.8212 403.6186,-414.2934 409.2284,-423.2812 413.6089,-417.8212"/>
+</g>
+<!-- module~trajectory_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge34" class="edge">
+<title>module~trajectory_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#e700ff" stroke-dasharray="5,2" d="M671.9389,-719.2423C649.7332,-718.0849 620.499,-717.9164 595,-722.229"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge42" class="edge">
+<title>module~interaction_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-644.229C663.6073,-686.6162 654.8104,-712.1134 595,-722.229"/>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M595,-722.229C547.2339,-730.3075 533.1116,-710.9437 486,-722.229"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge45" class="edge">
+<title>module~interaction_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C665.922,-451.8389 675.4398,-394.2042 636,-379.229 598.8843,-365.1362 553.4898,-375.6039 522.4233,-386.6007"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="521.0184,-383.389 512.8689,-390.1592 523.4617,-389.9488 521.0184,-383.389"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~stats_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge46" class="edge">
+<title>module~interaction_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C653.5721,-454.7281 677.4065,-507.2252 636,-543.229 634.4611,-544.5671 632.8219,-545.847 631.1178,-547.0671"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="628.8228,-544.3755 622.2187,-552.6602 632.5478,-550.3022 628.8228,-544.3755"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~control_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge47" class="edge">
+<title>module~interaction_m&#45;&gt;module~control_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-644.229C671.386,-679.0178 644.6697,-642.8322 595,-646.229"/>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M815.4134,-372.3436C812.9523,-411.7893 800.6414,-538.6932 742,-620.229 730.9871,-635.5414 720.4924,-631.0492 707,-644.229"/>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M595,-646.229C572.0041,-647.8016 546.2889,-646.0804 525.6131,-643.8373"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="525.9408,-640.3518 515.6025,-642.669 525.1293,-647.3046 525.9408,-640.3518"/>
+</g>
+<!-- module~ia_dihedral_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node13" class="node">
+<title>module~ia_dihedral_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node13"><a xlink:href=".././module/ia_dihedral_m.html" xlink:title="ia_dihedral_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="634,-454.229 556,-454.229 556,-430.229 634,-430.229 634,-454.229"/>
+<text text-anchor="middle" x="595" y="-439.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_dihedral_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_dihedral_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge35" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_dihedral_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C686.7658,-446.9626 663.9067,-447.744 644.1407,-447.048"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="644.2742,-443.5505 634.1166,-446.5625 643.9355,-450.5423 644.2742,-443.5505"/>
+</g>
+<!-- module~ia_bond_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node14" class="node">
+<title>module~ia_bond_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node14"><a xlink:href=".././module/ia_bond_m.html" xlink:title="ia_bond_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="518,-692.229 454,-692.229 454,-668.229 518,-668.229 518,-692.229"/>
+<text text-anchor="middle" x="486" y="-677.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_bond_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_bond_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge36" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_bond_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M595,-646.229C569.9029,-647.9453 542.9031,-656.3149 522.054,-664.3197"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="520.6385,-661.116 512.6432,-668.0676 523.2285,-667.6193 520.6385,-661.116"/>
+</g>
+<!-- module~ia_vdw_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node16" class="node">
+<title>module~ia_vdw_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node16"><a xlink:href=".././module/ia_vdw_m.html" xlink:title="ia_vdw_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="625,-412.229 565,-412.229 565,-388.229 625,-388.229 625,-412.229"/>
+<text text-anchor="middle" x="595" y="-397.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_vdw_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_vdw_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge37" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_vdw_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C691.5347,-445.847 654.5638,-430.1461 627.3088,-416.9214"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="628.6405,-413.6755 618.1248,-412.3827 625.5391,-419.951 628.6405,-413.6755"/>
+</g>
+<!-- module~ia_external_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node17" class="node">
+<title>module~ia_external_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node17"><a xlink:href=".././module/ia_external_m.html" xlink:title="ia_external_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="634,-332.229 556,-332.229 556,-308.229 634,-308.229 634,-332.229"/>
+<text text-anchor="middle" x="595" y="-317.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_external_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_external_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge38" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_external_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C655.3273,-454.3174 674.8446,-382.3855 636,-346.229 632.8766,-343.3218 629.3852,-340.5476 625.7935,-337.9676"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="627.6154,-334.9755 617.3565,-332.3285 623.7256,-340.7953 627.6154,-334.9755"/>
+</g>
+<!-- module~ia_angle_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node19" class="node">
+<title>module~ia_angle_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node19"><a xlink:href=".././module/ia_angle_m.html" xlink:title="ia_angle_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="628.5,-290.229 561.5,-290.229 561.5,-266.229 628.5,-266.229 628.5,-290.229"/>
+<text text-anchor="middle" x="595" y="-275.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_angle_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_angle_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge39" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_angle_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C637.9073,-458.3927 685.8602,-349.7168 636,-299.229 634.9463,-298.1621 633.8271,-297.1388 632.6575,-296.1584"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="634.5571,-293.2152 624.3698,-290.305 630.5188,-298.9329 634.5571,-293.2152"/>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M806.1893,-372.3657C788.8136,-392.6183 750.3491,-432.0878 707,-442.229"/>
+</g>
+<!-- module~table_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node20" class="node">
+<title>module~table_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node20"><a xlink:href=".././module/table_m.html" xlink:title="table_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="513,-102.229 459,-102.229 459,-78.229 513,-78.229 513,-102.229"/>
+<text text-anchor="middle" x="486" y="-87.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">table_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~table_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge40" class="edge">
+<title>module~interaction_m&#45;&gt;module~table_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M595,-78.229C571.1282,-76.4105 544.4073,-79.2742 523.3967,-82.6589"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="522.5399,-79.2548 513.2777,-84.399 523.7263,-86.1535 522.5399,-79.2548"/>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M813.8797,-347.9616C805.9339,-303.3487 776.601,-150.5971 742,-117.229 693.3452,-70.3078 662.3983,-83.3633 595,-78.229"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~simbox_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge41" class="edge">
+<title>module~interaction_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C681.3193,-448.4716 617.9173,-469.066 595,-482.229"/>
+</g>
+<!-- module~pairtab_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node22" class="node">
+<title>module~pairtab_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node22"><a xlink:href=".././module/pairtab_m.html" xlink:title="pairtab_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="736.5,-150.229 677.5,-150.229 677.5,-126.229 736.5,-126.229 736.5,-150.229"/>
+<text text-anchor="middle" x="707" y="-135.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pairtab_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~pairtab_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge43" class="edge">
+<title>module~interaction_m&#45;&gt;module~pairtab_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M809.9844,-347.9771C792.2301,-311.8168 739.8946,-205.2253 717.4333,-159.4785"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="720.5461,-157.8768 712.997,-150.443 714.2626,-160.962 720.5461,-157.8768"/>
+</g>
+<!-- module~ia_tether_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node23" class="node">
+<title>module~ia_tether_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node23"><a xlink:href=".././module/ia_tether_m.html" xlink:title="ia_tether_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="629,-534.229 561,-534.229 561,-510.229 629,-510.229 629,-534.229"/>
+<text text-anchor="middle" x="595" y="-519.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_tether_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_tether_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge44" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_tether_m</title>
+<path fill="none" stroke="#ff008b" stroke-dasharray="5,2" d="M707,-442.229C668.3969,-451.2599 668.5476,-473.5926 636,-496.229 631.9736,-499.0293 627.6594,-501.8998 623.3962,-504.664"/>
+<polygon fill="#ff008b" stroke="#ff008b" points="621.3736,-501.8027 614.8257,-510.1319 625.1386,-507.704 621.3736,-501.8027"/>
+</g>
+<!-- module~ia_dihedral_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge48" class="edge">
+<title>module~ia_dihedral_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M555.9276,-446.4553C534.9395,-447.6727 508.7713,-447.4878 486,-442.229"/>
+</g>
+<!-- module~ia_dihedral_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge49" class="edge">
+<title>module~ia_dihedral_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M562.2964,-430.2277C550.619,-425.9424 537.3431,-421.0705 525.1763,-416.6056"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="526.3019,-413.2905 515.7082,-413.1311 523.8903,-419.862 526.3019,-413.2905"/>
+</g>
+<!-- module~ia_bond_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge51" class="edge">
+<title>module~ia_bond_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff6d00" stroke-dasharray="5,2" d="M462.3208,-667.9946C459.1288,-665.4726 456.2014,-662.5531 454,-659.229 404.6138,-584.6569 474.8702,-530.2636 418,-461.229 406.5468,-447.326 284.8525,-399.8293 267,-402.229"/>
+</g>
+<!-- module~ia_bond_m&#45;&gt;module~logger_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge52" class="edge">
+<title>module~ia_bond_m&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#ff6d00" stroke-dasharray="5,2" d="M479.3,-692.6329C472.3974,-705.7158 461.6023,-727.0516 454,-746.229 434.2632,-796.0166 451.9841,-819.8354 418,-861.229 417.1847,-862.222 416.3097,-863.1754 415.3862,-864.09"/>
+<polygon fill="#ff6d00" stroke="#ff6d00" points="413.1726,-861.3786 407.5492,-870.3579 417.5448,-866.8452 413.1726,-861.3786"/>
+</g>
+<!-- module~ia_bond_m&#45;&gt;module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge50" class="edge">
+<title>module~ia_bond_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#ff6d00" stroke-dasharray="5,2" d="M462.2467,-668.043C459.0642,-665.5148 456.1593,-662.5807 454,-659.229 397.7262,-571.8808 473.6954,-515.9471 418,-428.229 416.3788,-425.6756 414.4064,-423.3125 412.2206,-421.1385"/>
+<polygon fill="#ff6d00" stroke="#ff6d00" points="414.1024,-418.1528 404.1664,-414.4749 409.6401,-423.5462 414.1024,-418.1528"/>
+</g>
+<!-- module~ia_vdw_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge53" class="edge">
+<title>module~ia_vdw_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#b6ff00" stroke-dasharray="5,2" d="M486,-442.229C446.4408,-433.0932 450.0664,-406.1316 418,-381.229 402.9294,-369.5253 397.4841,-355.8515 379.5,-362.229"/>
+<path fill="none" stroke="#b6ff00" stroke-dasharray="5,2" d="M568.4203,-412.2685C538.9123,-425.3473 494.3238,-444.1513 486,-442.229"/>
+</g>
+<!-- module~ia_vdw_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge54" class="edge">
+<title>module~ia_vdw_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#b6ff00" stroke-dasharray="5,2" d="M564.9267,-400.7808C552.7945,-401.0034 538.626,-401.2634 525.6683,-401.5011"/>
+<polygon fill="#b6ff00" stroke="#b6ff00" points="525.5321,-398.0029 515.598,-401.6859 525.6606,-405.0018 525.5321,-398.0029"/>
+</g>
+<!-- module~ia_external_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge55" class="edge">
+<title>module~ia_external_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M555.935,-324.3108C512.0429,-329.6996 439.1358,-341.0812 379.5,-362.229"/>
+</g>
+<!-- module~ia_external_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge56" class="edge">
+<title>module~ia_external_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M574.6349,-332.4165C567.9386,-336.6144 560.5384,-341.4623 554,-346.229 537.1703,-358.4984 534.0825,-362.9953 518,-376.229 515.0636,-378.6453 511.9678,-381.1784 508.9053,-383.6758"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="506.5583,-381.0732 501.0086,-390.0983 510.9751,-386.5038 506.5583,-381.0732"/>
+</g>
+<!-- module~strings_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge57" class="edge">
+<title>module~strings_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ff24" stroke-dasharray="5,2" d="M350.2208,-400.1011C327.4319,-398.9573 295.0679,-398.4562 267,-402.229"/>
+</g>
+<!-- module~ia_angle_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge58" class="edge">
+<title>module~ia_angle_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M565.5335,-266.159C535.8001,-255.963 489.3537,-245.5878 454,-263.229 404.727,-287.8158 431.1807,-343.2172 379.5,-362.229"/>
+</g>
+<!-- module~ia_angle_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge59" class="edge">
+<title>module~ia_angle_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M566.4135,-290.4316C562.0033,-292.9839 557.6938,-295.9212 554,-299.229 527.8588,-322.6384 507.3356,-358.2479 495.9404,-380.8686"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="492.736,-379.4545 491.4926,-389.9761 499.026,-382.5263 492.736,-379.4545"/>
+</g>
+<!-- module~table_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge60" class="edge">
+<title>module~table_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M467.2807,-102.3675C462.3898,-106.2926 457.5113,-110.9992 454,-116.229 390.3222,-211.0723 487.1678,-324.0482 379.5,-362.229"/>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M379.5,-362.229C329.4852,-379.9651 319.6051,-395.2467 267,-402.229"/>
+</g>
+<!-- module~vector_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node28" class="node">
+<title>module~vector_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node28"><a xlink:href=".././module/vector_m.html" xlink:title="vector_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="407.5,-180.229 351.5,-180.229 351.5,-156.229 407.5,-156.229 407.5,-180.229"/>
+<text text-anchor="middle" x="379.5" y="-165.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">vector_m</text>
+</a>
+</g>
+</g>
+<!-- module~table_m&#45;&gt;module~vector_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge61" class="edge">
+<title>module~table_m&#45;&gt;module~vector_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M469.3594,-102.4165C451.9307,-115.1811 424.361,-135.373 404.3524,-150.0272"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="402.0234,-147.3946 396.0238,-156.1271 406.1595,-153.042 402.0234,-147.3946"/>
+</g>
+<!-- module~simbox_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge62" class="edge">
+<title>module~simbox_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M468.118,-469.9898C463.1303,-466.0016 457.9905,-461.2866 454,-456.229 420.9802,-414.379 429.7423,-344.4122 379.5,-362.229"/>
+</g>
+<!-- module~simbox_m&#45;&gt;module~random_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge63" class="edge">
+<title>module~simbox_m&#45;&gt;module~random_m</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M455.7662,-482.229C445.1255,-482.229 432.9664,-482.229 421.5305,-482.229"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="421.2958,-478.7291 411.2957,-482.229 421.2957,-485.7291 421.2958,-478.7291"/>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge68" class="edge">
+<title>module~pairtab_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M677.4431,-141.1539C618.2944,-147.5375 488.1129,-164.4153 454,-192.229 390.0656,-244.3574 457.0655,-334.1474 379.5,-362.229"/>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge70" class="edge">
+<title>module~pairtab_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M698.8673,-150.361C686.8332,-167.5616 662.7982,-199.1713 636,-219.229 619.9212,-231.2635 610.3345,-225.2593 595,-238.229"/>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M595,-238.229C579.6655,-251.1986 567.8168,-242.6532 554,-257.229 524.3618,-288.4952 536.8833,-308.5066 518,-347.229 512.3649,-358.7844 505.2403,-371.1997 499.1449,-381.3052"/>
+<polygon fill="#0024ff" stroke="#0024ff" points="496.1519,-379.4908 493.9086,-389.8454 502.1195,-383.1497 496.1519,-379.4908"/>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~table_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge66" class="edge">
+<title>module~pairtab_m&#45;&gt;module~table_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M693.3834,-126.0239C673.4419,-109.3676 634.3713,-81.2282 595,-78.229"/>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~simbox_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge67" class="edge">
+<title>module~pairtab_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M705.7732,-150.5338C700.2622,-203.6662 676.2893,-412.9933 636,-463.229 623.4346,-478.8964 612.4155,-472.226 595,-482.229"/>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M595,-482.229C574.4593,-494.0269 547.9453,-494.2873 526.2106,-491.4722"/>
+<polygon fill="#0024ff" stroke="#0024ff" points="526.7041,-488.007 516.2865,-489.937 525.6338,-494.9247 526.7041,-488.007"/>
+</g>
+<!-- module~connectivity_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node27" class="node">
+<title>module~connectivity_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node27"><a xlink:href=".././module/connectivity_m.html" xlink:title="connectivity_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="636,-130.229 554,-130.229 554,-106.229 636,-106.229 636,-130.229"/>
+<text text-anchor="middle" x="595" y="-115.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">connectivity_m</text>
+</a>
+</g>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~connectivity_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge64" class="edge">
+<title>module~pairtab_m&#45;&gt;module~connectivity_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M677.2801,-132.9219C667.7526,-131.2205 656.9127,-129.2848 646.2995,-127.3896"/>
+<polygon fill="#0024ff" stroke="#0024ff" points="646.7032,-123.9064 636.2437,-125.5939 645.4726,-130.7974 646.7032,-123.9064"/>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~vector_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge65" class="edge">
+<title>module~pairtab_m&#45;&gt;module~vector_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M486,-38.229C441.0709,-64.7323 406.9524,-117.6242 390.4587,-147.1183"/>
+<polygon fill="#0024ff" stroke="#0024ff" points="387.2494,-145.694 385.5507,-156.1518 393.4002,-149.0358 387.2494,-145.694"/>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M704.1624,-126.1009C697.4355,-100.4713 677.8492,-41.1946 636,-17.229 577.5838,16.224 543.9807,-4.0267 486,-38.229"/>
+</g>
+<!-- module~cell_list_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node29" class="node">
+<title>module~cell_list_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node29"><a xlink:href=".././module/cell_list_m.html" xlink:title="cell_list_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="626,-50.229 564,-50.229 564,-26.229 626,-26.229 626,-50.229"/>
+<text text-anchor="middle" x="595" y="-35.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">cell_list_m</text>
+</a>
+</g>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~cell_list_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge69" class="edge">
+<title>module~pairtab_m&#45;&gt;module~cell_list_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M696.9678,-126.0868C683.8838,-110.6691 659.8411,-83.7309 636,-64.229 632.4546,-61.3289 628.5669,-58.4884 624.6419,-55.8129"/>
+<polygon fill="#0024ff" stroke="#0024ff" points="626.3992,-52.7807 616.1085,-50.2604 622.5814,-58.648 626.3992,-52.7807"/>
+</g>
+<!-- module~aabbtree_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node31" class="node">
+<title>module~aabbtree_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node31"><a xlink:href=".././module/aabbtree_m.html" xlink:title="aabbtree_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="629.5,-210.229 560.5,-210.229 560.5,-186.229 629.5,-186.229 629.5,-210.229"/>
+<text text-anchor="middle" x="595" y="-195.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aabbtree_m</text>
+</a>
+</g>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~aabbtree_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge71" class="edge">
+<title>module~pairtab_m&#45;&gt;module~aabbtree_m</title>
+<path fill="none" stroke="#0024ff" stroke-dasharray="5,2" d="M684.3351,-150.3709C667.7121,-159.2761 644.9276,-171.482 626.5297,-181.3381"/>
+<polygon fill="#0024ff" stroke="#0024ff" points="624.7932,-178.2977 617.6312,-186.1052 628.0988,-184.4681 624.7932,-178.2977"/>
+</g>
+<!-- module~ia_tether_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge72" class="edge">
+<title>module~ia_tether_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M560.955,-527.2542C529.5044,-529.8917 483.343,-528.3941 454,-503.229 411.0866,-466.4256 454.4047,-424.4811 418,-381.229 405.7126,-366.6304 397.4261,-355.6903 379.5,-362.229"/>
+</g>
+<!-- module~ia_tether_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge73" class="edge">
+<title>module~ia_tether_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M586.2369,-509.9985C572.645,-491.4036 545.2029,-455.3235 518,-428.229 515.4895,-425.7285 512.7535,-423.2229 509.973,-420.8077"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="512.0964,-418.0215 502.1694,-414.3195 507.6211,-423.4041 512.0964,-418.0215"/>
+</g>
+<!-- module~random_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge75" class="edge">
+<title>module~random_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#b600ff" stroke-dasharray="5,2" d="M361.3876,-470.1947C354.9192,-465.845 347.6007,-460.8639 341,-456.229 307.6794,-432.832 307.3517,-396.8051 267,-402.229"/>
+</g>
+<!-- mkl_vsl_type -->
+<g id="module~~bd_solver_m~~UsesGraph_node30" class="node">
+<title>mkl_vsl_type</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="303.5,-474.229 230.5,-474.229 230.5,-450.229 303.5,-450.229 303.5,-474.229"/>
+<text text-anchor="middle" x="267" y="-459.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl_type</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl_type -->
+<g id="module~~bd_solver_m~~UsesGraph_edge76" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl_type</title>
+<path fill="none" stroke="#b600ff" stroke-dasharray="5,2" d="M347.8631,-476.6047C337.2068,-474.7102 325.0825,-472.5548 313.5234,-470.4998"/>
+<polygon fill="#b600ff" stroke="#b600ff" points="314.0202,-467.0333 303.562,-468.7289 312.7949,-473.9253 314.0202,-467.0333"/>
+</g>
+<!-- mkl_vsl -->
+<g id="module~~bd_solver_m~~UsesGraph_node32" class="node">
+<title>mkl_vsl</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="294,-516.229 240,-516.229 240,-492.229 294,-492.229 294,-516.229"/>
+<text text-anchor="middle" x="267" y="-501.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl -->
+<g id="module~~bd_solver_m~~UsesGraph_edge74" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl</title>
+<path fill="none" stroke="#b600ff" stroke-dasharray="5,2" d="M347.8631,-488.4158C334.266,-491.0747 318.2789,-494.2011 304.1254,-496.9689"/>
+<polygon fill="#b600ff" stroke="#b600ff" points="303.3463,-493.5549 294.204,-498.9091 304.6898,-500.4248 303.3463,-493.5549"/>
+</g>
+<!-- module~connectivity_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge78" class="edge">
+<title>module~connectivity_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M486,-130.229C470.4522,-138.8496 464.5542,-139.9231 454,-154.229 395.704,-233.2474 471.8307,-328.8019 379.5,-362.229"/>
+</g>
+<!-- module~connectivity_m&#45;&gt;module~table_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge77" class="edge">
+<title>module~connectivity_m&#45;&gt;module~table_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M553.7918,-107.6434C543.6796,-105.0458 532.9172,-102.2811 523.016,-99.7377"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="523.6293,-96.2817 513.0729,-97.1835 521.8876,-103.0615 523.6293,-96.2817"/>
+</g>
+<!-- module~connectivity_m&#45;&gt;module~vector_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge79" class="edge">
+<title>module~connectivity_m&#45;&gt;module~vector_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M486,-130.229C464.4585,-142.1728 438.4501,-151.537 417.5279,-157.9812"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="416.2908,-154.6976 407.7074,-160.9086 418.2906,-161.4059 416.2908,-154.6976"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M553.8912,-115.3858C532.442,-115.6603 506.4794,-118.874 486,-130.229"/>
+</g>
+<!-- module~vector_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge80" class="edge">
+<title>module~vector_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M376.3669,-180.418C363.9052,-227.5563 316.1418,-395.6236 267,-402.229"/>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M267,-402.229C246.3038,-405.0109 223.2186,-405.4163 203.5613,-404.9678"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="203.4318,-401.4622 193.3286,-404.6521 203.2159,-408.4589 203.4318,-401.4622"/>
+</g>
+<!-- module~qsort_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node33" class="node">
+<title>module~qsort_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node33"><a xlink:href=".././module/qsort_m.html" xlink:title="qsort_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="294,-258.229 240,-258.229 240,-234.229 294,-234.229 294,-258.229"/>
+<text text-anchor="middle" x="267" y="-243.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">qsort_m</text>
+</a>
+</g>
+</g>
+<!-- module~vector_m&#45;&gt;module~qsort_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge81" class="edge">
+<title>module~vector_m&#45;&gt;module~qsort_m</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M361.9219,-180.4165C343.3462,-193.2956 313.8652,-213.7358 292.6858,-228.4202"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="290.6784,-225.5529 284.4547,-234.1271 294.6669,-231.3055 290.6784,-225.5529"/>
+</g>
+<!-- module~cell_list_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge83" class="edge">
+<title>module~cell_list_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M563.9575,-27.3076C534.6545,-18.7912 489.9682,-10.5029 454,-24.229 328.7212,-72.0376 306.2563,-115.6301 229,-225.229 193.6644,-275.3576 171.8153,-345.3938 162.4022,-380.441"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="159.0112,-379.5744 159.879,-390.1337 165.7854,-381.338 159.0112,-379.5744"/>
+</g>
+<!-- module~cell_list_m&#45;&gt;module~simbox_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge82" class="edge">
+<title>module~cell_list_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M583.8283,-50.2819C574.1379,-61.5181 560.6521,-79.2085 554,-97.229 498.4687,-247.6625 594.0629,-315.0609 518,-456.229 516.7522,-458.5448 515.2032,-460.7316 513.4652,-462.7786"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="510.8041,-460.4838 506.0626,-469.9584 515.6776,-465.5086 510.8041,-460.4838"/>
+</g>
+<!-- module~cell_list_m&#45;&gt;module~vector_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge84" class="edge">
+<title>module~cell_list_m&#45;&gt;module~vector_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M563.66,-30.1924C540.5873,-26.0912 509.3077,-24.48 486,-38.229"/>
+</g>
+<!-- module~aabbtree_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge87" class="edge">
+<title>module~aabbtree_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M486,-206.229C405.5457,-230.201 458.4359,-333.6513 379.5,-362.229"/>
+</g>
+<!-- module~aabbtree_m&#45;&gt;module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge86" class="edge">
+<title>module~aabbtree_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M570.61,-210.4089C564.6297,-214.2268 558.6254,-218.8687 554,-224.229 528.2629,-254.0552 542.9491,-274.7406 518,-305.229 489.1898,-340.4359 444.5073,-368.5631 413.7264,-385.2807"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="411.8442,-382.3172 404.653,-390.0978 415.1266,-388.4999 411.8442,-382.3172"/>
+</g>
+<!-- module~aabbtree_m&#45;&gt;module~vector_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge88" class="edge">
+<title>module~aabbtree_m&#45;&gt;module~vector_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M486,-206.229C457.3558,-214.7638 425.1135,-199.7062 403.6844,-186.0996"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="405.4629,-183.0785 395.2045,-180.43 401.5723,-188.8977 405.4629,-183.0785"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M560.4413,-197.0041C538.6611,-197.145 510.1853,-199.0228 486,-206.229"/>
+</g>
+<!-- module~aabb_m -->
+<g id="module~~bd_solver_m~~UsesGraph_node34" class="node">
+<title>module~aabb_m</title>
+<g id="a_module~~bd_solver_m~~UsesGraph_node34"><a xlink:href=".././module/aabb_m.html" xlink:title="aabb_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="513,-296.229 459,-296.229 459,-272.229 513,-272.229 513,-296.229"/>
+<text text-anchor="middle" x="486" y="-281.829" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aabb_m</text>
+</a>
+</g>
+</g>
+<!-- module~aabbtree_m&#45;&gt;module~aabb_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge85" class="edge">
+<title>module~aabbtree_m&#45;&gt;module~aabb_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M574.5552,-210.3088C567.8537,-214.4996 560.4705,-219.3704 554,-224.229 537.1097,-236.9116 519.2475,-252.7791 506.0705,-265.0106"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="503.4182,-262.6999 498.522,-272.0955 508.2088,-267.8039 503.4182,-262.6999"/>
+</g>
+<!-- module~qsort_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge89" class="edge">
+<title>module~qsort_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M258.3685,-258.47C239.5728,-285.1258 194.7684,-348.6666 171.5334,-381.618"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="168.4938,-379.8552 165.5914,-390.0448 174.2146,-383.8892 168.4938,-379.8552"/>
+</g>
+<!-- module~aabb_m&#45;&gt;module~constants_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge91" class="edge">
+<title>module~aabb_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M461.9316,-296.3468C459.2099,-297.9127 456.5138,-299.556 454,-301.229 418.3742,-324.939 419.8334,-347.9261 379.5,-362.229"/>
+</g>
+<!-- module~aabb_m&#45;&gt;module~strings_m -->
+<g id="module~~bd_solver_m~~UsesGraph_edge90" class="edge">
+<title>module~aabb_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M468.6135,-296.3357C463.5291,-300.3846 458.2118,-305.1664 454,-310.229 432.6306,-335.9154 440.4829,-351.5113 418,-376.229 415.4629,-379.0183 412.5684,-381.656 409.5318,-384.1043"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="407.3154,-381.3891 401.3094,-390.1172 411.4474,-387.0395 407.3154,-381.3891"/>
+</g>
+</g>
+</svg>
+</div><script>var panmodulebd_solver_mUsesGraph = svgPanZoom('#modulebd_solver_mUsesGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~bd_solver_m~~UsedByGraph Pages: 1 -->
+<svg id="modulebd_solver_mUsedByGraph" width="261pt" height="32pt"
+ viewBox="0.00 0.00 261.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~bd_solver_m~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~bd_solver_m~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 257,-28 257,4 -4,4"/>
+<!-- module~bd_solver_m -->
+<g id="module~~bd_solver_m~~UsedByGraph_node1" class="node">
+<title>module~bd_solver_m</title>
+<polygon fill="none" stroke="#000000" points="73,-24 0,-24 0,0 73,0 73,-24"/>
+<text text-anchor="middle" x="36.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">bd_solver_m</text>
+</g>
+<!-- module~setup_m -->
+<g id="module~~bd_solver_m~~UsedByGraph_node2" class="node">
+<title>module~setup_m</title>
+<g id="a_module~~bd_solver_m~~UsedByGraph_node2"><a xlink:href=".././module/setup_m.html" xlink:title="setup_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="163,-24 109,-24 109,0 163,0 163,-24"/>
+<text text-anchor="middle" x="136" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">setup_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~bd_solver_m -->
+<g id="module~~bd_solver_m~~UsedByGraph_edge1" class="edge">
+<title>module~setup_m&#45;&gt;module~bd_solver_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M108.8112,-12C100.9535,-12 92.1431,-12 83.4473,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="83.3558,-8.5001 73.3557,-12 83.3557,-15.5001 83.3558,-8.5001"/>
+</g>
+<!-- program~main -->
+<g id="module~~bd_solver_m~~UsedByGraph_node3" class="node">
+<title>program~main</title>
+<g id="a_module~~bd_solver_m~~UsedByGraph_node3"><a xlink:href=".././program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="253,-24 199,-24 199,0 253,0 253,-24"/>
+<text text-anchor="middle" x="226" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~setup_m -->
+<g id="module~~bd_solver_m~~UsedByGraph_edge2" class="edge">
+<title>program~main&#45;&gt;module~setup_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M198.997,-12C190.9723,-12 182.0335,-12 173.4691,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="173.295,-8.5001 163.295,-12 173.2949,-15.5001 173.295,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-lhdia%7E2">lhdia</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-write_traj%7E2">write_traj</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-lanc_mxitr%7E2">lanc_mxitr</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nlmxitr">nlmxitr</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-kdmax%7E3">kdmax</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_mobsam%7E2">nts_mobsam</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-tim_stp%7E2">tim_stp</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-lanc_tol%7E2">lanc_tol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-ftol%7E3">ftol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-stptol%7E3">stptol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts%7E7">nts</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_sim%7E2">nts_sim</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_dump%7E2">nts_dump</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_samp%7E2">nts_samp</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nts_log%7E2">nts_log</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-mob_fctr%7E2">mob_fctr</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-bdintg%7E2">bdintg</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-fn_revive%7E2">fn_revive</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-psmbx">psmbx</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-patc">patc</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-cntr_mobsam">cntr_mobsam</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-sqrt_two_dt">sqrt_two_dt</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-drift">drift</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-diffusion">diffusion</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-mob%7E7">mob</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-crd0">crd0</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-sol">sol</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-nitsol_rwork">nitsol_rwork</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-pvcrd">pvcrd</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#variable-pvfrc">pvfrc</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-bds_init">bds_init</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-bds_finish">bds_finish</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-bds_run">bds_run</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-integrate_em">integrate_em</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-integrate_se">integrate_se</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-se_fval">se_fval</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-se_jacv">se_jacv</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-calc_diffusion">calc_diffusion</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-calc_drift">calc_drift</a>
+      
+      <a class="list-group-item" href="../module/bd_solver_m.html#proc-calc_rpy_tensor">calc_rpy_tensor</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lhdia%7E2"></span>logical,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>lhdia</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-write_traj%7E2"></span>logical,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>write_traj</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lanc_mxitr%7E2"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>lanc_mxitr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nlmxitr"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nlmxitr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-kdmax%7E3"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>kdmax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_mobsam%7E2"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nts_mobsam</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tim_stp%7E2"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>tim_stp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lanc_tol%7E2"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>lanc_tol</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ftol%7E3"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>ftol</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stptol%7E3"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>stptol</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts%7E7"></span>integer(kind=ip_long),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nts</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_sim%7E2"></span>integer(kind=ip_long),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nts_sim</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_dump%7E2"></span>integer(kind=ip_long),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nts_dump</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_samp%7E2"></span>integer(kind=ip_long),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nts_samp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_log%7E2"></span>integer(kind=ip_long),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nts_log</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mob_fctr%7E2"></span>character(len=4),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>mob_fctr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bdintg%7E2"></span>character(len=4),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>bdintg</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fn_revive%7E2"></span>character(len=:),</td>
+  
+  <td>private,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fn_revive</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-psmbx"></span>type(smbx_t),</td>
+  
+  <td>private,</td>
+  <td>pointer</td><td>::</td>
+  <td><strong>psmbx</strong></td><td>=> </td><td>null()</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-patc"></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  
+  <td>private,</td>
+  <td>pointer</td><td>::</td>
+  <td><strong>patc</strong></td><td>=> </td><td>null()</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cntr_mobsam"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>cntr_mobsam</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sqrt_two_dt"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>sqrt_two_dt</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-drift"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:  ), allocatable</td><td>::</td>
+  <td><strong>drift</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-diffusion"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>diffusion</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mob%7E7"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>mob</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-crd0"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>crd0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sol"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>sol</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nitsol_rwork"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>nitsol_rwork</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pvcrd"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:), pointer</td><td>::</td>
+  <td><strong>pvcrd</strong></td><td>=> </td><td>null()</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pvfrc"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:), pointer</td><td>::</td>
+  <td><strong>pvfrc</strong></td><td>=> </td><td>null()</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bds_init"></span><h3>
+public subroutine <a href='../proc/bds_init.html'>bds_init</a>(cpar, num_atoms, job_tag, ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Initializes the BD solver.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/ctrlpar_t.html'>ctrlpar_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>cpar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>num_atoms</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>job_tag</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bds_finish"></span><h3>
+public subroutine <a href='../proc/bds_finish.html'>bds_finish</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Clears up memory allocated in <a href="../proc/bds_init.html">bds_init</a>.</p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-bds_run"></span><h3>
+public subroutine <a href='../proc/bds_run.html'>bds_run</a>(nts_beg, simbox, atc, ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Driver for BD integrator.</p><a href="../proc/bds_run.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ip_long),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nts_beg</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(smbx_t),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>target</td><td>::</td>
+  <td><strong>simbox</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>target</td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td><p>Error flag</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-integrate_em"></span><h3>
+private subroutine <a href='../proc/integrate_em.html'>integrate_em</a>(ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Performs one step of BD integration using explicit Euler-Maruyama scheme.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-integrate_se"></span><h3>
+private subroutine <a href='../proc/integrate_se.html'>integrate_se</a>(ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Performs one step of BD integration using semi-implicit Euler scheme.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-se_fval"></span><h3>
+public subroutine <a href='../proc/se_fval.html'>se_fval</a>(n, xcur, fcur, rpar, ipar, ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Calculates the nonlinear function.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(*)</td><td>::</td>
+  <td><strong>xcur</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(*)</td><td>::</td>
+  <td><strong>fcur</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(*)</td><td>::</td>
+  <td><strong>rpar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(*)</td><td>::</td>
+  <td><strong>ipar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-se_jacv"></span><h3>
+public subroutine <a href='../proc/se_jacv.html'>se_jacv</a>(n, xcur, fcur, ijob, v, z, rpar, ipar, ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Calculates jacobian times vector product. This is a dummy subroutine.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>n</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>xcur</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>fcur</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ijob</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>v</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>z</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>rpar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:)</td><td>::</td>
+  <td><strong>ipar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calc_diffusion"></span><h3>
+private subroutine <a href='../proc/calc_diffusion.html'>calc_diffusion</a>(ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Calculates the diffusion term of the SDE. Updates module variables
+<code>diffusion</code> and <code>cntr_mobsam</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calc_drift"></span><h3>
+private subroutine <a href='../proc/calc_drift.html'>calc_drift</a>(ierr)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Calculates the drift term of the SDE.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ierr</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-calc_rpy_tensor"></span><h3>
+private subroutine <a href='../proc/calc_rpy_tensor.html'>calc_rpy_tensor</a>(coordinates, mob)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Calculates the RPY approximation to the mobility tensor.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>coordinates</strong></td><td><p>(3, num_atoms*) matrix; stores the atom positions.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>mob</strong></td><td><p>(3<em>num_atoms</em>, 3<em>num_atoms</em>) matrix; stores the mobility tensor.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

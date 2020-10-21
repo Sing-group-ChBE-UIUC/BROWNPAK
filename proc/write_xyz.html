@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,6 +66,8 @@
             <li><a href="../lists/modules.html">Modules</a></li>
         
             
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
         
@@ -85,6 +87,8 @@
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
 
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
@@ -132,21 +136,21 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.2% of total for procedures.">24 statements</a>
+    title=" 0.1% of total for procedures.">16 statements</a>
      </li> 
      
      
      
-    <li><i class="fa fa-code"></i><a href="../src/m_config_io.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/config_io_m.f90"> Source File</a></li>
      
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
     
-     <li><a href='../sourcefile/m_config_io.f90.html'>m_config_io.f90</a></li>
+     <li><a href='../sourcefile/config_io_m.f90.html'>config_io_m.f90</a></li>
     
-     <li><a href='../module/m_config_io.html'>m_config_io</a></li>
+     <li><a href='../module/config_io_m.html'>config_io_m</a></li>
     
   
      <li class="active">write_xyz</li>
@@ -199,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-public subroutine write_xyz(fn_xyz, title, with_mpcd_atoms)
+public subroutine write_xyz(atc, fn_xyz, title)
     
     
    
@@ -230,6 +234,21 @@ public subroutine write_xyz(fn_xyz, title, with_mpcd_atoms)
   
 <tr>
   
+  <td><span class="anchor" id="variable-atc%7E14"></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
   <td><span class="anchor" id="variable-fn_xyz"></span>character(len=*),</td>
   <td>intent(in)</td>
   <td></td>
@@ -251,21 +270,6 @@ public subroutine write_xyz(fn_xyz, title, with_mpcd_atoms)
   
   <td></td><td>::</td>
   <td><strong>title</strong></td><td><p>Title (for the configuration)</p></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-with_mpcd_atoms%7E2"></span>logical,</td>
-  <td>intent(in),</td>
-  <td>optional</td>
-  
-  <td></td><td>::</td>
-  <td><strong>with_mpcd_atoms</strong></td><td><p>Include MPCD atoms in the file? {T, F}</p></td>
   
 </tr>
 

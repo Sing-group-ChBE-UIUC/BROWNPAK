@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>timestamp_m &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>timestamp_m 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 2.7% of total for modules and submodules.">194 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/timestamp_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/timestamp_m.f90.html'>timestamp_m.f90</a></li>
+    
+  
+     <li class="active">timestamp_m</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_current_hms">hms_current_hms</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_current_print">hms_current_print</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_current_string">hms_current_string</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_delta_print">hms_delta_print</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-timestamp">timestamp</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-timestring">timestring</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~timestamp_m~~UsedByGraph Pages: 1 -->
+<svg id="moduletimestamp_mUsedByGraph" width="641pt" height="104pt"
+ viewBox="0.00 0.00 641.00 103.72" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~timestamp_m~~UsedByGraph" class="graph" transform="scale(.9468 .9468) rotate(0) translate(4 105.545)">
+<title>module~~timestamp_m~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-105.545 673,-105.545 673,4 -4,4"/>
+<!-- module~timestamp_m -->
+<g id="module~~timestamp_m~~UsedByGraph_node1" class="node">
+<title>module~timestamp_m</title>
+<polygon fill="none" stroke="#000000" points="76,-66 0,-66 0,-42 76,-42 76,-66"/>
+<text text-anchor="middle" x="38" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">timestamp_m</text>
+</g>
+<!-- module~logger_m -->
+<g id="module~~timestamp_m~~UsedByGraph_node2" class="node">
+<title>module~logger_m</title>
+<g id="a_module~~timestamp_m~~UsedByGraph_node2"><a xlink:href=".././module/logger_m.html" xlink:title="logger_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="168,-66 112,-66 112,-42 168,-42 168,-66"/>
+<text text-anchor="middle" x="140" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">logger_m</text>
+</a>
+</g>
+</g>
+<!-- module~logger_m&#45;&gt;module~timestamp_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge1" class="edge">
+<title>module~logger_m&#45;&gt;module~timestamp_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M111.858,-54C103.9748,-54 95.1729,-54 86.4695,-54"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="86.3586,-50.5001 76.3586,-54 86.3586,-57.5001 86.3586,-50.5001"/>
+</g>
+<!-- module~ia_bond_m -->
+<g id="module~~timestamp_m~~UsedByGraph_node3" class="node">
+<title>module~ia_bond_m</title>
+<g id="a_module~~timestamp_m~~UsedByGraph_node3"><a xlink:href=".././module/ia_bond_m.html" xlink:title="ia_bond_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="268,-24 204,-24 204,0 268,0 268,-24"/>
+<text text-anchor="middle" x="236" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ia_bond_m</text>
+</a>
+</g>
+</g>
+<!-- module~ia_bond_m&#45;&gt;module~logger_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge2" class="edge">
+<title>module~ia_bond_m&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M208.4903,-24.0355C198.6488,-28.3412 187.3926,-33.2658 176.8877,-37.8616"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="175.2725,-34.7479 167.5138,-41.9627 178.0782,-41.161 175.2725,-34.7479"/>
+</g>
+<!-- program~main -->
+<g id="module~~timestamp_m~~UsedByGraph_node4" class="node">
+<title>program~main</title>
+<g id="a_module~~timestamp_m~~UsedByGraph_node4"><a xlink:href=".././program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="669,-86 615,-86 615,-62 669,-62 669,-86"/>
+<text text-anchor="middle" x="642" y="-71.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~logger_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge3" class="edge">
+<title>program~main&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M614.9706,-76.4899C578.1687,-79.9629 510.2606,-86.6656 452.5,-94"/>
+</g>
+<!-- module~setup_m -->
+<g id="module~~timestamp_m~~UsedByGraph_node5" class="node">
+<title>module~setup_m</title>
+<g id="a_module~~timestamp_m~~UsedByGraph_node5"><a xlink:href=".././module/setup_m.html" xlink:title="setup_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="579,-66 525,-66 525,-42 579,-42 579,-66"/>
+<text text-anchor="middle" x="552" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">setup_m</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~setup_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge8" class="edge">
+<title>program~main&#45;&gt;module~setup_m</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M614.997,-67.9993C606.8842,-66.1965 597.8369,-64.186 589.1869,-62.2638"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="589.8161,-58.8183 579.295,-60.0655 588.2976,-65.6516 589.8161,-58.8183"/>
+</g>
+<!-- module~setup_m&#45;&gt;module~logger_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge4" class="edge">
+<title>module~setup_m&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M452.5,-94C356.7507,-103.5278 331.6542,-104.4402 236,-94"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M531.126,-66.0682C511.5651,-76.4679 481.1279,-90.3648 452.5,-94"/>
+</g>
+<!-- module~bd_solver_m -->
+<g id="module~~timestamp_m~~UsedByGraph_node7" class="node">
+<title>module~bd_solver_m</title>
+<g id="a_module~~timestamp_m~~UsedByGraph_node7"><a xlink:href=".././module/bd_solver_m.html" xlink:title="bd_solver_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="489,-66 416,-66 416,-42 489,-42 489,-66"/>
+<text text-anchor="middle" x="452.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">bd_solver_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~bd_solver_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge10" class="edge">
+<title>module~setup_m&#45;&gt;module~bd_solver_m</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M524.8112,-54C516.9535,-54 508.1431,-54 499.4473,-54"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="499.3558,-50.5001 489.3557,-54 499.3557,-57.5001 499.3558,-50.5001"/>
+</g>
+<!-- module~interaction_m -->
+<g id="module~~timestamp_m~~UsedByGraph_node8" class="node">
+<title>module~interaction_m</title>
+<g id="a_module~~timestamp_m~~UsedByGraph_node8"><a xlink:href=".././module/interaction_m.html" xlink:title="interaction_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="380,-26 304,-26 304,-2 380,-2 380,-26"/>
+<text text-anchor="middle" x="342" y="-11.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">interaction_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~interaction_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge12" class="edge">
+<title>module~setup_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M524.7283,-43.6297C513.7611,-39.7976 500.9125,-35.7283 489,-33 456.4951,-25.5555 419.2315,-20.7793 390.3557,-17.8776"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="390.4107,-14.3667 380.1212,-16.8918 389.7395,-21.3345 390.4107,-14.3667"/>
+</g>
+<!-- module~brown_m -->
+<g id="module~~timestamp_m~~UsedByGraph_node6" class="node">
+<title>module~brown_m</title>
+<g id="a_module~~timestamp_m~~UsedByGraph_node6"><a xlink:href=".././module/brown_m.html" xlink:title="brown_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="264,-66 208,-66 208,-42 264,-42 264,-66"/>
+<text text-anchor="middle" x="236" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">brown_m</text>
+</a>
+</g>
+</g>
+<!-- module~brown_m&#45;&gt;module~logger_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge5" class="edge">
+<title>module~brown_m&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M207.9748,-54C198.6918,-54 188.1957,-54 178.2776,-54"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="178.2263,-50.5001 168.2263,-54 178.2262,-57.5001 178.2263,-50.5001"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~logger_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge6" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~logger_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M342,-56C292.1701,-60.6552 285.7514,-99.4301 236,-94"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M236,-94C212.0465,-91.3856 186.9785,-80.6268 168.4675,-70.9254"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="170.14,-67.8509 159.6837,-66.1432 166.7928,-73.9988 170.14,-67.8509"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~brown_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge9" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~brown_m</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M415.8416,-53.2875C394.294,-53.2117 366.5486,-53.7066 342,-56"/>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M342,-56C319.6835,-58.0849 294.6134,-57.7337 274.4589,-56.7924"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="274.5804,-53.294 264.408,-56.2561 274.2073,-60.284 274.5804,-53.294"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~interaction_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge11" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M419.3464,-41.9987C408.6277,-38.1186 396.5805,-33.7577 385.2423,-29.6533"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="386.1064,-26.2439 375.5122,-26.1311 383.7237,-32.8259 386.1064,-26.2439"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~ia_bond_m -->
+<g id="module~~timestamp_m~~UsedByGraph_edge7" class="edge">
+<title>module~interaction_m&#45;&gt;module~ia_bond_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M303.7316,-13.278C295.4683,-13.122 286.686,-12.9563 278.2792,-12.7977"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="278.3356,-9.2983 268.2713,-12.6089 278.2034,-16.297 278.3356,-9.2983"/>
+</g>
+</g>
+</svg>
+</div><script>var panmoduletimestamp_mUsedByGraph = svgPanZoom('#moduletimestamp_mUsedByGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_current_hms">hms_current_hms</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_current_print">hms_current_print</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_current_string">hms_current_string</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-hms_delta_print">hms_delta_print</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-timestamp">timestamp</a>
+      
+      <a class="list-group-item" href="../module/timestamp_m.html#proc-timestring">timestring</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-hms_current_hms"></span><h3>
+public subroutine <a href='../proc/hms_current_hms.html'>hms_current_hms</a>(h, m, s, mm)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>HMS_CURRENT_HMS returns the current HMS time as integers.</p><a href="../proc/hms_current_hms.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=4)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>h</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=4)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>m</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=4)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>s</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=4)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>mm</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-hms_current_print"></span><h3>
+public subroutine <a href='../proc/hms_current_print.html'>hms_current_print</a>(string)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>HMS_CURRENT_PRINT prints the current HMS time, and a user specified string.</p><a href="../proc/hms_current_print.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-hms_current_string"></span><h3>
+public subroutine <a href='../proc/hms_current_string.html'>hms_current_string</a>(string)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>HMS_CURRENT_STRING writes the current HMS data into a string.</p><a href="../proc/hms_current_string.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-hms_delta_print"></span><h3>
+public subroutine <a href='../proc/hms_delta_print.html'>hms_delta_print</a>(string)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>HMS_DELTA_PRINT prints the change in HMS time, and a user specified string.</p><a href="../proc/hms_delta_print.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-timestamp"></span><h3>
+public subroutine <a href='../proc/timestamp.html'>timestamp</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>TIMESTAMP prints the current YMDHMS date as a time stamp.</p><a href="../proc/timestamp.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-timestring"></span><h3>
+public subroutine <a href='../proc/timestring.html'>timestring</a>(string)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>TIMESTRING writes the current YMDHMS date into a string.</p><a href="../proc/timestring.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*)</td>
+  <td></td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>string</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

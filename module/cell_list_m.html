@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>cell_list_m &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>cell_list_m 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 2.7% of total for modules and submodules.">195 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/cell_list_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/cell_list_m.f90.html'>cell_list_m.f90</a></li>
+    
+  
+     <li class="active">cell_list_m</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_size">cell_size</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nc_max">nc_max</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nc">nc</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nct_max">nct_max</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nct">nct</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cells">cells</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cells_pos">cells_pos</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_nbrs">cell_nbrs</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_nbrs_pos">cell_nbrs_pos</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-host_cells">host_cells</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_pop">cell_pop</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-d%7E4">d</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_get_num_cells">cl_get_num_cells</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_init">cl_init</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_set_cell_size">cl_set_cell_size</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_build_cell_nbrs">cl_build_cell_nbrs</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_delete">cl_delete</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_build">cl_build</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_get_contents">cl_get_contents</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_get_nbr_cells">cl_get_nbr_cells</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_print">cl_print</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <p>Sorts atoms using a cell list.</p>
+<p>The algorithm to build the cell list partially follows the techniques in Watanabe et
+ al, 2011, “Efficient Implementations of Molecular Dynamics Simulations for
+ Lennard-Jones Systems,” Prog. Theor. Phys. 126, 203–235.</p>
+<p>The pairlist is not explicitly built, rather the cells are directly
+ looped over during force calculation.</p>
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/constants_m.html'>constants_m</a></li>
+    
+    <li><a href='../module/vector_m.html'>vector_m</a></li>
+    
+    <li><a href='../module/simbox_m.html'>simbox_m</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~cell_list_m~~UsesGraph Pages: 1 -->
+<svg id="modulecell_list_mUsesGraph" width="495pt" height="157pt"
+ viewBox="0.00 0.00 495.00 156.64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~cell_list_m~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 152.6368)">
+<title>module~~cell_list_m~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-152.6368 491,-152.6368 491,4 -4,4"/>
+<!-- module~cell_list_m -->
+<g id="module~~cell_list_m~~UsesGraph_node1" class="node">
+<title>module~cell_list_m</title>
+<polygon fill="none" stroke="#000000" points="487,-76.6368 425,-76.6368 425,-52.6368 487,-52.6368 487,-76.6368"/>
+<text text-anchor="middle" x="456" y="-62.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">cell_list_m</text>
+</g>
+<!-- module~constants_m -->
+<g id="module~~cell_list_m~~UsesGraph_node2" class="node">
+<title>module~constants_m</title>
+<g id="a_module~~cell_list_m~~UsesGraph_node2"><a xlink:href=".././module/constants_m.html" xlink:title="constants_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="193.5,-55.6368 121.5,-55.6368 121.5,-31.6368 193.5,-31.6368 193.5,-55.6368"/>
+<text text-anchor="middle" x="157.5" y="-41.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">constants_m</text>
+</a>
+</g>
+</g>
+<!-- module~cell_list_m&#45;&gt;module~constants_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge2" class="edge">
+<title>module~cell_list_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M424.9644,-68.4118C386.253,-72.2613 318.2476,-76.1864 261.5,-64.6368"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M261.5,-64.6368C242.6198,-60.4568 221.7352,-56.1736 203.6651,-52.5748"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="204.157,-49.1043 193.6677,-50.596 202.7978,-55.9711 204.157,-49.1043"/>
+</g>
+<!-- module~simbox_m -->
+<g id="module~~cell_list_m~~UsesGraph_node3" class="node">
+<title>module~simbox_m</title>
+<g id="a_module~~cell_list_m~~UsesGraph_node3"><a xlink:href=".././module/simbox_m.html" xlink:title="simbox_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="389,-116.6368 329,-116.6368 329,-92.6368 389,-92.6368 389,-116.6368"/>
+<text text-anchor="middle" x="359" y="-102.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">simbox_m</text>
+</a>
+</g>
+</g>
+<!-- module~cell_list_m&#45;&gt;module~simbox_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge1" class="edge">
+<title>module~cell_list_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M426.8968,-76.6381C417.7727,-80.4006 407.5522,-84.6153 397.8658,-88.6097"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="396.3284,-85.4577 388.4179,-92.5057 398.9971,-91.929 396.3284,-85.4577"/>
+</g>
+<!-- module~vector_m -->
+<g id="module~~cell_list_m~~UsesGraph_node4" class="node">
+<title>module~vector_m</title>
+<g id="a_module~~cell_list_m~~UsesGraph_node4"><a xlink:href=".././module/vector_m.html" xlink:title="vector_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="387,-36.6368 331,-36.6368 331,-12.6368 387,-12.6368 387,-36.6368"/>
+<text text-anchor="middle" x="359" y="-22.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">vector_m</text>
+</a>
+</g>
+</g>
+<!-- module~cell_list_m&#45;&gt;module~vector_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge3" class="edge">
+<title>module~cell_list_m&#45;&gt;module~vector_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M426.8968,-52.6355C417.3394,-48.6943 406.5788,-44.2569 396.4894,-40.0963"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="397.662,-36.794 387.0829,-36.2174 394.9934,-43.2654 397.662,-36.794"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~cell_list_m~~UsesGraph_node5" class="node">
+<title>iso_fortran_env</title>
+<g id="a_module~~cell_list_m~~UsesGraph_node5"><a xlink:href="http://fortranwiki.org/fortran/show/ISO_FORTRAN_ENV" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="85,-55.6368 0,-55.6368 0,-31.6368 85,-31.6368 85,-55.6368"/>
+<text text-anchor="middle" x="42.5" y="-41.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- module~constants_m&#45;&gt;iso_fortran_env -->
+<g id="module~~cell_list_m~~UsesGraph_edge4" class="edge">
+<title>module~constants_m&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M121.4288,-43.6368C113.1909,-43.6368 104.2681,-43.6368 95.4867,-43.6368"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="95.2924,-40.1369 85.2924,-43.6368 95.2923,-47.1369 95.2924,-40.1369"/>
+</g>
+<!-- module~simbox_m&#45;&gt;module~constants_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge5" class="edge">
+<title>module~simbox_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M336.5268,-92.5575C317.2447,-82.9024 288.393,-70.1102 261.5,-64.6368"/>
+</g>
+<!-- module~random_m -->
+<g id="module~~cell_list_m~~UsesGraph_node7" class="node">
+<title>module~random_m</title>
+<g id="a_module~~cell_list_m~~UsesGraph_node7"><a xlink:href=".././module/random_m.html" xlink:title="random_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="293,-116.6368 230,-116.6368 230,-92.6368 293,-92.6368 293,-116.6368"/>
+<text text-anchor="middle" x="261.5" y="-102.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">random_m</text>
+</a>
+</g>
+</g>
+<!-- module~simbox_m&#45;&gt;module~random_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge6" class="edge">
+<title>module~simbox_m&#45;&gt;module~random_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M328.9512,-104.6368C320.9159,-104.6368 312.0816,-104.6368 303.5286,-104.6368"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="303.3082,-101.1369 293.3081,-104.6368 303.3081,-108.1369 303.3082,-101.1369"/>
+</g>
+<!-- module~vector_m&#45;&gt;module~constants_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge7" class="edge">
+<title>module~vector_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M330.7644,-13.3995C304.4239,-4.4752 264.1688,5.1638 230,-3.6368 213.0337,-8.0067 195.7899,-17.2816 182.3783,-25.8009"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="180.1626,-23.0702 173.756,-31.5086 184.0265,-28.9072 180.1626,-23.0702"/>
+</g>
+<!-- module~qsort_m -->
+<g id="module~~cell_list_m~~UsesGraph_node6" class="node">
+<title>module~qsort_m</title>
+<g id="a_module~~cell_list_m~~UsesGraph_node6"><a xlink:href=".././module/qsort_m.html" xlink:title="qsort_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="288.5,-36.6368 234.5,-36.6368 234.5,-12.6368 288.5,-12.6368 288.5,-36.6368"/>
+<text text-anchor="middle" x="261.5" y="-22.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">qsort_m</text>
+</a>
+</g>
+</g>
+<!-- module~vector_m&#45;&gt;module~qsort_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge8" class="edge">
+<title>module~vector_m&#45;&gt;module~qsort_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M330.799,-24.6368C320.8443,-24.6368 309.4904,-24.6368 298.8943,-24.6368"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="298.6309,-21.1369 288.6308,-24.6368 298.6308,-28.1369 298.6309,-21.1369"/>
+</g>
+<!-- module~qsort_m&#45;&gt;module~constants_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge9" class="edge">
+<title>module~qsort_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M234.4467,-29.5792C225.0513,-31.2957 214.2319,-33.2723 203.7303,-35.1909"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="203.0241,-31.7619 193.816,-37.0021 204.2822,-38.6479 203.0241,-31.7619"/>
+</g>
+<!-- module~random_m&#45;&gt;module~constants_m -->
+<g id="module~~cell_list_m~~UsesGraph_edge11" class="edge">
+<title>module~random_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M240.9529,-92.5852C225.5692,-83.562 204.3024,-71.0882 187.088,-60.9913"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="188.4009,-57.7038 178.0044,-55.6634 184.8593,-63.7418 188.4009,-57.7038"/>
+</g>
+<!-- mkl_vsl_type -->
+<g id="module~~cell_list_m~~UsesGraph_node8" class="node">
+<title>mkl_vsl_type</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="194,-106.6368 121,-106.6368 121,-82.6368 194,-82.6368 194,-106.6368"/>
+<text text-anchor="middle" x="157.5" y="-92.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl_type</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl_type -->
+<g id="module~~cell_list_m~~UsesGraph_edge12" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl_type</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M229.7315,-101.5821C221.6597,-100.806 212.8175,-99.9558 204.1736,-99.1246"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="204.4648,-95.6366 194.1757,-98.1633 203.7947,-102.6044 204.4648,-95.6366"/>
+</g>
+<!-- mkl_vsl -->
+<g id="module~~cell_list_m~~UsesGraph_node9" class="node">
+<title>mkl_vsl</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="184.5,-148.6368 130.5,-148.6368 130.5,-124.6368 184.5,-124.6368 184.5,-148.6368"/>
+<text text-anchor="middle" x="157.5" y="-134.2368" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl -->
+<g id="module~~cell_list_m~~UsesGraph_edge10" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M229.7315,-114.4117C218.5507,-117.852 205.8915,-121.7471 194.3291,-125.3048"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="193.0436,-122.0383 184.5152,-128.3244 195.1023,-128.7287 193.0436,-122.0383"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~cell_list_m~~UsedByGraph Pages: 1 -->
+<svg id="modulecell_list_mUsedByGraph" width="566pt" height="52pt"
+ viewBox="0.00 0.00 566.00 52.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~cell_list_m~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 48)">
+<title>module~~cell_list_m~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-48 562,-48 562,4 -4,4"/>
+<!-- module~cell_list_m -->
+<g id="module~~cell_list_m~~UsedByGraph_node1" class="node">
+<title>module~cell_list_m</title>
+<polygon fill="none" stroke="#000000" points="62,-44 0,-44 0,-20 62,-20 62,-44"/>
+<text text-anchor="middle" x="31" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">cell_list_m</text>
+</g>
+<!-- module~pairtab_m -->
+<g id="module~~cell_list_m~~UsedByGraph_node2" class="node">
+<title>module~pairtab_m</title>
+<g id="a_module~~cell_list_m~~UsedByGraph_node2"><a xlink:href=".././module/pairtab_m.html" xlink:title="pairtab_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="157,-44 98,-44 98,-20 157,-20 157,-44"/>
+<text text-anchor="middle" x="127.5" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pairtab_m</text>
+</a>
+</g>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~cell_list_m -->
+<g id="module~~cell_list_m~~UsedByGraph_edge1" class="edge">
+<title>module~pairtab_m&#45;&gt;module~cell_list_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M97.7594,-32C89.7277,-32 80.8896,-32 72.3462,-32"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="72.1455,-28.5001 62.1455,-32 72.1455,-35.5001 72.1455,-28.5001"/>
+</g>
+<!-- module~interaction_m -->
+<g id="module~~cell_list_m~~UsedByGraph_node3" class="node">
+<title>module~interaction_m</title>
+<g id="a_module~~cell_list_m~~UsedByGraph_node3"><a xlink:href=".././module/interaction_m.html" xlink:title="interaction_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="269,-44 193,-44 193,-20 269,-20 269,-44"/>
+<text text-anchor="middle" x="231" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">interaction_m</text>
+</a>
+</g>
+</g>
+<!-- module~interaction_m&#45;&gt;module~pairtab_m -->
+<g id="module~~cell_list_m~~UsedByGraph_edge2" class="edge">
+<title>module~interaction_m&#45;&gt;module~pairtab_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M192.7545,-32C184.4947,-32 175.7414,-32 167.4194,-32"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="167.1785,-28.5001 157.1784,-32 167.1784,-35.5001 167.1785,-28.5001"/>
+</g>
+<!-- module~bd_solver_m -->
+<g id="module~~cell_list_m~~UsedByGraph_node4" class="node">
+<title>module~bd_solver_m</title>
+<g id="a_module~~cell_list_m~~UsedByGraph_node4"><a xlink:href=".././module/bd_solver_m.html" xlink:title="bd_solver_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="378,-24 305,-24 305,0 378,0 378,-24"/>
+<text text-anchor="middle" x="341.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">bd_solver_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~interaction_m -->
+<g id="module~~cell_list_m~~UsedByGraph_edge3" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M304.7051,-18.6597C296.4924,-20.1462 287.665,-21.7439 279.0732,-23.299"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="278.363,-19.8706 269.1463,-25.0957 279.6098,-26.7586 278.363,-19.8706"/>
+</g>
+<!-- module~setup_m -->
+<g id="module~~cell_list_m~~UsedByGraph_node5" class="node">
+<title>module~setup_m</title>
+<g id="a_module~~cell_list_m~~UsedByGraph_node5"><a xlink:href=".././module/setup_m.html" xlink:title="setup_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="468,-44 414,-44 414,-20 468,-20 468,-44"/>
+<text text-anchor="middle" x="441" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">setup_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~interaction_m -->
+<g id="module~~cell_list_m~~UsedByGraph_edge4" class="edge">
+<title>module~setup_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M413.7124,-32.5275C402.6304,-32.7172 389.7042,-32.9071 378,-33 345.5566,-33.2575 337.4437,-33.2192 305,-33 296.6879,-32.9438 287.8509,-32.8522 279.2853,-32.7466"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="279.0701,-29.2436 269.0251,-32.6123 278.9784,-36.243 279.0701,-29.2436"/>
+</g>
+<!-- module~setup_m&#45;&gt;module~bd_solver_m -->
+<g id="module~~cell_list_m~~UsedByGraph_edge5" class="edge">
+<title>module~setup_m&#45;&gt;module~bd_solver_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M413.8112,-26.5349C405.8681,-24.9383 396.9515,-23.146 388.1638,-21.3797"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="388.8494,-17.9475 378.3557,-19.4082 387.4699,-24.8103 388.8494,-17.9475"/>
+</g>
+<!-- program~main -->
+<g id="module~~cell_list_m~~UsedByGraph_node6" class="node">
+<title>program~main</title>
+<g id="a_module~~cell_list_m~~UsedByGraph_node6"><a xlink:href=".././program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="558,-44 504,-44 504,-20 558,-20 558,-44"/>
+<text text-anchor="middle" x="531" y="-29.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~setup_m -->
+<g id="module~~cell_list_m~~UsedByGraph_edge6" class="edge">
+<title>program~main&#45;&gt;module~setup_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M503.997,-32C495.9723,-32 487.0335,-32 478.4691,-32"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="478.295,-28.5001 468.295,-32 478.2949,-35.5001 478.295,-28.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_size">cell_size</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nc_max">nc_max</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nc">nc</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nct_max">nct_max</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-nct">nct</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cells">cells</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cells_pos">cells_pos</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_nbrs">cell_nbrs</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_nbrs_pos">cell_nbrs_pos</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-host_cells">host_cells</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-cell_pop">cell_pop</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#variable-d%7E4">d</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_get_num_cells">cl_get_num_cells</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_init">cl_init</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_set_cell_size">cl_set_cell_size</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_build_cell_nbrs">cl_build_cell_nbrs</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_delete">cl_delete</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_build">cl_build</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_get_contents">cl_get_contents</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_get_nbr_cells">cl_get_nbr_cells</a>
+      
+      <a class="list-group-item" href="../module/cell_list_m.html#proc-cl_print">cl_print</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cell_size"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>cell_size</strong></td><td> =</td><td>0.0_rp</td><td><p>Cell size along <em>x</em>, <em>y</em>, &amp; <em>z</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nc_max"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>nc_max</strong></td><td> =</td><td>0</td><td><p>Maximum number of cells along <em>x</em>, <em>y</em>, &amp; <em>z</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nc"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>nc</strong></td><td> =</td><td>0</td><td><p>Number of cells along <em>x</em>, <em>y</em>, &amp; <em>z</em>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nct_max"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nct_max</strong></td><td> =</td><td>0</td><td><p>Maximum total number of cells.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nct"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>nct</strong></td><td> =</td><td>0</td><td><p>Total of cells.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cells"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable, target</td><td>::</td>
+  <td><strong>cells</strong></td><td></td><td></td><td><p><em>(na_max,)</em> array. Listing atoms in each cell.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cells_pos"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>cells_pos</strong></td><td></td><td></td><td><p><em>(0:nct_max,)</em> index array. Note: 0-based indexing.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cell_nbrs"></span>type(<a href='../type/ivector_t.html'>ivector_t</a>),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>cell_nbrs</strong></td><td></td><td></td><td><p>Lists neighbor cells for each cell.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cell_nbrs_pos"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>cell_nbrs_pos</strong></td><td></td><td></td><td><p><em>(0:nct_max,)</em> index array. Note: 0-based indexing.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-host_cells"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>host_cells</strong></td><td></td><td></td><td><p><em>(na_max,)</em> array. <em>host_cells(i)</em> stores the linear index of the cell
+ containing atom <em>i</em>. <em>na_max</em> is the total number of atoms under consideration.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cell_pop"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>dimension(:), allocatable</td><td>::</td>
+  <td><strong>cell_pop</strong></td><td></td><td></td><td><p><em>(0:nct_max-1,)</em> array storing population of each cell. Note: 0-based indexing.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-d%7E4"></span>integer,</td>
+  
+  <td>private,</td>
+  <td>parameter, dimension(3,13)</td><td>::</td>
+  <td><strong>d</strong></td><td> =</td><td>reshape([1, 0, 0, 1, 1, 0, -1, 1, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1, 1, 0, 1, -1, -1, 1, 0, -1, 1, 1, -1, 1, -1, 1, 1, 0, 1, 1, 1, 1, 1], [3, 13])</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_get_num_cells"></span><h3>
+public function <a href='../proc/cl_get_num_cells.html'>cl_get_num_cells</a>() result(res)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns the total number of cells</p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>integer
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_init"></span><h3>
+public subroutine <a href='../proc/cl_init.html'>cl_init</a>(na_max, cs_min, simbox)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Initializes a cell list.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>na_max</strong></td><td><p>Maximum number of atoms to be handled.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>cs_min</strong></td><td><p>Minimum size (i.e. length) of a cell.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>simbox</strong></td><td><p>Simulation box</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_set_cell_size"></span><h3>
+public subroutine <a href='../proc/cl_set_cell_size.html'>cl_set_cell_size</a>(cs, simbox)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Sets the cell size. The actual cell size may be slightly larger.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>cs</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>simbox</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_build_cell_nbrs"></span><h3>
+public subroutine <a href='../proc/cl_build_cell_nbrs.html'>cl_build_cell_nbrs</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Makes a table of neighboring cells.</p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_delete"></span><h3>
+public subroutine <a href='../proc/cl_delete.html'>cl_delete</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Deallocates memory allocated in <code>cl_init</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_build"></span><h3>
+public subroutine <a href='../proc/cl_build.html'>cl_build</a>(coords)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Sorts atoms into cells for calculating short-range interations</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>coords</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_get_contents"></span><h3>
+public subroutine <a href='../proc/cl_get_contents.html'>cl_get_contents</a>(ic, res)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a pointer to the entries of cell with linear index <em>ic</em>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ic</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:), pointer</td><td>::</td>
+  <td><strong>res</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_get_nbr_cells"></span><h3>
+public subroutine <a href='../proc/cl_get_nbr_cells.html'>cl_get_nbr_cells</a>(ic, res)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns a pointer to the neighbor cells of cell with linear index <em>ic</em>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ic</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:), pointer</td><td>::</td>
+  <td><strong>res</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-cl_print"></span><h3>
+public subroutine <a href='../proc/cl_print.html'>cl_print</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Prints a cell list</p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

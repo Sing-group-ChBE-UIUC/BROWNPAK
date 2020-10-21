@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>ctrlpar_t &ndash; BROWNPAK </title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>ctrlpar_t
+    <small>Derived Type</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="<p>13.5% of total for derived types.</p>Including implementation: 135 statements, 11.3% of total for derived types.">34 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/control_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/control_m.f90.html'>control_m.f90</a></li>
+    
+     <li><a href='../module/control_m.html'>control_m</a></li>
+    
+  
+     <li class="active">ctrlpar_t</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-rcutoff">rcutoff</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-tskin%7E2">tskin</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-mth_ptgen">mth_ptgen</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lelst">lelst</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lhdia">lhdia</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lvdw">lvdw</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-excluded_atoms">excluded_atoms</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-mob_fctr">mob_fctr</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lanc_mxitr">lanc_mxitr</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lanc_tol">lanc_tol</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-se_nlmxitr">se_nlmxitr</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-se_kdmax">se_kdmax</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-bdintg">bdintg</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-se_tol">se_tol</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-stats_binsize">stats_binsize</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-tim_stp">tim_stp</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_sim">nts_sim</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_mobsam">nts_mobsam</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_dump">nts_dump</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_samp">nts_samp</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_log">nts_log</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lrevive">lrevive</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-read_seed">read_seed</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-write_seed">write_seed</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-write_traj">write_traj</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_cfg">fn_cfg</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_revive">fn_revive</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_stats">fn_stats</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_traj">fn_traj</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-0">Type-Bound Procedures</a></h3></div>
+  <div id="boundprocs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#boundprocedure-read%7E2">read</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#boundprocedure-write">write</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../type/ctrlpar_t.html#src">ctrlpar_t</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+      <h2>type, public :: ctrlpar_t</h2>
+    
+    
+    
+    
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-rcutoff">rcutoff</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-tskin%7E2">tskin</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-mth_ptgen">mth_ptgen</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lelst">lelst</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lhdia">lhdia</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lvdw">lvdw</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-excluded_atoms">excluded_atoms</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-mob_fctr">mob_fctr</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lanc_mxitr">lanc_mxitr</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lanc_tol">lanc_tol</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-se_nlmxitr">se_nlmxitr</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-se_kdmax">se_kdmax</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-bdintg">bdintg</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-se_tol">se_tol</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-stats_binsize">stats_binsize</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-tim_stp">tim_stp</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_sim">nts_sim</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_mobsam">nts_mobsam</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_dump">nts_dump</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_samp">nts_samp</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-nts_log">nts_log</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-lrevive">lrevive</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-read_seed">read_seed</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-write_seed">write_seed</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-write_traj">write_traj</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_cfg">fn_cfg</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_revive">fn_revive</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_stats">fn_stats</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#variable-fn_traj">fn_traj</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-1">Type-Bound Procedures</a></h3></div>
+  <div id="boundprocs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#boundprocedure-read%7E2">read</a>
+      
+      <a class="list-group-item" href="../type/ctrlpar_t.html#boundprocedure-write">write</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../type/ctrlpar_t.html#src">ctrlpar_t</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+    <section>
+    <h2>Components</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rcutoff"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>rcutoff</strong></td><td> =</td><td>0.0_rp</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tskin%7E2"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tskin</strong></td><td> =</td><td>0.0_rp</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mth_ptgen"></span>character(len=5),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mth_ptgen</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lelst"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lelst</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lhdia"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lhdia</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lvdw"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lvdw</strong></td><td> =</td><td>.false.</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-excluded_atoms"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>excluded_atoms</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mob_fctr"></span>character(len=4),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mob_fctr</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lanc_mxitr"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lanc_mxitr</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lanc_tol"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lanc_tol</strong></td><td> =</td><td>0.0_rp</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-se_nlmxitr"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>se_nlmxitr</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-se_kdmax"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>se_kdmax</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bdintg"></span>character(len=4),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bdintg</strong></td><td> =</td><td>''</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-se_tol"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(2)</td><td>::</td>
+  <td><strong>se_tol</strong></td><td> =</td><td>0.0_rp</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stats_binsize"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>dimension(2)</td><td>::</td>
+  <td><strong>stats_binsize</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tim_stp"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tim_stp</strong></td><td> =</td><td>0.0_rp</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_sim"></span>integer(kind=ip_long),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nts_sim</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_mobsam"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nts_mobsam</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_dump"></span>integer(kind=ip_long),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nts_dump</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_samp"></span>integer(kind=ip_long),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nts_samp</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nts_log"></span>integer(kind=ip_long),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nts_log</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lrevive"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lrevive</strong></td><td> =</td><td>.false.</td><td><p>{T, F}. Whether the simulation is restarted.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-read_seed"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>read_seed</strong></td><td> =</td><td>.false.</td><td><p>{T, F}. Whether to initialize the random number generator by reading
+ a seed from a file. If <code>read_seed</code> == T, the seed will be read from
+ a file 'random_seed.txt'</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-write_seed"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>write_seed</strong></td><td> =</td><td>.false.</td><td><p>{T, F}. Whether to write the random number generator seed. If
+  <code>write_seed</code> == T the seed will be written to a file named
+  'random_seed.txt'</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-write_traj"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>write_traj</strong></td><td> =</td><td>.false.</td><td><p>Should the trajectory be written to file? {T, F}</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fn_cfg"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fn_cfg</strong></td><td></td><td></td><td><p>Name of the file containing the initial configuration</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fn_revive"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fn_revive</strong></td><td></td><td></td><td><p>Name of the revive file</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fn_stats"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fn_stats</strong></td><td></td><td></td><td><p>Name of the statistics file</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fn_traj"></span>character(len=:),</td>
+  
+  <td>public,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fn_traj</strong></td><td></td><td></td><td><p>Name of the trajectory file</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+    
+     
+    <section>
+    <h2>Type-Bound Procedures</h2>
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-read%7E2"></span><h3>procedure, public :: <strong>read</strong>  => <a href='../proc/control_read.html'>control_read</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+        
+          
+    
+    <h3>
+public subroutine <a href='../proc/control_read.html'>control_read</a>(this, fn)
+    
+    
+   
+</h3>
+    
+
+
+
+
+
+
+
+<p>Reads simulation control parameters from file</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/ctrlpar_t.html'>ctrlpar_t</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td><p>A <em>ctrlpar_t</em> instance.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fn</strong></td><td><p>Name of parameters file.</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+        
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-write"></span><h3>procedure, public :: <strong>write</strong>  => <a href='../proc/control_write.html'>control_write</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+        
+          
+    
+    <h3>
+public subroutine <a href='../proc/control_write.html'>control_write</a>(this, fn)
+    
+    
+   
+</h3>
+    
+
+
+
+
+
+
+
+<p>Write simulation parameters to file</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/ctrlpar_t.html'>ctrlpar_t</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td><p>A <em>ctrlpar_t</em> instance.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fn</strong></td><td><p>Output file name</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+        
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+    </section>
+    
+    
+    
+    <section>
+    <h3><span class="anchor" id="src"></span>Source Code</h3>
+    <div class="highlight"><pre><span></span><span class="k">type </span><span class="n">ctrlpar_t</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">rcutoff</span> <span class="o">=</span> <span class="mf">0.0_rp</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tskin</span> <span class="o">=</span> <span class="mf">0.0_rp</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mth_ptgen</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="kt">logical</span>  <span class="kd">::</span> <span class="n">lelst</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+    <span class="kt">logical</span>  <span class="kd">::</span> <span class="n">lhdia</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+    <span class="kt">logical</span>  <span class="kd">::</span> <span class="n">lvdw</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+    <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">excluded_atoms</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="kd">::</span> <span class="n">mob_fctr</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">lanc_mxitr</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">lanc_tol</span> <span class="o">=</span> <span class="mf">0.0_rp</span>
+    <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">se_nlmxitr</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">integer</span>  <span class="kd">::</span> <span class="n">se_kdmax</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span> <span class="kd">::</span> <span class="n">bdintg</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="kd">::</span> <span class="n">se_tol</span> <span class="o">=</span> <span class="mf">0.0_rp</span>
+    <span class="kt">integer</span><span class="p">,</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="kd">::</span> <span class="n">stats_binsize</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tim_stp</span> <span class="o">=</span> <span class="mf">0.0_rp</span>
+    <span class="kt">integer</span><span class="p">(</span><span class="n">ip_long</span><span class="p">)</span> <span class="kd">::</span> <span class="n">nts_sim</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">integer</span>          <span class="kd">::</span> <span class="n">nts_mobsam</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">integer</span><span class="p">(</span><span class="n">ip_long</span><span class="p">)</span> <span class="kd">::</span> <span class="n">nts_dump</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">integer</span><span class="p">(</span><span class="n">ip_long</span><span class="p">)</span> <span class="kd">::</span> <span class="n">nts_samp</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="kt">integer</span><span class="p">(</span><span class="n">ip_long</span><span class="p">)</span> <span class="kd">::</span> <span class="n">nts_log</span> <span class="o">=</span> <span class="mi">0</span>
+
+
+    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">lrevive</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+        <span class="c">!! {T, F}. Whether the simulation is restarted.</span>
+    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">read_seed</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+        <span class="c">!! {T, F}. Whether to initialize the random number generator by reading</span>
+        <span class="c">!! a seed from a file. If `read_seed` == T, the seed will be read from</span>
+        <span class="c">!! a file &#39;random_seed.txt&#39;</span>
+    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">write_seed</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+        <span class="c">!! {T, F}. Whether to write the random number generator seed. If</span>
+        <span class="c">!!  `write_seed` == T the seed will be written to a file named</span>
+        <span class="c">!!  &#39;random_seed.txt&#39;</span>
+    <span class="kt">logical</span> <span class="kd">::</span> <span class="n">write_traj</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+        <span class="c">!! Should the trajectory be written to file? {T, F}</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">fn_cfg</span>
+        <span class="c">!! Name of the file containing the initial configuration</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">fn_revive</span>
+        <span class="c">!! Name of the revive file</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">fn_stats</span>
+        <span class="c">!! Name of the statistics file</span>
+    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span> <span class="k">allocatable</span> <span class="kd">::</span> <span class="n">fn_traj</span>
+        <span class="c">!! Name of the trajectory file</span>
+    <span class="k">contains</span>
+<span class="k">        procedure</span> <span class="kd">::</span> <span class="k">read</span> <span class="o">=&gt;</span> <span class="n">control_read</span>
+        <span class="k">procedure</span> <span class="kd">::</span> <span class="k">write</span> <span class="o">=&gt;</span> <span class="n">control_write</span>
+<span class="k">end type </span><span class="n">ctrlpar_t</span>
+</pre></div>
+
+    </section>
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

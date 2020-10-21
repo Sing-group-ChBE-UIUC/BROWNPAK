@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>simbox_m &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>simbox_m 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 1.7% of total for modules and submodules.">127 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/simbox_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/simbox_m.f90.html'>simbox_m.f90</a></li>
+    
+  
+     <li class="active">simbox_m</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/simbox_m.html#type-smbx_t">smbx_t</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_init">smbx_init</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_set_basis">smbx_set_basis</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_freeze">smbx_freeze</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_unfreeze">smbx_unfreeze</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_get_image">smbx_get_image</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_wrap_all">smbx_wrap_all</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_to_center">smbx_to_center</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_to_origin">smbx_to_origin</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_get_rnd_points">smbx_get_rnd_points</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <p>Implements a simulation box with appropriate boundary conditions.</p>
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/constants_m.html'>constants_m</a></li>
+    
+    <li><a href='../module/random_m.html'>random_m</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~simbox_m~~UsesGraph Pages: 1 -->
+<svg id="modulesimbox_mUsesGraph" width="397pt" height="116pt"
+ viewBox="0.00 0.00 397.00 116.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~simbox_m~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 112)">
+<title>module~~simbox_m~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-112 393,-112 393,4 -4,4"/>
+<!-- module~simbox_m -->
+<g id="module~~simbox_m~~UsesGraph_node1" class="node">
+<title>module~simbox_m</title>
+<polygon fill="none" stroke="#000000" points="389,-87 329,-87 329,-63 389,-63 389,-87"/>
+<text text-anchor="middle" x="359" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">simbox_m</text>
+</g>
+<!-- module~constants_m -->
+<g id="module~~simbox_m~~UsesGraph_node2" class="node">
+<title>module~constants_m</title>
+<g id="a_module~~simbox_m~~UsesGraph_node2"><a xlink:href=".././module/constants_m.html" xlink:title="constants_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="193.5,-108 121.5,-108 121.5,-84 193.5,-84 193.5,-108"/>
+<text text-anchor="middle" x="157.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">constants_m</text>
+</a>
+</g>
+</g>
+<!-- module~simbox_m&#45;&gt;module~constants_m -->
+<g id="module~~simbox_m~~UsesGraph_edge1" class="edge">
+<title>module~simbox_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M328.8334,-78.1439C295.8171,-81.5848 242.4775,-87.1438 204.079,-91.1456"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="203.2574,-87.7122 193.6741,-92.23 203.9831,-94.6745 203.2574,-87.7122"/>
+</g>
+<!-- module~random_m -->
+<g id="module~~simbox_m~~UsesGraph_node3" class="node">
+<title>module~random_m</title>
+<g id="a_module~~simbox_m~~UsesGraph_node3"><a xlink:href=".././module/random_m.html" xlink:title="random_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="293,-67 230,-67 230,-43 293,-43 293,-67"/>
+<text text-anchor="middle" x="261.5" y="-52.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">random_m</text>
+</a>
+</g>
+</g>
+<!-- module~simbox_m&#45;&gt;module~random_m -->
+<g id="module~~simbox_m~~UsesGraph_edge2" class="edge">
+<title>module~simbox_m&#45;&gt;module~random_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M328.9512,-68.8361C320.8276,-67.1698 311.8873,-65.3359 303.2468,-63.5634"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="303.8075,-60.1057 293.3081,-61.5247 302.4008,-66.9629 303.8075,-60.1057"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~simbox_m~~UsesGraph_node4" class="node">
+<title>iso_fortran_env</title>
+<g id="a_module~~simbox_m~~UsesGraph_node4"><a xlink:href="http://fortranwiki.org/fortran/show/ISO_FORTRAN_ENV" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="85,-108 0,-108 0,-84 85,-84 85,-108"/>
+<text text-anchor="middle" x="42.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- module~constants_m&#45;&gt;iso_fortran_env -->
+<g id="module~~simbox_m~~UsesGraph_edge3" class="edge">
+<title>module~constants_m&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M121.4288,-96C113.1909,-96 104.2681,-96 95.4867,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="95.2924,-92.5001 85.2924,-96 95.2923,-99.5001 95.2924,-92.5001"/>
+</g>
+<!-- module~random_m&#45;&gt;module~constants_m -->
+<g id="module~~simbox_m~~UsesGraph_edge5" class="edge">
+<title>module~random_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M230.8591,-67.0796C220.4785,-71.1719 208.7234,-75.8062 197.7126,-80.147"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="196.3008,-76.9413 188.2813,-83.8651 198.8682,-83.4535 196.3008,-76.9413"/>
+</g>
+<!-- mkl_vsl_type -->
+<g id="module~~simbox_m~~UsesGraph_node5" class="node">
+<title>mkl_vsl_type</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="194,-66 121,-66 121,-42 194,-42 194,-66"/>
+<text text-anchor="middle" x="157.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl_type</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl_type -->
+<g id="module~~simbox_m~~UsesGraph_edge6" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl_type</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M229.7315,-54.6945C221.7475,-54.6178 213.0096,-54.5337 204.4555,-54.4515"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="204.2089,-50.9491 194.1757,-54.3527 204.1415,-57.9487 204.2089,-50.9491"/>
+</g>
+<!-- mkl_vsl -->
+<g id="module~~simbox_m~~UsesGraph_node6" class="node">
+<title>mkl_vsl</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="184.5,-24 130.5,-24 130.5,0 184.5,0 184.5,-24"/>
+<text text-anchor="middle" x="157.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl -->
+<g id="module~~simbox_m~~UsesGraph_edge4" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M232.2534,-42.9077C220.3803,-37.9986 206.5357,-32.2744 194.0105,-27.0957"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="195.3227,-23.8509 184.7441,-23.2644 192.648,-30.3198 195.3227,-23.8509"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~simbox_m~~UsedByGraph Pages: 1 -->
+<svg id="modulesimbox_mUsedByGraph" width="641pt" height="139pt"
+ viewBox="0.00 0.00 641.00 138.51" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~simbox_m~~UsedByGraph" class="graph" transform="scale(.9683 .9683) rotate(0) translate(4 139.0434)">
+<title>module~~simbox_m~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-139.0434 658,-139.0434 658,4 -4,4"/>
+<!-- module~simbox_m -->
+<g id="module~~simbox_m~~UsedByGraph_node1" class="node">
+<title>module~simbox_m</title>
+<polygon fill="none" stroke="#000000" points="60,-104 0,-104 0,-80 60,-80 60,-104"/>
+<text text-anchor="middle" x="30" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">simbox_m</text>
+</g>
+<!-- module~setup_m -->
+<g id="module~~simbox_m~~UsedByGraph_node2" class="node">
+<title>module~setup_m</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node2"><a xlink:href=".././module/setup_m.html" xlink:title="setup_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="564,-64 510,-64 510,-40 564,-40 564,-64"/>
+<text text-anchor="middle" x="537" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">setup_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~simbox_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge1" class="edge">
+<title>module~setup_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M437.5,-92C404.5641,-98.3725 397.8257,-106.0821 365,-113 302.9106,-126.0852 286.6645,-125.9531 223.5,-132"/>
+</g>
+<!-- module~config_io_m -->
+<g id="module~~simbox_m~~UsedByGraph_node4" class="node">
+<title>module~config_io_m</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node4"><a xlink:href=".././module/config_io_m.html" xlink:title="config_io_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="361.5,-24 292.5,-24 292.5,0 361.5,0 361.5,-24"/>
+<text text-anchor="middle" x="327" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">config_io_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~config_io_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge10" class="edge">
+<title>module~setup_m&#45;&gt;module~config_io_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M509.7283,-41.6297C498.7611,-37.7976 485.9125,-33.7283 474,-31 440.2664,-23.2741 401.4075,-18.422 372.1178,-15.5565"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="372.0699,-12.0368 361.7871,-14.589 371.4171,-19.0063 372.0699,-12.0368"/>
+</g>
+<!-- module~stats_m -->
+<g id="module~~simbox_m~~UsedByGraph_node6" class="node">
+<title>module~stats_m</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node6"><a xlink:href=".././module/stats_m.html" xlink:title="stats_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="250.5,-62 196.5,-62 196.5,-38 250.5,-38 250.5,-62"/>
+<text text-anchor="middle" x="223.5" y="-47.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">stats_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~stats_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge13" class="edge">
+<title>module~setup_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M437.5,-92C386.2212,-101.9214 378.9731,-57.1721 327,-52"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M514.0523,-64.166C494.3665,-73.8739 464.9184,-86.6951 437.5,-92"/>
+</g>
+<!-- module~interaction_m -->
+<g id="module~~simbox_m~~UsedByGraph_node7" class="node">
+<title>module~interaction_m</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node7"><a xlink:href=".././module/interaction_m.html" xlink:title="interaction_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="365,-104 289,-104 289,-80 365,-80 365,-104"/>
+<text text-anchor="middle" x="327" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">interaction_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~interaction_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge16" class="edge">
+<title>module~setup_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M437.5,-92C417.3836,-95.8921 394.8189,-96.5366 375.3502,-95.9659"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="375.3195,-92.4618 365.1854,-95.5522 375.0348,-99.456 375.3195,-92.4618"/>
+</g>
+<!-- module~bd_solver_m -->
+<g id="module~~simbox_m~~UsedByGraph_node8" class="node">
+<title>module~bd_solver_m</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node8"><a xlink:href=".././module/bd_solver_m.html" xlink:title="bd_solver_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="474,-64 401,-64 401,-40 474,-40 474,-64"/>
+<text text-anchor="middle" x="437.5" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">bd_solver_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~bd_solver_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge17" class="edge">
+<title>module~setup_m&#45;&gt;module~bd_solver_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M509.8112,-52C501.9535,-52 493.1431,-52 484.4473,-52"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="484.3558,-48.5001 474.3557,-52 484.3557,-55.5001 484.3558,-48.5001"/>
+</g>
+<!-- module~pairtab_m -->
+<g id="module~~simbox_m~~UsedByGraph_node3" class="node">
+<title>module~pairtab_m</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node3"><a xlink:href=".././module/pairtab_m.html" xlink:title="pairtab_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="253,-104 194,-104 194,-80 253,-80 253,-104"/>
+<text text-anchor="middle" x="223.5" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pairtab_m</text>
+</a>
+</g>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~simbox_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge2" class="edge">
+<title>module~pairtab_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M127,-132C102.641,-129.7187 77.1423,-118.8211 58.4046,-108.9761"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="59.978,-105.8475 49.5244,-104.123 56.621,-111.99 59.978,-105.8475"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M207.5533,-104.1662C189.0327,-116.9416 157.1547,-134.8241 127,-132"/>
+</g>
+<!-- module~cell_list_m -->
+<g id="module~~simbox_m~~UsedByGraph_node5" class="node">
+<title>module~cell_list_m</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node5"><a xlink:href=".././module/cell_list_m.html" xlink:title="cell_list_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="158,-104 96,-104 96,-80 158,-80 158,-104"/>
+<text text-anchor="middle" x="127" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">cell_list_m</text>
+</a>
+</g>
+</g>
+<!-- module~pairtab_m&#45;&gt;module~cell_list_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge11" class="edge">
+<title>module~pairtab_m&#45;&gt;module~cell_list_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M193.7594,-92C185.7277,-92 176.8896,-92 168.3462,-92"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="168.1455,-88.5001 158.1455,-92 168.1455,-95.5001 168.1455,-88.5001"/>
+</g>
+<!-- module~config_io_m&#45;&gt;module~simbox_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge4" class="edge">
+<title>module~config_io_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M292.3925,-6.363C252.0049,-.9888 183.5412,4.3601 127,-10"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M127,-10C92.0583,-19.6231 62.0011,-50.6888 44.9589,-71.6977"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="42.0828,-69.6937 38.6772,-79.7263 47.5959,-74.0072 42.0828,-69.6937"/>
+</g>
+<!-- module~cell_list_m&#45;&gt;module~simbox_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge3" class="edge">
+<title>module~cell_list_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M95.7747,-92C87.6636,-92 78.8111,-92 70.3049,-92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="70.1742,-88.5001 60.1742,-92 70.1742,-95.5001 70.1742,-88.5001"/>
+</g>
+<!-- module~stats_m&#45;&gt;module~simbox_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge5" class="edge">
+<title>module~stats_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M209.5542,-37.9262C191.1742,-23.5027 157.5851,-2.2321 127,-10"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~simbox_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge6" class="edge">
+<title>module~interaction_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M223.5,-132C180.8063,-136.0872 169.702,-135.9992 127,-132"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M306.0435,-104.0263C285.7135,-114.7262 253.6068,-129.1178 223.5,-132"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~pairtab_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge8" class="edge">
+<title>module~interaction_m&#45;&gt;module~pairtab_m</title>
+<path fill="none" stroke="#ffff00" stroke-dasharray="5,2" d="M288.7545,-92C280.4947,-92 271.7414,-92 263.4194,-92"/>
+<polygon fill="#ffff00" stroke="#ffff00" points="263.1785,-88.5001 253.1784,-92 263.1784,-95.5001 263.1785,-88.5001"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~stats_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge14" class="edge">
+<title>module~interaction_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M297.3411,-79.9645C285.746,-75.2593 272.3295,-69.8149 260.1392,-64.8681"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="261.2661,-61.5482 250.6839,-61.0311 258.634,-68.0345 261.2661,-61.5482"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~config_io_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge9" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~config_io_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M404.3464,-39.9987C393.6277,-36.1186 381.5805,-31.7577 370.2423,-27.6533"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="371.1064,-24.2439 360.5122,-24.1311 368.7237,-30.8259 371.1064,-24.2439"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~stats_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge12" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M327,-52C305.1706,-49.8276 280.6279,-49.2722 260.922,-49.2856"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="260.7901,-45.7862 250.8098,-49.3419 260.8291,-52.7861 260.7901,-45.7862"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M400.828,-53.8166C379.2757,-54.4316 351.5303,-54.4412 327,-52"/>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~interaction_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge15" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M404.3464,-64.0013C393.6277,-67.8814 381.5805,-72.2423 370.2423,-76.3467"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="368.7237,-73.1741 360.5122,-79.8689 371.1064,-79.7561 368.7237,-73.1741"/>
+</g>
+<!-- program~main -->
+<g id="module~~simbox_m~~UsedByGraph_node9" class="node">
+<title>program~main</title>
+<g id="a_module~~simbox_m~~UsedByGraph_node9"><a xlink:href=".././program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="654,-64 600,-64 600,-40 654,-40 654,-64"/>
+<text text-anchor="middle" x="627" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~setup_m -->
+<g id="module~~simbox_m~~UsedByGraph_edge7" class="edge">
+<title>program~main&#45;&gt;module~setup_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M599.997,-52C591.9723,-52 583.0335,-52 574.4691,-52"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="574.295,-48.5001 564.295,-52 574.2949,-55.5001 574.295,-48.5001"/>
+</g>
+</g>
+</svg>
+</div><script>var panmodulesimbox_mUsedByGraph = svgPanZoom('#modulesimbox_mUsedByGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/simbox_m.html#type-smbx_t">smbx_t</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_init">smbx_init</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_set_basis">smbx_set_basis</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_freeze">smbx_freeze</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_unfreeze">smbx_unfreeze</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_get_image">smbx_get_image</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_wrap_all">smbx_wrap_all</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_to_center">smbx_to_center</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_to_origin">smbx_to_origin</a>
+      
+      <a class="list-group-item" href="../module/simbox_m.html#proc-smbx_get_rnd_points">smbx_get_rnd_points</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <section>
+     <h2>Derived Types</h2>
+   
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-smbx_t"></span><h3>type, public :: <a href='../type/smbx_t.html'>smbx_t</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imcon"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>imcon</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-basis"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(3,3)</td><td>::</td>
+  <td><strong>basis</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dl_basis"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(3,3)</td><td>::</td>
+  <td><strong>dl_basis</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-volume"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>volume</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-is_deforming"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>is_deforming</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-is_aligned"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>is_aligned</strong></td><td></td><td></td><td><p>Whether the basis vectors are aligned with the laboratory frame</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+     <h4>Type-Bound Procedures</h4>
+      <table class="table table-striped varlist">
+      <tbody>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-init%7E3'>init</a></strong>  => smbx_init </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-set_basis'>set_basis</a></strong>  => smbx_set_basis </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-freeze'>freeze</a></strong>  => smbx_freeze </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-unfreeze'>unfreeze</a></strong>  => smbx_unfreeze </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-get_image'>get_image</a></strong>  => smbx_get_image </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-wrap_all'>wrap_all</a></strong>  => smbx_wrap_all </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-to_center'>to_center</a></strong>  => smbx_to_center </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-to_origin'>to_origin</a></strong>  => smbx_to_origin </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/smbx_t.html#boundprocedure-get_rnd_points'>get_rnd_points</a></strong>  => smbx_get_rnd_points </td>
+       <td></td></tr>
+      
+       </tbody>
+       </table>
+     
+  </div>
+</div>
+
+     
+    </section>
+  <br>
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_init"></span><h3>
+public subroutine <a href='../proc/smbx_init.html'>smbx_init</a>(this, imcon)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Initializes an instance of <em>smbx_t</em>. Can also be called to reset.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td><p>An instance of <code>smbx_t</code>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>imcon</strong></td><td><p>Flag specifying boundary conditions on the simulation box.  </p><a href="None" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_set_basis"></span><h3>
+public subroutine <a href='../proc/smbx_set_basis.html'>smbx_set_basis</a>(this, bv)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Sets all three basis vectors.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(in),</td>
+  <td></td>
+  
+  <td>dimension(3,3)</td><td>::</td>
+  <td><strong>bv</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_freeze"></span><h3>
+public subroutine <a href='../proc/smbx_freeze.html'>smbx_freeze</a>(this)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Specifies <em>this</em> as non-deforming.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_unfreeze"></span><h3>
+public subroutine <a href='../proc/smbx_unfreeze.html'>smbx_unfreeze</a>(this)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Specifies <em>this</em> as deforming.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_get_image"></span><h3>
+public subroutine <a href='../proc/smbx_get_image.html'>smbx_get_image</a>(this, r)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns the image of <em>r</em> under PBC.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>r</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_wrap_all"></span><h3>
+public subroutine <a href='../proc/smbx_wrap_all.html'>smbx_wrap_all</a>(this, coords)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Wraps atom positions w.r.t. periodic boundary conditions.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>coords</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_to_center"></span><h3>
+public subroutine <a href='../proc/smbx_to_center.html'>smbx_to_center</a>(this, coords, com)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Adjusts atom positions such that the c.o.m. of the atoms is at the center 
+ of the box. Assumes all atoms to have the same mass and aligned axis.
+ Optionally returns the original c.o.m.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>coords</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>com</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_to_origin"></span><h3>
+public subroutine <a href='../proc/smbx_to_origin.html'>smbx_to_origin</a>(this, coords, com)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Adjusts atom positions such that the c.o.m. of the atoms is at the origin.
+ Assumes all atoms to have the same mass and aligned axis.
+ Optionally returns the original c.o.m.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>coords</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>com</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-smbx_get_rnd_points"></span><h3>
+public subroutine <a href='../proc/smbx_get_rnd_points.html'>smbx_get_rnd_points</a>(this, coords)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Returns uniformly distributed points within the box.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>coords</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

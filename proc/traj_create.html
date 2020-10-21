@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,6 +66,8 @@
             <li><a href="../lists/modules.html">Modules</a></li>
         
             
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
         
@@ -85,6 +87,8 @@
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
 
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
@@ -132,21 +136,21 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.3% of total for procedures.">27 statements</a>
+    title=" 0.2% of total for procedures.">23 statements</a>
      </li> 
      
      
      
-    <li><i class="fa fa-code"></i><a href="../src/m_trajectory.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/trajectory_m.f90"> Source File</a></li>
      
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
     
-     <li><a href='../sourcefile/m_trajectory.f90.html'>m_trajectory.f90</a></li>
+     <li><a href='../sourcefile/trajectory_m.f90.html'>trajectory_m.f90</a></li>
     
-     <li><a href='../module/m_trajectory.html'>m_trajectory</a></li>
+     <li><a href='../module/trajectory_m.html'>trajectory_m</a></li>
     
   
      <li class="active">traj_create</li>
@@ -199,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-public subroutine traj_create(this, fn, na, nam, frmcmp)
+private subroutine traj_create(this, fn, na, frmcmp)
     
     
    
@@ -232,7 +236,7 @@ public subroutine traj_create(this, fn, na, nam, frmcmp)
   
 <tr>
   
-  <td><span class="anchor" id="variable-this%7E65"></span>class(<a href='../type/trajectory_t.html'>trajectory_t</a>),</td>
+  <td><span class="anchor" id="variable-this%7E40"></span>class(<a href='../type/trajectory_t.html'>trajectory_t</a>),</td>
   <td>intent(out)</td>
   <td></td>
   
@@ -247,7 +251,7 @@ public subroutine traj_create(this, fn, na, nam, frmcmp)
   
 <tr>
   
-  <td><span class="anchor" id="variable-fn%7E10"></span>character(len=*),</td>
+  <td><span class="anchor" id="variable-fn%7E3"></span>character(len=*),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -262,28 +266,12 @@ public subroutine traj_create(this, fn, na, nam, frmcmp)
   
 <tr>
   
-  <td><span class="anchor" id="variable-na"></span>integer,</td>
+  <td><span class="anchor" id="variable-na%7E2"></span>integer,</td>
   <td>intent(in)</td>
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>na</strong></td><td><p>Number of non-MPCD atoms</p></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-nam"></span>integer,</td>
-  <td>intent(in)</td>
-  <td></td>
-  
-  <td></td><td>::</td>
-  <td><strong>nam</strong></td><td><p>Number of MPCD atoms, pass zero to indicate no data from MPCD
- particles are present.</p></td>
+  <td><strong>na</strong></td><td><p>Number of atoms</p></td>
   
 </tr>
 

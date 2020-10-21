@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,6 +66,8 @@
             <li><a href="../lists/modules.html">Modules</a></li>
         
             
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
         
@@ -85,6 +87,8 @@
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
 
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
@@ -132,21 +136,21 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="<p> 4.8% of total for derived types.</p>Including implementation: 25 statements,  2.4% of total for derived types.">8 statements</a>
+    title="<p> 3.6% of total for derived types.</p>Including implementation: 45 statements,  3.8% of total for derived types.">9 statements</a>
      </li> 
      
      
      
-    <li><i class="fa fa-code"></i><a href="../src/m_logger.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/logger_m.f90"> Source File</a></li>
      
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
     
-     <li><a href='../sourcefile/m_logger.f90.html'>m_logger.f90</a></li>
+     <li><a href='../sourcefile/logger_m.f90.html'>logger_m.f90</a></li>
     
-     <li><a href='../module/m_logger.html'>m_logger</a></li>
+     <li><a href='../module/logger_m.html'>logger_m</a></li>
     
   
      <li class="active">logger_t</li>
@@ -177,7 +181,7 @@
   <div id="vars-0" class="panel-collapse collapse">
     <div class="list-group">
       
-      <a class="list-group-item" href="../type/logger_t.html#variable-fn">fn</a>
+      <a class="list-group-item" href="../type/logger_t.html#variable-fn%7E2">fn</a>
       
       <a class="list-group-item" href="../type/logger_t.html#variable-fu">fu</a>
       
@@ -208,6 +212,8 @@
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-0">Type-Bound Procedures</a></h3></div>
   <div id="boundprocs-0" class="panel-collapse collapse">
     <div class="list-group">
+      
+      <a class="list-group-item" href="../type/logger_t.html#boundprocedure-init%7E6">init</a>
       
       <a class="list-group-item" href="../type/logger_t.html#boundprocedure-finish">finish</a>
       
@@ -253,7 +259,7 @@
   <div id="vars-1" class="panel-collapse collapse">
     <div class="list-group">
       
-      <a class="list-group-item" href="../type/logger_t.html#variable-fn">fn</a>
+      <a class="list-group-item" href="../type/logger_t.html#variable-fn%7E2">fn</a>
       
       <a class="list-group-item" href="../type/logger_t.html#variable-fu">fu</a>
       
@@ -284,6 +290,8 @@
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#boundprocs-1">Type-Bound Procedures</a></h3></div>
   <div id="boundprocs-1" class="panel-collapse collapse">
     <div class="list-group">
+      
+      <a class="list-group-item" href="../type/logger_t.html#boundprocedure-init%7E6">init</a>
       
       <a class="list-group-item" href="../type/logger_t.html#boundprocedure-finish">finish</a>
       
@@ -327,7 +335,7 @@
   
 <tr>
   
-  <td><span class="anchor" id="variable-fn"></span>character(len=:),</td>
+  <td><span class="anchor" id="variable-fn%7E2"></span>character(len=:),</td>
   
   <td>public,</td>
   <td>allocatable</td><td>::</td>
@@ -377,6 +385,108 @@
      
     <section>
     <h2>Type-Bound Procedures</h2>
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-init%7E6"></span><h3>procedure, public :: <strong>init</strong>  => <a href='../proc/logger_init.html'>logger_init</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+        
+          
+    
+    <h3>
+private subroutine <a href='../proc/logger_init.html'>logger_init</a>(this, fn, use_stdout)
+    
+    
+   
+</h3>
+    
+
+
+
+
+
+
+
+<p>Initializes a logger.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/logger_t.html'>logger_t</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td><p>A <code>logger_t</code> instance</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>fn</strong></td><td><p>Name of the log file. If <code>use_stdout</code> is true, <code>fn</code> is ignored.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>logical,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>use_stdout</strong></td><td><p>Write all log messages to stdout rather than a file on disk? {T/F}</p></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+        
+      
+      </li>
+    
+  </ul>
+</div>
+
     
      
 <div class="panel panel-default">
@@ -551,7 +661,8 @@ private subroutine <a href='../proc/logger_log_msg.html'>logger_log_msg</a>(this
     <span class="kt">logical</span> <span class="kd">::</span> <span class="n">is_open</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
         <span class="c">!! Is the log file open for writing? {T/F}</span>
     <span class="k">contains</span>
-<span class="k">        procedure</span> <span class="kd">::</span> <span class="n">finish</span> <span class="o">=&gt;</span> <span class="n">logger_finish</span>
+<span class="k">        procedure</span> <span class="kd">::</span> <span class="n">init</span> <span class="o">=&gt;</span> <span class="n">logger_init</span>
+        <span class="k">procedure</span> <span class="kd">::</span> <span class="n">finish</span> <span class="o">=&gt;</span> <span class="n">logger_finish</span>
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">log_msg</span> <span class="o">=&gt;</span> <span class="n">logger_log_msg</span>
 <span class="k">end type </span><span class="n">logger_t</span>
 </pre></div>

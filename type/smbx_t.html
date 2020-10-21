@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,6 +66,8 @@
             <li><a href="../lists/modules.html">Modules</a></li>
         
             
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
         
@@ -85,6 +87,8 @@
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
 
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
@@ -132,21 +136,21 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="<p> 9.0% of total for derived types.</p>Including implementation: 92 statements,  8.9% of total for derived types.">15 statements</a>
+    title="<p> 7.2% of total for derived types.</p>Including implementation: 121 statements, 10.2% of total for derived types.">18 statements</a>
      </li> 
      
      
      
-    <li><i class="fa fa-code"></i><a href="../src/m_simbox.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/simbox_m.f90"> Source File</a></li>
      
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
     
-     <li><a href='../sourcefile/m_simbox.f90.html'>m_simbox.f90</a></li>
+     <li><a href='../sourcefile/simbox_m.f90.html'>simbox_m.f90</a></li>
     
-     <li><a href='../module/m_simbox.html'>m_simbox</a></li>
+     <li><a href='../module/simbox_m.html'>simbox_m</a></li>
     
   
      <li class="active">smbx_t</li>
@@ -176,6 +180,8 @@
   <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
   <div id="vars-0" class="panel-collapse collapse">
     <div class="list-group">
+      
+      <a class="list-group-item" href="../type/smbx_t.html#variable-imcon">imcon</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#variable-basis">basis</a>
       
@@ -213,6 +219,8 @@
   <div id="boundprocs-0" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-init%7E3">init</a>
+      
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-set_basis">set_basis</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-freeze">freeze</a>
@@ -224,6 +232,8 @@
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-wrap_all">wrap_all</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-to_center">to_center</a>
+      
+      <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-to_origin">to_origin</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-get_rnd_points">get_rnd_points</a>
       
@@ -267,6 +277,8 @@
   <div id="vars-1" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../type/smbx_t.html#variable-imcon">imcon</a>
+      
       <a class="list-group-item" href="../type/smbx_t.html#variable-basis">basis</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#variable-dl_basis">dl_basis</a>
@@ -303,6 +315,8 @@
   <div id="boundprocs-1" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-init%7E3">init</a>
+      
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-set_basis">set_basis</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-freeze">freeze</a>
@@ -314,6 +328,8 @@
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-wrap_all">wrap_all</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-to_center">to_center</a>
+      
+      <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-to_origin">to_origin</a>
       
       <a class="list-group-item" href="../type/smbx_t.html#boundprocedure-get_rnd_points">get_rnd_points</a>
       
@@ -348,6 +364,20 @@
 
 
 <tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imcon"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>imcon</strong></td><td></td><td></td><td></td>
+  
+</tr>
 
   
   
@@ -433,6 +463,93 @@
      
     <section>
     <h2>Type-Bound Procedures</h2>
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-init%7E3"></span><h3>procedure, public :: <strong>init</strong>  => <a href='../proc/smbx_init.html'>smbx_init</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+        
+          
+    
+    <h3>
+public subroutine <a href='../proc/smbx_init.html'>smbx_init</a>(this, imcon)
+    
+    
+   
+</h3>
+    
+
+
+
+
+
+
+
+<p>Initializes an instance of <em>smbx_t</em>. Can also be called to reset.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td><p>An instance of <code>smbx_t</code>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>imcon</strong></td><td><p>Flag specifying boundary conditions on the simulation box.  </p><a href="None" class="pull-right"><emph>Read more&hellip;</emph></a></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+        
+      
+      </li>
+    
+  </ul>
+</div>
+
     
      
 <div class="panel panel-default">
@@ -945,6 +1062,110 @@ public subroutine <a href='../proc/smbx_to_center.html'>smbx_to_center</a>(this,
     
      
 <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-to_origin"></span><h3>procedure, public :: <strong>to_origin</strong>  => <a href='../proc/smbx_to_origin.html'>smbx_to_origin</a> 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+        
+          
+    
+    <h3>
+public subroutine <a href='../proc/smbx_to_origin.html'>smbx_to_origin</a>(this, coords, com)
+    
+    
+   
+</h3>
+    
+
+
+
+
+
+
+
+<p>Adjusts atom positions such that the c.o.m. of the atoms is at the origin.
+ Assumes all atoms to have the same mass and aligned axis.
+ Optionally returns the original c.o.m.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>this</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(inout),</td>
+  <td></td>
+  
+  <td>dimension(:,:)</td><td>::</td>
+  <td><strong>coords</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=rp),</td>
+  <td>intent(out),</td>
+  <td>optional</td>
+  
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>com</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+        
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+     
+<div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-get_rnd_points"></span><h3>procedure, public :: <strong>get_rnd_points</strong>  => <a href='../proc/smbx_get_rnd_points.html'>smbx_get_rnd_points</a> 
     
   </h3></div>
@@ -1037,6 +1258,7 @@ public subroutine <a href='../proc/smbx_get_rnd_points.html'>smbx_get_rnd_points
     <section>
     <h3><span class="anchor" id="src"></span>Source Code</h3>
     <div class="highlight"><pre><span></span><span class="k">type </span><span class="n">smbx_t</span>
+    <span class="kt">integer</span> <span class="kd">::</span> <span class="n">imcon</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="kd">::</span> <span class="n">basis</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">),</span> <span class="k">dimension</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dl_basis</span>
     <span class="kt">real</span><span class="p">(</span><span class="n">rp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">volume</span>
@@ -1045,12 +1267,14 @@ public subroutine <a href='../proc/smbx_get_rnd_points.html'>smbx_get_rnd_points
         <span class="c">!! Whether the basis vectors are aligned with the laboratory frame</span>
 
     <span class="k">contains</span>
-<span class="k">        procedure</span> <span class="kd">::</span> <span class="n">set_basis</span> <span class="o">=&gt;</span> <span class="n">smbx_set_basis</span>
+<span class="k">        procedure</span> <span class="kd">::</span> <span class="n">init</span> <span class="o">=&gt;</span> <span class="n">smbx_init</span>
+        <span class="k">procedure</span> <span class="kd">::</span> <span class="n">set_basis</span> <span class="o">=&gt;</span> <span class="n">smbx_set_basis</span>
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">freeze</span> <span class="o">=&gt;</span> <span class="n">smbx_freeze</span>
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">unfreeze</span> <span class="o">=&gt;</span> <span class="n">smbx_unfreeze</span>
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">get_image</span> <span class="o">=&gt;</span> <span class="n">smbx_get_image</span>
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">wrap_all</span> <span class="o">=&gt;</span> <span class="n">smbx_wrap_all</span>
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">to_center</span> <span class="o">=&gt;</span> <span class="n">smbx_to_center</span>
+        <span class="k">procedure</span> <span class="kd">::</span> <span class="n">to_origin</span> <span class="o">=&gt;</span> <span class="n">smbx_to_origin</span>
         <span class="k">procedure</span> <span class="kd">::</span> <span class="n">get_rnd_points</span> <span class="o">=&gt;</span> <span class="n">smbx_get_rnd_points</span>
 <span class="k">end type </span><span class="n">smbx_t</span>
 </pre></div>

@@ -1,0 +1,2130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>stats_m &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>stats_m 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 4.7% of total for modules and submodules.">345 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/stats_m.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/stats_m.f90.html'>stats_m.f90</a></li>
+    
+  
+     <li class="active">stats_m</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-fn_stats%7E2">fn_stats</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-fu_stats">fu_stats</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnsiz">bnsiz</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnsiz_stress">bnsiz_stress</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnpop">bnpop</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnpop_stress">bnpop_stress</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bndlen">bndlen</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bndlen_min">bndlen_min</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bndlen_max">bndlen_max</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_bond">energy_bond</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_bond_accu">energy_bond_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_angle">energy_angle</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_angle_accu">energy_angle_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_dihedral">energy_dihedral</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_dihedral_accu">energy_dihedral_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_vdw">energy_vdw</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_vdw_accu">energy_vdw_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tether">energy_tether</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tether_accu">energy_tether_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_external%7E2">energy_external</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_external_accu">energy_external_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tot">energy_tot</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tot_accu">energy_tot_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-stress%7E2">stress</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-stress_accu">stress_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq">rgsq</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_accu">rgsq_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq">reedsq</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq_accu">reedsq_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span">span</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span_accu">span_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_bbone">rgsq_bbone</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_bbone_accu">rgsq_bbone_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_sc">rgsq_sc</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_sc_accu">rgsq_sc_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq_sc">reedsq_sc</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq_sc_accu">reedsq_sc_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span_bbone">span_bbone</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span_bbone_accu">span_bbone_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reev">reev</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-molbuf">molbuf</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-lvdw%7E3">lvdw</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_init">stats_init</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_finish">stats_finish</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-zero_out">zero_out</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-write_hdr">write_hdr</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_write">stats_write</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_accumulate">stats_accumulate</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-compute_ic1">compute_ic1</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-compute_ic0">compute_ic0</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <p>Computes and writes properties calculated during simulation.</p>
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/constants_m.html'>constants_m</a></li>
+    
+    <li><a href='../module/strings_m.html'>strings_m</a></li>
+    
+    <li><a href='../module/control_m.html'>control_m</a></li>
+    
+    <li><a href='../module/simbox_m.html'>simbox_m</a></li>
+    
+    <li><a href='../module/atmcfg_m.html'>atmcfg_m</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~stats_m~~UsesGraph Pages: 1 -->
+<svg id="modulestats_mUsesGraph" width="487pt" height="215pt"
+ viewBox="0.00 0.00 487.00 215.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~stats_m~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 211)">
+<title>module~~stats_m~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-211 483,-211 483,4 -4,4"/>
+<!-- module~stats_m -->
+<g id="module~~stats_m~~UsesGraph_node1" class="node">
+<title>module~stats_m</title>
+<polygon fill="none" stroke="#000000" points="479,-104 425,-104 425,-80 479,-80 479,-104"/>
+<text text-anchor="middle" x="452" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">stats_m</text>
+</g>
+<!-- module~strings_m -->
+<g id="module~~stats_m~~UsesGraph_node2" class="node">
+<title>module~strings_m</title>
+<g id="a_module~~stats_m~~UsesGraph_node2"><a xlink:href=".././module/strings_m.html" xlink:title="strings_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="290.5,-104 232.5,-104 232.5,-80 290.5,-80 290.5,-104"/>
+<text text-anchor="middle" x="261.5" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">strings_m</text>
+</a>
+</g>
+</g>
+<!-- module~stats_m&#45;&gt;module~strings_m -->
+<g id="module~~stats_m~~UsesGraph_edge1" class="edge">
+<title>module~stats_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M359,-52C332.2709,-46.4956 303.5904,-60.9842 284.3061,-74.0369"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="282.2565,-71.1997 276.1477,-79.8561 286.3214,-76.8986 282.2565,-71.1997"/>
+</g>
+<!-- module~simbox_m -->
+<g id="module~~stats_m~~UsesGraph_node3" class="node">
+<title>module~simbox_m</title>
+<g id="a_module~~stats_m~~UsesGraph_node3"><a xlink:href=".././module/simbox_m.html" xlink:title="simbox_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="389,-146 329,-146 329,-122 389,-122 389,-146"/>
+<text text-anchor="middle" x="359" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">simbox_m</text>
+</a>
+</g>
+</g>
+<!-- module~stats_m&#45;&gt;module~simbox_m -->
+<g id="module~~stats_m~~UsesGraph_edge3" class="edge">
+<title>module~stats_m&#45;&gt;module~simbox_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M425.1005,-104.1481C415.7503,-108.3708 405.1059,-113.178 395.132,-117.6823"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="393.5121,-114.5734 385.839,-121.8792 396.3933,-120.953 393.5121,-114.5734"/>
+</g>
+<!-- module~constants_m -->
+<g id="module~~stats_m~~UsesGraph_node4" class="node">
+<title>module~constants_m</title>
+<g id="a_module~~stats_m~~UsesGraph_node4"><a xlink:href=".././module/constants_m.html" xlink:title="constants_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="193.5,-104 121.5,-104 121.5,-80 193.5,-80 193.5,-104"/>
+<text text-anchor="middle" x="157.5" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">constants_m</text>
+</a>
+</g>
+</g>
+<!-- module~stats_m&#45;&gt;module~constants_m -->
+<g id="module~~stats_m~~UsesGraph_edge2" class="edge">
+<title>module~stats_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M359,-52C301.0729,-40.0709 233.6432,-60.3801 193.3277,-76.1674"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="191.8928,-72.9722 183.9289,-79.9597 194.5121,-79.4637 191.8928,-72.9722"/>
+</g>
+<!-- module~atmcfg_m -->
+<g id="module~~stats_m~~UsesGraph_node5" class="node">
+<title>module~atmcfg_m</title>
+<g id="a_module~~stats_m~~UsesGraph_node5"><a xlink:href=".././module/atmcfg_m.html" xlink:title="atmcfg_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="291,-24 232,-24 232,0 291,0 291,-24"/>
+<text text-anchor="middle" x="261.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">atmcfg_m</text>
+</a>
+</g>
+</g>
+<!-- module~stats_m&#45;&gt;module~atmcfg_m -->
+<g id="module~~stats_m~~UsesGraph_edge4" class="edge">
+<title>module~stats_m&#45;&gt;module~atmcfg_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M430.6516,-79.8406C412.3129,-70.1366 384.822,-57.3176 359,-52"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M359,-52C336.1098,-47.2861 311.7883,-37.3178 293.1628,-28.5122"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="294.5035,-25.2723 283.9797,-24.0474 291.4427,-31.5677 294.5035,-25.2723"/>
+</g>
+<!-- module~control_m -->
+<g id="module~~stats_m~~UsesGraph_node6" class="node">
+<title>module~control_m</title>
+<g id="a_module~~stats_m~~UsesGraph_node6"><a xlink:href=".././module/control_m.html" xlink:title="control_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="388.5,-104 329.5,-104 329.5,-80 388.5,-80 388.5,-104"/>
+<text text-anchor="middle" x="359" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">control_m</text>
+</a>
+</g>
+</g>
+<!-- module~stats_m&#45;&gt;module~control_m -->
+<g id="module~~stats_m~~UsesGraph_edge5" class="edge">
+<title>module~stats_m&#45;&gt;module~control_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M424.5999,-92C416.6007,-92 407.6887,-92 399.0764,-92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="398.8016,-88.5001 388.8015,-92 398.8015,-95.5001 398.8016,-88.5001"/>
+</g>
+<!-- module~strings_m&#45;&gt;module~constants_m -->
+<g id="module~~stats_m~~UsesGraph_edge6" class="edge">
+<title>module~strings_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M232.2534,-92C223.4293,-92 213.5162,-92 203.8652,-92"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="203.5595,-88.5001 193.5595,-92 203.5595,-95.5001 203.5595,-88.5001"/>
+</g>
+<!-- module~simbox_m&#45;&gt;module~constants_m -->
+<g id="module~~stats_m~~UsesGraph_edge7" class="edge">
+<title>module~simbox_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M328.6402,-134.4191C309.3721,-134.4277 283.9319,-133.9646 261.5,-132"/>
+</g>
+<!-- module~random_m -->
+<g id="module~~stats_m~~UsesGraph_node8" class="node">
+<title>module~random_m</title>
+<g id="a_module~~stats_m~~UsesGraph_node8"><a xlink:href=".././module/random_m.html" xlink:title="random_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="293,-184 230,-184 230,-160 293,-160 293,-184"/>
+<text text-anchor="middle" x="261.5" y="-169.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">random_m</text>
+</a>
+</g>
+</g>
+<!-- module~simbox_m&#45;&gt;module~random_m -->
+<g id="module~~stats_m~~UsesGraph_edge8" class="edge">
+<title>module~simbox_m&#45;&gt;module~random_m</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M328.9512,-145.7113C320.3135,-149.0778 310.7525,-152.8041 301.6103,-156.3673"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="300.3374,-153.1069 292.291,-159.9994 302.8794,-159.629 300.3374,-153.1069"/>
+</g>
+<!-- iso_fortran_env -->
+<g id="module~~stats_m~~UsesGraph_node7" class="node">
+<title>iso_fortran_env</title>
+<g id="a_module~~stats_m~~UsesGraph_node7"><a xlink:href="http://fortranwiki.org/fortran/show/ISO_FORTRAN_ENV" xlink:title="iso_fortran_env">
+<polygon fill="#337ab7" stroke="#337ab7" points="85,-104 0,-104 0,-80 85,-80 85,-104"/>
+<text text-anchor="middle" x="42.5" y="-89.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">iso_fortran_env</text>
+</a>
+</g>
+</g>
+<!-- module~constants_m&#45;&gt;iso_fortran_env -->
+<g id="module~~stats_m~~UsesGraph_edge9" class="edge">
+<title>module~constants_m&#45;&gt;iso_fortran_env</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M121.4288,-92C113.1909,-92 104.2681,-92 95.4867,-92"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="95.2924,-88.5001 85.2924,-92 95.2923,-95.5001 95.2924,-88.5001"/>
+</g>
+<!-- module~atmcfg_m&#45;&gt;module~constants_m -->
+<g id="module~~stats_m~~UsesGraph_edge10" class="edge">
+<title>module~atmcfg_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M245.7046,-24.1503C228.5013,-37.3836 200.8025,-58.6904 181.0355,-73.8958"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="178.8955,-71.1262 173.1032,-79.9975 183.1635,-76.6745 178.8955,-71.1262"/>
+</g>
+<!-- module~control_m&#45;&gt;module~strings_m -->
+<g id="module~~stats_m~~UsesGraph_edge11" class="edge">
+<title>module~control_m&#45;&gt;module~strings_m</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M329.4822,-92C320.4269,-92 310.3172,-92 300.7203,-92"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="300.582,-88.5001 290.582,-92 300.5819,-95.5001 300.582,-88.5001"/>
+</g>
+<!-- module~control_m&#45;&gt;module~constants_m -->
+<g id="module~~stats_m~~UsesGraph_edge12" class="edge">
+<title>module~control_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M342.8775,-104.1088C324.1554,-116.8315 291.9382,-134.6658 261.5,-132"/>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M261.5,-132C235.3807,-129.7125 207.7671,-118.6351 187.5626,-108.7164"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="189.0556,-105.549 178.5561,-104.1306 185.8794,-111.787 189.0556,-105.549"/>
+</g>
+<!-- module~random_m&#45;&gt;module~constants_m -->
+<g id="module~~stats_m~~UsesGraph_edge14" class="edge">
+<title>module~random_m&#45;&gt;module~constants_m</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M245.7046,-159.8497C228.5013,-146.6164 200.8025,-125.3096 181.0355,-110.1042"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="183.1635,-107.3255 173.1032,-104.0025 178.8955,-112.8738 183.1635,-107.3255"/>
+</g>
+<!-- mkl_vsl_type -->
+<g id="module~~stats_m~~UsesGraph_node9" class="node">
+<title>mkl_vsl_type</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="194,-165 121,-165 121,-141 194,-141 194,-165"/>
+<text text-anchor="middle" x="157.5" y="-150.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl_type</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl_type -->
+<g id="module~~stats_m~~UsesGraph_edge15" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl_type</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M229.7315,-166.1961C221.6597,-164.7215 212.8175,-163.1061 204.1736,-161.5269"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="204.6419,-158.0546 194.1757,-159.7004 203.3838,-164.9406 204.6419,-158.0546"/>
+</g>
+<!-- mkl_vsl -->
+<g id="module~~stats_m~~UsesGraph_node10" class="node">
+<title>mkl_vsl</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="184.5,-207 130.5,-207 130.5,-183 184.5,-183 184.5,-207"/>
+<text text-anchor="middle" x="157.5" y="-192.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mkl_vsl</text>
+</g>
+<!-- module~random_m&#45;&gt;mkl_vsl -->
+<g id="module~~stats_m~~UsesGraph_edge13" class="edge">
+<title>module~random_m&#45;&gt;mkl_vsl</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M229.7315,-179.0257C218.5507,-181.4984 205.8915,-184.298 194.3291,-186.8551"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="193.5234,-183.4486 184.5152,-189.0255 195.0351,-190.2835 193.5234,-183.4486"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~stats_m~~UsedByGraph Pages: 1 -->
+<svg id="modulestats_mUsedByGraph" width="463pt" height="73pt"
+ viewBox="0.00 0.00 463.00 72.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~stats_m~~UsedByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 68.987)">
+<title>module~~stats_m~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-68.987 459,-68.987 459,4 -4,4"/>
+<!-- module~stats_m -->
+<g id="module~~stats_m~~UsedByGraph_node1" class="node">
+<title>module~stats_m</title>
+<polygon fill="none" stroke="#000000" points="54,-56.7164 0,-56.7164 0,-32.7164 54,-32.7164 54,-56.7164"/>
+<text text-anchor="middle" x="27" y="-42.3164" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">stats_m</text>
+</g>
+<!-- module~bd_solver_m -->
+<g id="module~~stats_m~~UsedByGraph_node2" class="node">
+<title>module~bd_solver_m</title>
+<g id="a_module~~stats_m~~UsedByGraph_node2"><a xlink:href=".././module/bd_solver_m.html" xlink:title="bd_solver_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="275,-36.7164 202,-36.7164 202,-12.7164 275,-12.7164 275,-36.7164"/>
+<text text-anchor="middle" x="238.5" y="-22.3164" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">bd_solver_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~stats_m -->
+<g id="module~~stats_m~~UsedByGraph_edge1" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M128,-64.7164C106.4848,-64.5396 82.8735,-60.1076 63.8935,-55.4609"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="64.7042,-52.0556 54.1479,-52.9582 62.9631,-58.8356 64.7042,-52.0556"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M218.5125,-36.8259C196.9594,-48.6985 161.2546,-64.9896 128,-64.7164"/>
+</g>
+<!-- module~interaction_m -->
+<g id="module~~stats_m~~UsedByGraph_node4" class="node">
+<title>module~interaction_m</title>
+<g id="a_module~~stats_m~~UsedByGraph_node4"><a xlink:href=".././module/interaction_m.html" xlink:title="interaction_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="166,-36.7164 90,-36.7164 90,-12.7164 166,-12.7164 166,-36.7164"/>
+<text text-anchor="middle" x="128" y="-22.3164" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">interaction_m</text>
+</a>
+</g>
+</g>
+<!-- module~bd_solver_m&#45;&gt;module~interaction_m -->
+<g id="module~~stats_m~~UsedByGraph_edge6" class="edge">
+<title>module~bd_solver_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M201.7051,-24.7164C193.5817,-24.7164 184.8569,-24.7164 176.3535,-24.7164"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="176.1463,-21.2165 166.1463,-24.7164 176.1463,-28.2165 176.1463,-21.2165"/>
+</g>
+<!-- module~setup_m -->
+<g id="module~~stats_m~~UsedByGraph_node3" class="node">
+<title>module~setup_m</title>
+<g id="a_module~~stats_m~~UsedByGraph_node3"><a xlink:href=".././module/setup_m.html" xlink:title="setup_m">
+<polygon fill="#337ab7" stroke="#337ab7" points="365,-36.7164 311,-36.7164 311,-12.7164 365,-12.7164 365,-36.7164"/>
+<text text-anchor="middle" x="338" y="-22.3164" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">setup_m</text>
+</a>
+</g>
+</g>
+<!-- module~setup_m&#45;&gt;module~stats_m -->
+<g id="module~~stats_m~~UsedByGraph_edge2" class="edge">
+<title>module~setup_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M310.7283,-35.0867C299.7611,-38.9188 286.9125,-42.9881 275,-45.7164 210.7858,-60.4232 193.8746,-65.2577 128,-64.7164"/>
+</g>
+<!-- module~setup_m&#45;&gt;module~bd_solver_m -->
+<g id="module~~stats_m~~UsedByGraph_edge4" class="edge">
+<title>module~setup_m&#45;&gt;module~bd_solver_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M310.8112,-24.7164C302.9535,-24.7164 294.1431,-24.7164 285.4473,-24.7164"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="285.3558,-21.2165 275.3557,-24.7164 285.3557,-28.2165 285.3558,-21.2165"/>
+</g>
+<!-- module~setup_m&#45;&gt;module~interaction_m -->
+<g id="module~~stats_m~~UsedByGraph_edge7" class="edge">
+<title>module~setup_m&#45;&gt;module~interaction_m</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M310.8835,-13.5522C299.9376,-9.6108 287.0631,-5.6739 275,-3.7164 242.9745,1.4807 234.1349,.755 202,-3.7164 192.3794,-5.055 182.252,-7.3282 172.6825,-9.8968"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="171.623,-6.5591 162.9565,-12.6537 173.532,-13.2938 171.623,-6.5591"/>
+</g>
+<!-- module~interaction_m&#45;&gt;module~stats_m -->
+<g id="module~~stats_m~~UsedByGraph_edge3" class="edge">
+<title>module~interaction_m&#45;&gt;module~stats_m</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M89.8162,-32.2775C81.3968,-33.9447 72.4908,-35.7083 64.1145,-37.367"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="63.3577,-33.9488 54.2281,-39.3247 64.7175,-40.8154 63.3577,-33.9488"/>
+</g>
+<!-- program~main -->
+<g id="module~~stats_m~~UsedByGraph_node5" class="node">
+<title>program~main</title>
+<g id="a_module~~stats_m~~UsedByGraph_node5"><a xlink:href=".././program/main.html" xlink:title="main">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="455,-36.7164 401,-36.7164 401,-12.7164 455,-12.7164 455,-36.7164"/>
+<text text-anchor="middle" x="428" y="-22.3164" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">main</text>
+</a>
+</g>
+</g>
+<!-- program~main&#45;&gt;module~setup_m -->
+<g id="module~~stats_m~~UsedByGraph_edge5" class="edge">
+<title>program~main&#45;&gt;module~setup_m</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M400.997,-24.7164C392.9723,-24.7164 384.0335,-24.7164 375.4691,-24.7164"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="375.295,-21.2165 365.295,-24.7164 375.2949,-28.2165 375.295,-21.2165"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="486pt" height="32pt"
+ viewBox="0.00 0.00 486.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 482,-28 482,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="138,-24 72,-24 72,0 138,0 138,-24"/>
+<text text-anchor="middle" x="105" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="219.5,-24 156.5,-24 156.5,0 219.5,0 219.5,-24"/>
+<text text-anchor="middle" x="188" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="292,-24 238,-24 238,0 292,0 292,-24"/>
+<text text-anchor="middle" x="265" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="364,-24 310,-24 310,0 364,0 364,-24"/>
+<text text-anchor="middle" x="337" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="478,-24 382,-24 382,0 478,0 478,-24"/>
+<text text-anchor="middle" x="430" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-fn_stats%7E2">fn_stats</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-fu_stats">fu_stats</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnsiz">bnsiz</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnsiz_stress">bnsiz_stress</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnpop">bnpop</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bnpop_stress">bnpop_stress</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bndlen">bndlen</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bndlen_min">bndlen_min</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-bndlen_max">bndlen_max</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_bond">energy_bond</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_bond_accu">energy_bond_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_angle">energy_angle</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_angle_accu">energy_angle_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_dihedral">energy_dihedral</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_dihedral_accu">energy_dihedral_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_vdw">energy_vdw</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_vdw_accu">energy_vdw_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tether">energy_tether</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tether_accu">energy_tether_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_external%7E2">energy_external</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_external_accu">energy_external_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tot">energy_tot</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-energy_tot_accu">energy_tot_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-stress%7E2">stress</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-stress_accu">stress_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq">rgsq</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_accu">rgsq_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq">reedsq</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq_accu">reedsq_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span">span</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span_accu">span_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_bbone">rgsq_bbone</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_bbone_accu">rgsq_bbone_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_sc">rgsq_sc</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-rgsq_sc_accu">rgsq_sc_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq_sc">reedsq_sc</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reedsq_sc_accu">reedsq_sc_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span_bbone">span_bbone</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-span_bbone_accu">span_bbone_accu</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-reev">reev</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-molbuf">molbuf</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#variable-lvdw%7E3">lvdw</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_init">stats_init</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_finish">stats_finish</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-zero_out">zero_out</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-write_hdr">write_hdr</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_write">stats_write</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-stats_accumulate">stats_accumulate</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-compute_ic1">compute_ic1</a>
+      
+      <a class="list-group-item" href="../module/stats_m.html#proc-compute_ic0">compute_ic0</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fn_stats%7E2"></span>character(len=:),</td>
+  
+  <td>private,</td>
+  <td>allocatable</td><td>::</td>
+  <td><strong>fn_stats</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fu_stats"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>fu_stats</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bnsiz"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>bnsiz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bnsiz_stress"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>bnsiz_stress</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bnpop"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>bnpop</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bnpop_stress"></span>integer,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>bnpop_stress</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bndlen"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bndlen</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bndlen_min"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bndlen_min</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bndlen_max"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bndlen_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_bond"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_bond</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_bond_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>energy_bond_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_angle"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_angle</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_angle_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>energy_angle_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_dihedral"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_dihedral</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_dihedral_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>energy_dihedral_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_vdw"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_vdw</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_vdw_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>energy_vdw_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_tether"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_tether</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_tether_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>energy_tether_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_external%7E2"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_external</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_external_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>energy_external_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_tot"></span>real(kind=rp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_tot</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_tot_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>energy_tot_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stress%7E2"></span>real(kind=rp),</td>
+  
+  <td>public,</td>
+  <td>dimension(3,3)</td><td>::</td>
+  <td><strong>stress</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stress_accu"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(3,3)</td><td>::</td>
+  <td><strong>stress_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rgsq"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>rgsq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rgsq_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>rgsq_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-reedsq"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>reedsq</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-reedsq_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>reedsq_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-span"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>span</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-span_accu"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>span_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rgsq_bbone"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>rgsq_bbone</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rgsq_bbone_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>rgsq_bbone_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rgsq_sc"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>rgsq_sc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rgsq_sc_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>rgsq_sc_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-reedsq_sc"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>reedsq_sc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-reedsq_sc_accu"></span>real(kind=rp),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>reedsq_sc_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-span_bbone"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>span_bbone</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-span_bbone_accu"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>span_bbone_accu</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-reev"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(3)</td><td>::</td>
+  <td><strong>reev</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-molbuf"></span>real(kind=rp),</td>
+  
+  <td>private,</td>
+  <td>dimension(:,:), allocatable</td><td>::</td>
+  <td><strong>molbuf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lvdw%7E3"></span>logical,</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>lvdw</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-stats_init"></span><h3>
+public subroutine <a href='../proc/stats_init.html'>stats_init</a>(cpar, simbox, atc, job_tag)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Set up for stats collection</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/ctrlpar_t.html'>ctrlpar_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>cpar</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>simbox</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>job_tag</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-stats_finish"></span><h3>
+public subroutine <a href='../proc/stats_finish.html'>stats_finish</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Clean up for stats collection.</p>
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-zero_out"></span><h3>
+private subroutine <a href='../proc/zero_out.html'>zero_out</a>()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-write_hdr"></span><h3>
+private subroutine <a href='../proc/write_hdr.html'>write_hdr</a>(simbox, atc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Writes header of the file <code>fn_stats</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>simbox</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-stats_write"></span><h3>
+public subroutine <a href='../proc/stats_write.html'>stats_write</a>(nts, simbox, atc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Writes statistics to <code>fn_stats</code>.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer(kind=ip_long),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>nts</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>simbox</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-stats_accumulate"></span><h3>
+public subroutine <a href='../proc/stats_accumulate.html'>stats_accumulate</a>(simbox, atc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Accumulates statistics.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>simbox</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-compute_ic1"></span><h3>
+private subroutine <a href='../proc/compute_ic1.html'>compute_ic1</a>(simbox, atc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Computes statistics for possibly multiple chains in a periodic domain.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>simbox</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-compute_ic0"></span><h3>
+private subroutine <a href='../proc/compute_ic0.html'>compute_ic0</a>(atc)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+
+
+
+
+
+
+
+<p>Computes statistics for a single chain in unbounded domain.</p>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/atmcfg_t.html'>atmcfg_t</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>atc</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

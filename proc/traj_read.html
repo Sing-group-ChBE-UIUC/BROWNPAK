@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,6 +66,8 @@
             <li><a href="../lists/modules.html">Modules</a></li>
         
             
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
         
@@ -85,6 +87,8 @@
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
 
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
@@ -132,21 +136,21 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 1.1% of total for procedures.">117 statements</a>
+    title=" 0.7% of total for procedures.">73 statements</a>
      </li> 
      
      
      
-    <li><i class="fa fa-code"></i><a href="../src/m_trajectory.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/trajectory_m.f90"> Source File</a></li>
      
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
     
-     <li><a href='../sourcefile/m_trajectory.f90.html'>m_trajectory.f90</a></li>
+     <li><a href='../sourcefile/trajectory_m.f90.html'>trajectory_m.f90</a></li>
     
-     <li><a href='../module/m_trajectory.html'>m_trajectory</a></li>
+     <li><a href='../module/trajectory_m.html'>trajectory_m</a></li>
     
   
      <li class="active">traj_read</li>
@@ -199,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-public subroutine traj_read(this, iframe, nts, ierr, mflag, coordinates, velocities, forces, charge)
+private subroutine traj_read(this, iframe, nts, ierr, coordinates, velocities, forces, charge)
     
     
    
@@ -230,7 +234,7 @@ public subroutine traj_read(this, iframe, nts, ierr, mflag, coordinates, velocit
   
 <tr>
   
-  <td><span class="anchor" id="variable-this%7E69"></span>class(<a href='../type/trajectory_t.html'>trajectory_t</a>),</td>
+  <td><span class="anchor" id="variable-this%7E44"></span>class(<a href='../type/trajectory_t.html'>trajectory_t</a>),</td>
   <td>intent(in)</td>
   <td></td>
   
@@ -275,7 +279,7 @@ public subroutine traj_read(this, iframe, nts, ierr, mflag, coordinates, velocit
   
 <tr>
   
-  <td><span class="anchor" id="variable-ierr%7E30"></span>integer,</td>
+  <td><span class="anchor" id="variable-ierr%7E3"></span>integer,</td>
   <td>intent(out)</td>
   <td></td>
   
@@ -290,22 +294,7 @@ public subroutine traj_read(this, iframe, nts, ierr, mflag, coordinates, velocit
   
 <tr>
   
-  <td><span class="anchor" id="variable-mflag"></span>integer,</td>
-  <td>intent(in),</td>
-  <td>optional</td>
-  
-  <td></td><td>::</td>
-  <td><strong>mflag</strong></td><td><p>1: Only non-MPCD data, 2: Only MPCD data, 3: All data</p></td>
-  
-</tr>
-
-  
-  
-  
-  
-<tr>
-  
-  <td><span class="anchor" id="variable-coordinates"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-coordinates%7E3"></span>real(kind=rp),</td>
   <td>intent(out),</td>
   <td>optional</td>
   
@@ -335,7 +324,7 @@ public subroutine traj_read(this, iframe, nts, ierr, mflag, coordinates, velocit
   
 <tr>
   
-  <td><span class="anchor" id="variable-forces"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-forces%7E3"></span>real(kind=rp),</td>
   <td>intent(out),</td>
   <td>optional</td>
   
@@ -350,7 +339,7 @@ public subroutine traj_read(this, iframe, nts, ierr, mflag, coordinates, velocit
   
 <tr>
   
-  <td><span class="anchor" id="variable-charge"></span>real(kind=rp),</td>
+  <td><span class="anchor" id="variable-charge%7E2"></span>real(kind=rp),</td>
   <td>intent(out),</td>
   <td>optional</td>
   

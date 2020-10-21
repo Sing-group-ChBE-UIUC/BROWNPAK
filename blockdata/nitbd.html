@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <meta name="description" content="Documentation for BROWNPAK">
+   
+    <meta name="author" content="Sarit Dutta" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>nitbd &ndash; BROWNPAK</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>User Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/main.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/main.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>nitbd 
+    <small>Block Data</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title="100.0% of total for block data units.">42 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/nitbd.f"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/nitbd.f.html'>nitbd.f</a></li>
+    
+  
+     <li class="active">nitbd</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading
+  text-left"><h3 class="panel-title"><a data-toggle="collapse"
+  href="#common-0">Common Blocks</a></h3></div>
+  <div id="common-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#common-nitparam%7E4">nitparam</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#common-nitprint%7E9">nitprint</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-one">one</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-two">two</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-rtfiv">rtfiv</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-tenth">tenth</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-half">half</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-fournines">fournines</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_choice1_exp">DFLT_CHOICE1_EXP</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_choice2_exp">DFLT_CHOICE2_EXP</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_choice2_coef">DFLT_CHOICE2_COEF</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_eta_cutoff">DFLT_ETA_CUTOFF</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_eta_max">DFLT_ETA_MAX</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_thmin">DFLT_THMIN</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_thmax">DFLT_THMAX</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_eta_fixed">DFLT_ETA_FIXED</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_prlvl">DFLT_PRLVL</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-stdout">STDOUT</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+  
+
+    
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading
+  text-left"><h3 class="panel-title"><a data-toggle="collapse"
+  href="#common-1">Common Blocks</a></h3></div>
+  <div id="common-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#common-nitparam%7E4">nitparam</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#common-nitprint%7E9">nitprint</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-one">one</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-two">two</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-rtfiv">rtfiv</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-tenth">tenth</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-half">half</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-fournines">fournines</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_choice1_exp">DFLT_CHOICE1_EXP</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_choice2_exp">DFLT_CHOICE2_EXP</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_choice2_coef">DFLT_CHOICE2_COEF</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_eta_cutoff">DFLT_ETA_CUTOFF</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_eta_max">DFLT_ETA_MAX</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_thmin">DFLT_THMIN</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_thmax">DFLT_THMAX</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_eta_fixed">DFLT_ETA_FIXED</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-dflt_prlvl">DFLT_PRLVL</a>
+      
+      <a class="list-group-item" href="../blockdata/nitbd.html#variable-stdout">STDOUT</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+    
+    
+    <section>
+      <h2>Common Blocks</h2>
+      
+      
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-nitparam%7E4"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/nitbt.html#common-nitparam'>nitbt</a> (subroutine)<br><a href='../proc/nitsol.html#common-nitparam%7E2'>nitsol</a> (subroutine)<br><a href='../proc/nitdrv.html#common-nitparam%7E3'>nitdrv</a> (subroutine)<br>">common /nitparam/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-choice1_exp%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>choice1_exp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-choice2_exp%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>choice2_exp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-choice2_coef%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>choice2_coef</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-eta_cutoff%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>eta_cutoff</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-etamax%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>etamax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thmin%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>thmin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-thmax%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>thmax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-etafixed%7E4"></span>double precision</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>etafixed</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+      
+      
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="common-nitprint%7E9"></span><h3>
+      <a data-toggle="popover" data-html="true" tabindex="0" 
+     data-trigger="focus"
+   data-content="<h4>Used Elsewhere:</h4><a href='../proc/nittfq.html#common-nitprint'>nittfq</a> (subroutine)<br><a href='../proc/nitjv.html#common-nitprint%7E2'>nitjv</a> (subroutine)<br><a href='../proc/nitfd.html#common-nitprint%7E3'>nitfd</a> (subroutine)<br><a href='../proc/nitbt.html#common-nitprint%7E4'>nitbt</a> (subroutine)<br><a href='../proc/nitsol.html#common-nitprint%7E5'>nitsol</a> (subroutine)<br><a href='../proc/nitstb.html#common-nitprint%7E6'>nitstb</a> (subroutine)<br><a href='../proc/nitgm.html#common-nitprint%7E7'>nitgm</a> (subroutine)<br><a href='../proc/nitdrv.html#common-nitprint%7E8'>nitdrv</a> (subroutine)<br>">common /nitprint/</a>
+      
+  </h3></div>
+  <div class="panel-body">
+    
+    
+    
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iplvl%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>iplvl</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ipunit%7E9"></span>integer</td>
+  
+  
+  <td></td><td>::</td>
+  <td><strong>ipunit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+</div>
+</div>
+
+      
+    </section>
+    <br>
+    <script>
+      $(function () {
+      $('[data-toggle="popover"]').popover()
+      })
+    </script>
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-one"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>one</strong></td><td> =</td><td>1.0d0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-two"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>two</strong></td><td> =</td><td>2.0d0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rtfiv"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>rtfiv</strong></td><td> =</td><td>2.23606797749978981</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tenth"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>tenth</strong></td><td> =</td><td>0.10d0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-half"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>half</strong></td><td> =</td><td>0.50d0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-fournines"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>fournines</strong></td><td> =</td><td>one-1.0d-4</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_choice1_exp"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_CHOICE1_EXP</strong></td><td> =</td><td>(one+rtfiv)*half</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_choice2_exp"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_CHOICE2_EXP</strong></td><td> =</td><td>two</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_choice2_coef"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_CHOICE2_COEF</strong></td><td> =</td><td>one</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_eta_cutoff"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_ETA_CUTOFF</strong></td><td> =</td><td>tenth</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_eta_max"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_ETA_MAX</strong></td><td> =</td><td>fournines</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_thmin"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_THMIN</strong></td><td> =</td><td>tenth</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_thmax"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_THMAX</strong></td><td> =</td><td>half</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_eta_fixed"></span>double precision,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_ETA_FIXED</strong></td><td> =</td><td>tenth</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dflt_prlvl"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>DFLT_PRLVL</strong></td><td> =</td><td>0</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stdout"></span>integer,</td>
+  
+  
+  <td>parameter</td><td>::</td>
+  <td><strong>STDOUT</strong></td><td> =</td><td>6</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    </div>
+  </div>
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.freebsd.org/copyright/freebsd-doc-license.html">FreeBSD Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+            
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> BROWNPAK was developed by Sarit Dutta</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

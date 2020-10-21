@@ -44,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.6</small></a>
+          <a class="navbar-brand" href="../index.html">BROWNPAK <small>0.7</small></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -66,6 +66,8 @@
             <li><a href="../lists/modules.html">Modules</a></li>
         
             
+    <li><a href="../blockdata/nitbd.html">Block Data</a></li>
+    
                                 
             <li><a href="../lists/procedures.html">Procedures</a></li>
         
@@ -85,6 +87,8 @@
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
 
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../blockdata/nitbd.html">Block Data</a></li>
 
 
 <li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
@@ -132,21 +136,21 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title=" 0.1% of total for procedures.">11 statements</a>
+    title=" 0.1% of total for procedures.">13 statements</a>
      </li> 
      
      
      
-    <li><i class="fa fa-code"></i><a href="../src/m_simbox.f90"> Source File</a></li>
+    <li><i class="fa fa-code"></i><a href="../src/simbox_m.f90"> Source File</a></li>
      
      
   </ul>
   <ol class="breadcrumb in-well text-right">
   
     
-     <li><a href='../sourcefile/m_simbox.f90.html'>m_simbox.f90</a></li>
+     <li><a href='../sourcefile/simbox_m.f90.html'>simbox_m.f90</a></li>
     
-     <li><a href='../module/m_simbox.html'>m_simbox</a></li>
+     <li><a href='../module/simbox_m.html'>simbox_m</a></li>
     
   
      <li class="active">smbx_init</li>
@@ -199,7 +203,7 @@
     
     <div class="col-md-9" id='text'>
     <h2>
-public subroutine smbx_init(this)
+public subroutine smbx_init(this, imcon)
     
     
    
@@ -209,7 +213,7 @@ public subroutine smbx_init(this)
 
 
     
-    <p>Creates an instance of <em>smbx_t</em>. Can also be called to reset.</p>
+    <p>Initializes an instance of <em>smbx_t</em>. Can also be called to reset.</p>
     
 
     <h3>Arguments</h3>
@@ -230,12 +234,38 @@ public subroutine smbx_init(this)
   
 <tr>
   
-  <td><span class="anchor" id="variable-this%7E57"></span>type(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
-  <td>intent(inout)</td>
+  <td><span class="anchor" id="variable-this%7E31"></span>class(<a href='../type/smbx_t.html'>smbx_t</a>),</td>
+  <td>intent(out)</td>
   <td></td>
   
   <td></td><td>::</td>
-  <td><strong>this</strong></td><td></td>
+  <td><strong>this</strong></td><td><p>An instance of <code>smbx_t</code>.</p></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-imcon%7E2"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>imcon</strong></td><td><p>Flag specifying boundary conditions on the simulation box.  </p>
+<ul>
+<li>
+<p><em>imcon = 0</em>: Unbounded domain. While not explicitly enforced this 
+    is useful only for a single molecule. The dynamics is performed in the
+    c.o.m. frame of reference.</p>
+</li>
+<li>
+<p><em>imcon = 1</em>: PBC along <em>x</em>, <em>y</em>, &amp; <em>z</em>. There are no restrictions on
+    the number of molecules.</p>
+</li>
+</ul></td>
   
 </tr>
 
